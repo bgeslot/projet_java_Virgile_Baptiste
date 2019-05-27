@@ -6,8 +6,6 @@ public abstract class Vehicule {
     private int prixLocationJour;
     private String etat;
 
-    public abstract Vehicule Vehicule();
-
     //set
 
     public void setMarque(String aMarque){
