@@ -34,7 +34,7 @@ public class MenuVehicule {
     }
 
     public void delVehicule(Vehicule aVehicule){
-        ArrayList listToModif=new ArrayList();
+        ArrayList listToModif=listeVehicule;
         if(listToModif.remove(aVehicule)){
             System.out.println("Element Suprimer");
         }
