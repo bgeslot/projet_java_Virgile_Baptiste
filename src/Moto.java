@@ -1,4 +1,4 @@
-public class Moto {
+public class Moto extends Terrestre {
 
     //new bike
 
