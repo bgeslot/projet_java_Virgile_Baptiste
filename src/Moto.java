@@ -4,7 +4,7 @@ public class Moto {
 
     public Moto Moto(){
         return new Moto();
-    };
+    }
 
 
     //other methode
@@ -24,7 +24,4 @@ public class Moto {
     public boolean equals(Object obj) {
         return super.equals(obj);
     }
-}
-
-
 }
