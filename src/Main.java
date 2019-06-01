@@ -8,7 +8,6 @@ public class Main {
     MenuClient menuClient=new MenuClient();
     MenuLocation menuLocation=new MenuLocation();
     public static void main(String[] args) {
-        private JButton btnNouvClient=new JButton();
     }
 
 }
