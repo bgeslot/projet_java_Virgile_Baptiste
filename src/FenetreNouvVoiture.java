@@ -19,11 +19,20 @@ public class FenetreNouvVoiture implements ActionListener {
     private JPanel panel52=new JPanel();
     private JPanel panel61=new JPanel();
     private JPanel panel62=new JPanel();
+    private JPanel panel71=new JPanel();
+    private JPanel panel72=new JPanel();
+    private JPanel panel81=new JPanel();
+    private JPanel panel82=new JPanel();
+    private JPanel panel91=new JPanel();
+    private JPanel panel92=new JPanel();
     private JTextField fieldMarque = new JTextField();
     private JTextField fieldModele = new JTextField();
     private JTextField fieldvitesseMax = new JTextField();
     private JTextField fieldPrixLocationJour = new JTextField();
     private JTextField fieldEtat = new JTextField();
+    private JTextField fieldKm = new JTextField();
+    private JTextField fieldNbPlace = new JTextField();
+    private JTextField fieldPuissance = new JTextField();
     private JButton boutonAjouter = new JButton("Ajouter");
     private JButton boutonReset = new JButton("Reset");
 
@@ -33,7 +42,7 @@ public class FenetreNouvVoiture implements ActionListener {
         fenetre.setLocationRelativeTo(null);
         fenetre.setVisible(true);
         fenetre.setContentPane(panel);
-        panel.setLayout(new GridLayout(7,2));
+        panel.setLayout(new GridLayout(9,2));
         panel.add(panel11);
         panel.add(panel12);
         panel.add(panel21);
@@ -46,6 +55,12 @@ public class FenetreNouvVoiture implements ActionListener {
         panel.add(panel52);
         panel.add(panel61);
         panel.add(panel62);
+        panel.add(panel71);
+        panel.add(panel72);
+        panel.add(panel81);
+        panel.add(panel82);
+        panel.add(panel91);
+        panel.add(panel92);
         panel11.add(new Label("Marque :"));
         panel12.add(fieldMarque);
         panel21.add(new Label("Modele :"));
@@ -56,13 +71,22 @@ public class FenetreNouvVoiture implements ActionListener {
         panel42.add(fieldPrixLocationJour);
         panel51.add(new Label("État :"));
         panel52.add(fieldEtat);
-        panel61.add(boutonAjouter);
-        panel62.add(boutonReset);
+        panel61.add(new Label("Nombre de kilomètres :"));
+        panel62.add(fieldKm);
+        panel71.add(new Label("Nombre de places :"));
+        panel72.add(fieldNbPlace);
+        panel81.add(new Label("Puissance :"));
+        panel82.add(fieldPuissance);
+        panel91.add(boutonAjouter);
+        panel92.add(boutonReset);
         fieldEtat.setColumns(15);
         fieldMarque.setColumns(15);
         fieldModele.setColumns(15);
         fieldvitesseMax.setColumns(15);
         fieldPrixLocationJour.setColumns(15);
+        fieldKm.setColumns(15);
+        fieldNbPlace.setColumns(15);
+        fieldPuissance.setColumns(15);
         boutonAjouter.addActionListener(this);
         boutonReset.addActionListener(this);
 
@@ -79,6 +103,9 @@ public class FenetreNouvVoiture implements ActionListener {
             fieldModele.setText("");
             fieldMarque.setText("");
             fieldEtat.setText("");
+            fieldKm.setText("");
+            fieldPuissance.setText("");
+            fieldNbPlace.setText("");
         }
         else if (recup==boutonAjouter)
         {

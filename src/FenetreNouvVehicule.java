@@ -42,12 +42,12 @@ public class FenetreNouvVehicule implements ActionListener {
         JButton recup = (JButton) e.getSource();
         if (recup == boutonAvion)
         {
-            new FenetreNouvAvion();
+            new FenetreNouvAvion(main);
             fenetre.dispose();
         }
         else if (recup == boutonMoto)
         {
-            new FenetreNouvMoto();
+            new FenetreNouvMoto(main);
             fenetre.dispose();
         }
         else if (recup == boutonVoiture)
