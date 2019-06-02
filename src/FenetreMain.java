@@ -72,7 +72,7 @@ public class FenetreMain implements ActionListener {
         }
         else if (recup==boutonConsulterLocation)
         {
-            new FenetreConsulterLocation();
+            new FenetreConsulterLocation(main);
         }
         else if (recup==boutonNouvVehicule)
         {
