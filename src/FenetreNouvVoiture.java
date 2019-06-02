@@ -109,6 +109,8 @@ public class FenetreNouvVoiture implements ActionListener {
         }
         else if (recup==boutonAjouter)
         {
+            Voiture newVoiture=new Voiture(fieldMarque.getText(),fieldModele.getText(),fieldvitesseMax.getText(),fieldPrixLocationJour.getText(),fieldEtat.getText(),fieldKm.getText(),fieldPuissance.getText(),fieldNbPlace.getText());
+            (main.menuVehicule).addVoiture(newVoiture);
             fenetre.dispose();
         }
     }
