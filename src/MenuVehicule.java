@@ -62,7 +62,7 @@ public class MenuVehicule {
 
     }
 
-    public void addAvion(Voiture aAvion){
+    public void addAvion(Avion aAvion){
         ArrayList newListe=new ArrayList();
         ArrayList oldListe=listeAvion;
         int n=oldListe.size();
@@ -94,7 +94,7 @@ public class MenuVehicule {
         }
     }
 
-    public void delAvion(Voiture aAvion){
+    public void delAvion(Avion aAvion){
         ArrayList listToModif=listeAvion;
         if(listToModif.remove(aAvion)){
             System.out.println("Element Suprimer");

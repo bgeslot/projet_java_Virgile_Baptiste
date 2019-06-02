@@ -101,6 +101,7 @@ public class FenetreNouvAvion implements ActionListener {
         else if (recup==boutonAjouter)
         {
             Avion newAvion = new Avion(fieldMarque.getText(),fieldModele.getText(),fieldvitesseMax.getText(),fieldPrixLocationJour.getText(),fieldEtat.getText(),fieldNbHeureVol.getText(),fieldNbMoteur.getText());
+            (main.menuVehicule).addAvion(newAvion);
             fenetre.dispose();
         }
     }
