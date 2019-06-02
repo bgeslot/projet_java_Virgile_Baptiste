@@ -2,6 +2,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.Calendar;
 
 public class FenetreNouvClient implements ActionListener {
     private Main main;
@@ -74,6 +75,8 @@ public class FenetreNouvClient implements ActionListener {
         JButton recup = (JButton) e.getSource();
         if (recup==boutonAjouter)
         {
+            Client newClient=new Client(fieldNom.getText(),fieldPrenom.getText(),fieldDateDeNaissance.getText(),fieldAdresseMail.getText(),fieldNumeroTelephone.getText());
+            (main.menuClient).addClient(newClient);
             fenetre.dispose();
         }
         else if (recup==boutonReset)

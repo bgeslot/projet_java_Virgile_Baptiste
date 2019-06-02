@@ -4,8 +4,9 @@ import javax.swing.event.ListSelectionListener;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
 
-public class FenetreConsulterClient implements ActionListener, ListSelectionListener {
+public class FenetreConsulterClient<a> implements ActionListener, ListSelectionListener {
     private Main main;
     private JFrame fenetre = new JFrame();
     private JPanel panel = new JPanel();
@@ -22,8 +23,8 @@ public class FenetreConsulterClient implements ActionListener, ListSelectionList
     private JPanel panel52 = new JPanel();
     private JPanel panel61 = new JPanel();
     private JPanel panel62 = new JPanel();
-    String[] data = {"Client 1","Client 2","Client 3","Client 4","Client 5","Client 6","Client 7","Client 8","Client 9","Client 10","Client 11","Client 12","Client 13","Client 14","Client 15","Client 16","Client 17","Client 18"};
-    private JList<String> jList= new JList(data);
+    //String[] data = {"Client 1","Client 2","Client 3","Client 4","Client 5","Client 6","Client 7","Client 8","Client 9","Client 10","Client 11","Client 12","Client 13","Client 14","Client 15","Client 16","Client 17","Client 18"};
+    private JList<String> jList= new JList();//data);
     private JScrollPane scrollPane = new JScrollPane(jList);
     private JLabel labelNom = new JLabel("");
     private JLabel labelPrenom = new JLabel("");
@@ -35,6 +36,15 @@ public class FenetreConsulterClient implements ActionListener, ListSelectionList
 
     public FenetreConsulterClient(Main m) {
         main = m;
+        ArrayList listeClient;
+        listeClient = main.menuClient.getListeClient();
+        int length=listeClient.size();
+        String[] data=new String[length];
+        for(int i=0;i<length; i++){
+            data[i]=(((Client)(listeClient.get(i))).getNom()+" "+((Client)(listeClient.get(i))).getPrenom());
+        }
+        JList<String> jList= new JList(data);
+        JScrollPane scrollPane = new JScrollPane(jList);
         fenetre.setTitle("Consulter liste clients");
         fenetre.setContentPane(panel);
         fenetre.setLocationRelativeTo(null);

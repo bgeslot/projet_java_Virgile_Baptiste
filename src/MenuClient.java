@@ -22,7 +22,7 @@ public class MenuClient {
 
     //usefull methode
 
-    public void addClient(Location aClient){
+    public void addClient(Client aClient){
         ArrayList newListe=new ArrayList();
         ArrayList oldListe=listeClient;
         int n=oldListe.size();
@@ -33,9 +33,9 @@ public class MenuClient {
 
     }
 
-    public void delLocation(Vehicule aLocation){
+    public void delClient(Client aClient){
         ArrayList listToModif=listeClient;
-        if(listToModif.remove(aLocation)){
+        if(listToModif.remove(aClient)){
             System.out.println("Element Suprimer");
         }
         else{

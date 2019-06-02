@@ -5,12 +5,12 @@ public class Client {
 
     private String nom;
     private String prenom;
-    private Calendar dateDeNaissance;
+    private String dateDeNaissance;
     private ArrayList listeLocationEnCours;
     private String adresseMail;
     private String numTelephone;
 
-    public Client(String nom, String prenom, Calendar dateDeNaissance, String adresseMail, String numTelephone) {
+    public Client(String nom, String prenom, String dateDeNaissance, String adresseMail, String numTelephone) {
         this.nom = nom;
         this.prenom = prenom;
         this.dateDeNaissance = dateDeNaissance;
@@ -25,7 +25,7 @@ public class Client {
         this.adresseMail = adresseMail;
     }
 
-    public void setDateDeNaissance(Calendar dateDeNaissance) {
+    public void setDateDeNaissance(String dateDeNaissance) {
         this.dateDeNaissance = dateDeNaissance;
     }
 
@@ -47,7 +47,7 @@ public class Client {
 
     //get
 
-    public Calendar getDateDeNaissance() {
+    public String getDateDeNaissance() {
         return dateDeNaissance;
     }
 

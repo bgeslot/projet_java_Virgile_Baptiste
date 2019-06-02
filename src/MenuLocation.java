@@ -34,7 +34,7 @@ public class MenuLocation {
 
     }
 
-    public void delLocation(Vehicule aLocation){
+    public void delLocation(Location aLocation){
         ArrayList listToModif=listeLocation;
         if(listToModif.remove(aLocation)){
             System.out.println("Element Suprimer");
