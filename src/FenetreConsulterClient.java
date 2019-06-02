@@ -8,8 +8,6 @@ import java.util.ArrayList;
 
 public class FenetreConsulterClient<a> implements ActionListener, ListSelectionListener {
     private Main main;
-    private int index;
-    private boolean doitChanger;
     private JFrame fenetre = new JFrame();
     private JPanel panel = new JPanel();
     private JPanel panelDroite = new JPanel();
@@ -37,8 +35,6 @@ public class FenetreConsulterClient<a> implements ActionListener, ListSelectionL
 
     public FenetreConsulterClient(Main m) {
         main = m;
-        index=0;
-        doitChanger=true;
         ArrayList listeClient;
         listeClient = main.menuClient.getListeClient();
         int length=listeClient.size();
@@ -46,7 +42,7 @@ public class FenetreConsulterClient<a> implements ActionListener, ListSelectionL
         for(int i=0;i<length; i++){
             data[i]=(((Client)(listeClient.get(i))).getNom()+" "+((Client)(listeClient.get(i))).getPrenom());
         }
-        JList<String> jList= new JList(data);
+        jList= new JList(data);
         JScrollPane scrollPane = new JScrollPane(jList);
         fenetre.setTitle("Consulter liste clients");
         fenetre.setContentPane(panel);
@@ -100,19 +96,9 @@ public class FenetreConsulterClient<a> implements ActionListener, ListSelectionL
 
     @Override
     public void valueChanged(ListSelectionEvent e) {
-        if (doitChanger)
-        {
-            if (e.getFirstIndex() != index) {
-                index = e.getFirstIndex();
-            } else {
-                index = e.getLastIndex();
-            }
-            doitChanger=false;
-        }
-        else
-        {
-            doitChanger=true;
-        }
+
+        int index = jList.getSelectedIndex();
+        System.out.println(index);
         Client client = (Client) main.menuClient.getListeClient().get(index);
         labelDateDeNaissance.setText(client.getDateDeNaissance());
         labelMail.setText(client.getAdresseMail());
