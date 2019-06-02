@@ -87,6 +87,6 @@ public class FenetreConsulterClient implements ActionListener, ListSelectionList
 
     @Override
     public void valueChanged(ListSelectionEvent e) {
-
+        int client = e.getLastIndex();
     }
 }
