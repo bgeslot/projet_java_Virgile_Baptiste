@@ -5,16 +5,16 @@ import java.awt.event.ActionListener;
 import java.net.JarURLConnection;
 
 public class FenetreNouvVehicule implements ActionListener {
-    Main main;
-    JFrame fenetre=new JFrame();
-    JPanel panel = new JPanel();
-    JPanel panel1 = new JPanel();
-    JPanel panel2 = new JPanel();
-    JPanel panel3 = new JPanel();
-    JPanel panel4 = new JPanel();
-    JButton boutonVoiture = new JButton("Voiture");
-    JButton boutonMoto = new JButton("Moto");
-    JButton boutonAvion = new JButton("Avion");
+    private Main main;
+    private JFrame fenetre=new JFrame();
+    private JPanel panel = new JPanel();
+    private JPanel panel1 = new JPanel();
+    private JPanel panel2 = new JPanel();
+    private JPanel panel3 = new JPanel();
+    private JPanel panel4 = new JPanel();
+    private JButton boutonVoiture = new JButton("Voiture");
+    private JButton boutonMoto = new JButton("Moto");
+    private JButton boutonAvion = new JButton("Avion");
     public FenetreNouvVehicule(Main m)
     {
         main=m;
