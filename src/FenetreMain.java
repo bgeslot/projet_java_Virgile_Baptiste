@@ -1,7 +1,9 @@
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
-public class FenetreMain {
+public class FenetreMain implements ActionListener {
     private JFrame fenetre = new JFrame();
     private JPanel panel = new JPanel();
     private JPanel panel11 = new JPanel();
@@ -21,7 +23,6 @@ public class FenetreMain {
         fenetre.setTitle("Accueil");
         fenetre.setLocationRelativeTo(null);
         fenetre.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        fenetre.setResizable(false);
         fenetre.setVisible(true);
         fenetre.setContentPane(panel);
         panel.setLayout(new GridLayout(3,2));
@@ -43,10 +44,45 @@ public class FenetreMain {
         boutonConsulterLocation.setPreferredSize(new Dimension(220,25));
         boutonNouvVehicule.setPreferredSize(new Dimension(220,25));
         boutonConsulterVehicule.setPreferredSize(new Dimension(220,25));
+        boutonNouvClient.addActionListener(this);
+        boutonConsulterClient.addActionListener(this);
+        boutonNouvLocation.addActionListener(this);
+        boutonConsulterLocation.addActionListener(this);
+        boutonNouvVehicule.addActionListener(this);
+        boutonConsulterVehicule.addActionListener(this);
         fenetre.pack();
     }
 
     public static void main(String[] args) {
         FenetreMain test = new FenetreMain();
+    }
+
+    @Override
+    public void actionPerformed(ActionEvent e) {
+        JButton recup = (JButton) e.getSource();
+        if (recup==boutonNouvClient)
+        {
+            new FenetreNouvClient();
+        }
+        else if (recup==boutonConsulterClient)
+        {
+            new FenetreConsulterClient();
+        }
+        else if (recup==boutonNouvLocation)
+        {
+            new FenetreNouvLocation();
+        }
+        else if (recup==boutonConsulterLocation)
+        {
+            new FenetreConsulterLocation();
+        }
+        else if (recup==boutonNouvVehicule)
+        {
+            new FenetreNouvVehicule();
+        }
+        else if (recup==boutonConsulterVehicule)
+        {
+            new FenetreConsulterVehicule();
+        }
     }
 }
