@@ -64,7 +64,7 @@ public class FenetreMain implements ActionListener {
         else if (recup==boutonNouvLocation)
         {
             System.out.println("Nombre de Clients : "+main.menuClient.getListeClient().size());
-            new FenetreNouvLocation();
+            new FenetreNouvLocation(main);
         }
         else if (recup==boutonConsulterLocation)
         {
