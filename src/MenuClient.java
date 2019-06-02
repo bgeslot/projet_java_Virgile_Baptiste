@@ -23,13 +23,7 @@ public class MenuClient {
     //usefull methode
 
     public void addClient(Client aClient){
-        ArrayList newListe=new ArrayList();
-        ArrayList oldListe=listeClient;
-        int n=oldListe.size();
-        for(int i=0;i<n;++i){
-            newListe.add(i,oldListe.get(i));
-        }
-        newListe.add(n,aClient);
+        (this.listeClient).add(aClient);
 
     }
 
