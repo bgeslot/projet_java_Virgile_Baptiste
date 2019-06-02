@@ -80,7 +80,7 @@ public class FenetreMain implements ActionListener {
         }
         else if (recup==boutonConsulterVehicule)
         {
-            new FenetreConsulterVehicule();
+            new FenetreConsulterVehicule(main);
         }
     }
 }
