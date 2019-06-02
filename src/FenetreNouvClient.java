@@ -74,7 +74,7 @@ public class FenetreNouvClient implements ActionListener {
         JButton recup = (JButton) e.getSource();
         if (recup==boutonAjouter)
         {
-
+            fenetre.dispose();
         }
         else if (recup==boutonReset)
         {

@@ -9,8 +9,9 @@ public class Client {
     private String adresseMail;
     private String numTelephone;
 
-    public Client Client(){
-        return new Client();
+    public  Client()
+    {
+
     }
 
     //set
