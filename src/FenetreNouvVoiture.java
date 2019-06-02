@@ -109,7 +109,7 @@ public class FenetreNouvVoiture implements ActionListener {
         }
         else if (recup==boutonAjouter)
         {
-
+            fenetre.dispose();
         }
     }
 }

@@ -100,7 +100,7 @@ public class FenetreNouvMoto implements ActionListener {
         }
         else if (recup==boutonAjouter)
         {
-
+            fenetre.dispose();
         }
     }
 }
