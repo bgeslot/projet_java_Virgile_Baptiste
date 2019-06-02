@@ -24,13 +24,7 @@ public class MenuLocation {
     //usefull methode
 
     public void addLocation(Location aLocation){
-        ArrayList newListe=new ArrayList();
-        ArrayList oldListe=listeLocation;
-        int n=oldListe.size();
-        for(int i=0;i<n;++i){
-            newListe.add(i,oldListe.get(i));
-        }
-        newListe.add(n,aLocation);
+        (this.listeLocation).add(aLocation);
 
     }
 
