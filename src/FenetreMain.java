@@ -47,6 +47,7 @@ public class FenetreMain implements ActionListener {
         boutonNouvVehicule.addActionListener(this);
         boutonConsulterVehicule.addActionListener(this);
         fenetre.pack();
+
     }
 
     @Override
