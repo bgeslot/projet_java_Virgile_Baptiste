@@ -11,8 +11,17 @@ public class Location {
     private float PrixPrevu;
     private boolean reduction;
 
-    public Location Location(){
-        return new Location();
+    public Location Location(int newNumLocation,Vehicule newVehicule,Client newClient,Calendar newDateDebut,Calendar newDateFin,float newKmPrevu,float newPrixPrevu,boolean newReduction){
+        Location newLocation= new Location();
+        newLocation.setNumLocation(newNumLocation);
+        newLocation.setVehicule(newVehicule);
+        newLocation.setClient(newClient);
+        newLocation.setDataDebut(newDateDebut);
+        newLocation.setDateFin(newDateFin);
+        newLocation.setKmPrevu(newKmPrevu);
+        newLocation.setPrixPrevu(newPrixPrevu);
+        newLocation.setReduction(newReduction);
+        return newLocation;
     }
 
     //set
