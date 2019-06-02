@@ -100,7 +100,7 @@ public class FenetreNouvAvion implements ActionListener {
         }
         else if (recup==boutonAjouter)
         {
-
+            fenetre.dispose();
         }
     }
 }
