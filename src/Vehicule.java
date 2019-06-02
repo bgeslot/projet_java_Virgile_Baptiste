@@ -2,11 +2,11 @@ public abstract class Vehicule {
 
     private String marque;
     private String modele;
-    private int vitesseMax;
-    private int prixLocationJour;
+    private String vitesseMax;
+    private String prixLocationJour;
     private String etat;
 
-    public Vehicule(String marque, String modele, int vitesseMax, int prixLocationJour, String etat) {
+    public Vehicule(String marque, String modele, String vitesseMax, String prixLocationJour, String etat) {
         this.marque = marque;
         this.modele = modele;
         this.vitesseMax = vitesseMax;
@@ -22,10 +22,10 @@ public abstract class Vehicule {
     public void setModele(String aModele){
         modele=aModele;
     }
-    public void setVitesseMax(int aVitesseMax){
+    public void setVitesseMax(String aVitesseMax){
         vitesseMax=aVitesseMax;
     }
-    public void setPrixLocationJour(int aPrix){
+    public void setPrixLocationJour(String aPrix){
         prixLocationJour=aPrix;
     }
     public void setEtat(String aEtat){
@@ -40,10 +40,10 @@ public abstract class Vehicule {
     public String getModele(){
         return modele;
     }
-    public int getVitesseMax(){
+    public String getVitesseMax(){
         return vitesseMax;
     }
-    public int getPrixLocationJour(){
+    public String getPrixLocationJour(){
         return prixLocationJour;
     }
     public String getEtat(){

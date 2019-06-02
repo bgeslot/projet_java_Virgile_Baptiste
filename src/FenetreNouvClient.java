@@ -1,3 +1,5 @@
+import com.sun.org.apache.xml.internal.utils.StringToStringTable;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -77,6 +79,7 @@ public class FenetreNouvClient implements ActionListener {
         {
             Client newClient=new Client(fieldNom.getText(),fieldPrenom.getText(),fieldDateDeNaissance.getText(),fieldAdresseMail.getText(),fieldNumeroTelephone.getText());
             (main.menuClient).addClient(newClient);
+            System.out.println(newClient.toString());
             fenetre.dispose();
         }
         else if (recup==boutonReset)

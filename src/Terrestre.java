@@ -1,9 +1,9 @@
 public abstract class Terrestre extends Vehicule {
 
-    private int km;
-    private int puissance;
+    private String km;
+    private String puissance;
 
-    public Terrestre(String marque, String modele, int vitesseMax, int prixLocationJour, String etat, int km, int puissance) {
+    public Terrestre(String marque, String modele, String vitesseMax, String prixLocationJour, String etat, String km, String puissance) {
         super(marque, modele, vitesseMax, prixLocationJour, etat);
         this.km = km;
         this.puissance = puissance;
@@ -11,22 +11,22 @@ public abstract class Terrestre extends Vehicule {
 
     // seter
 
-    public void setKm(int km) {
+    public void setKm(String km) {
         this.km = km;
     }
 
-    public void setPuissance(int puissance) {
+    public void setPuissance(String puissance) {
         this.puissance = puissance;
     }
 
     // geter
 
 
-    public int getKm() {
+    public String getKm() {
         return km;
     }
 
-    public int getPuissance() {
+    public String getPuissance() {
         return puissance;
     }
 

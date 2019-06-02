@@ -1,26 +1,25 @@
 public class Voiture extends Terrestre {
 
+    private String nbPlace;
+
     //new car
 
-
-    public Voiture(String marque, String modele, int vitesseMax, int prixLocationJour, String etat, int km, int puissance, int nbPlace) {
+    public Voiture(String marque, String modele, String vitesseMax, String prixLocationJour, String etat, String km, String puissance, String nbPlace) {
         super(marque, modele, vitesseMax, prixLocationJour, etat, km, puissance);
         this.nbPlace = nbPlace;
     }
 
-    private int nbPlace;
-
     //seter
 
 
-    public void setNbPlace(int nbPlace) {
+    public void setNbPlace(String nbPlace) {
         this.nbPlace = nbPlace;
     }
 
     //geter
 
 
-    public int getNbPlace() {
+    public String getNbPlace() {
         return nbPlace;
     }
 
