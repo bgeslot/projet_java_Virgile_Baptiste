@@ -8,6 +8,8 @@ import java.util.ArrayList;
 
 public class FenetreConsulterClient<a> implements ActionListener, ListSelectionListener {
     private Main main;
+    private int index;
+    private boolean doitChanger;
     private JFrame fenetre = new JFrame();
     private JPanel panel = new JPanel();
     private JPanel panelDroite = new JPanel();
@@ -23,7 +25,6 @@ public class FenetreConsulterClient<a> implements ActionListener, ListSelectionL
     private JPanel panel52 = new JPanel();
     private JPanel panel61 = new JPanel();
     private JPanel panel62 = new JPanel();
-    //String[] data = {"Client 1","Client 2","Client 3","Client 4","Client 5","Client 6","Client 7","Client 8","Client 9","Client 10","Client 11","Client 12","Client 13","Client 14","Client 15","Client 16","Client 17","Client 18"};
     private JList<String> jList= new JList();//data);
     private JScrollPane scrollPane = new JScrollPane(jList);
     private JLabel labelNom = new JLabel("");
@@ -36,6 +37,8 @@ public class FenetreConsulterClient<a> implements ActionListener, ListSelectionL
 
     public FenetreConsulterClient(Main m) {
         main = m;
+        index=0;
+        doitChanger=true;
         ArrayList listeClient;
         listeClient = main.menuClient.getListeClient();
         int length=listeClient.size();
@@ -97,6 +100,25 @@ public class FenetreConsulterClient<a> implements ActionListener, ListSelectionL
 
     @Override
     public void valueChanged(ListSelectionEvent e) {
-        int index = e.getLastIndex();
+        if (doitChanger)
+        {
+            if (e.getFirstIndex() != index) {
+                index = e.getFirstIndex();
+            } else {
+                index = e.getLastIndex();
+            }
+            doitChanger=false;
+        }
+        else
+        {
+            doitChanger=true;
+        }
+        Client client = (Client) main.menuClient.getListeClient().get(index);
+        labelDateDeNaissance.setText(client.getDateDeNaissance());
+        labelMail.setText(client.getAdresseMail());
+        labelNom.setText(client.getNom());
+        labelPrenom.setText(client.getPrenom());
+        labelTelephone.setText(client.getNumTelephone());
+        fenetre.pack();
     }
 }
