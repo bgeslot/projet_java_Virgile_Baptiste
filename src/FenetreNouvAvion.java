@@ -19,11 +19,17 @@ public class FenetreNouvAvion implements ActionListener {
     private JPanel panel52=new JPanel();
     private JPanel panel61=new JPanel();
     private JPanel panel62=new JPanel();
+    private JPanel panel71=new JPanel();
+    private JPanel panel72=new JPanel();
+    private JPanel panel81=new JPanel();
+    private JPanel panel82=new JPanel();
     private JTextField fieldMarque = new JTextField();
     private JTextField fieldModele = new JTextField();
     private JTextField fieldvitesseMax = new JTextField();
     private JTextField fieldPrixLocationJour = new JTextField();
     private JTextField fieldEtat = new JTextField();
+    private JTextField fieldNbHeureVol = new JTextField();
+    private JTextField fieldNbMoteur = new JTextField();
     private JButton boutonAjouter = new JButton("Ajouter");
     private JButton boutonReset = new JButton("Reset");
 
@@ -33,7 +39,7 @@ public class FenetreNouvAvion implements ActionListener {
         fenetre.setLocationRelativeTo(null);
         fenetre.setVisible(true);
         fenetre.setContentPane(panel);
-        panel.setLayout(new GridLayout(6,2));
+        panel.setLayout(new GridLayout(8,2));
         panel.add(panel11);
         panel.add(panel12);
         panel.add(panel21);
@@ -46,6 +52,10 @@ public class FenetreNouvAvion implements ActionListener {
         panel.add(panel52);
         panel.add(panel61);
         panel.add(panel62);
+        panel.add(panel71);
+        panel.add(panel72);
+        panel.add(panel81);
+        panel.add(panel82);
         panel11.add(new Label("Marque :"));
         panel12.add(fieldMarque);
         panel21.add(new Label("Modele :"));
@@ -56,13 +66,19 @@ public class FenetreNouvAvion implements ActionListener {
         panel42.add(fieldPrixLocationJour);
         panel51.add(new Label("État :"));
         panel52.add(fieldEtat);
-        panel61.add(boutonAjouter);
-        panel62.add(boutonReset);
+        panel61.add(new Label("Nombre d'heures de vol :"));
+        panel62.add(fieldNbHeureVol);
+        panel71.add(new Label("Nombre de moteurs :"));
+        panel72.add(fieldNbMoteur);
+        panel81.add(boutonAjouter);
+        panel82.add(boutonReset);
         fieldEtat.setColumns(15);
         fieldMarque.setColumns(15);
         fieldModele.setColumns(15);
         fieldvitesseMax.setColumns(15);
         fieldPrixLocationJour.setColumns(15);
+        fieldNbHeureVol.setColumns(15);
+        fieldNbMoteur.setColumns(15);
         boutonAjouter.addActionListener(this);
         boutonReset.addActionListener(this);
 
@@ -79,6 +95,8 @@ public class FenetreNouvAvion implements ActionListener {
             fieldModele.setText("");
             fieldMarque.setText("");
             fieldEtat.setText("");
+            fieldNbHeureVol.setText("");
+            fieldNbMoteur.setText("");
         }
         else if (recup==boutonAjouter)
         {
