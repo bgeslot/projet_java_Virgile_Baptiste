@@ -3,6 +3,12 @@ public abstract class Terrestre extends Vehicule {
     private int km;
     private int puissance;
 
+    public Terrestre(String marque, String modele, int vitesseMax, int prixLocationJour, String etat, int km, int puissance) {
+        super(marque, modele, vitesseMax, prixLocationJour, etat);
+        this.km = km;
+        this.puissance = puissance;
+    }
+
     // seter
 
     public void setKm(int km) {

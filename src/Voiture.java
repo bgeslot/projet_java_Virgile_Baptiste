@@ -2,9 +2,11 @@ public class Voiture extends Terrestre {
 
     //new car
 
-    public Voiture Voiture(){
-        return new Voiture();
-    };
+
+    public Voiture(String marque, String modele, int vitesseMax, int prixLocationJour, String etat, int km, int puissance, int nbPlace) {
+        super(marque, modele, vitesseMax, prixLocationJour, etat, km, puissance);
+        this.nbPlace = nbPlace;
+    }
 
     private int nbPlace;
 

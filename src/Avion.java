@@ -2,8 +2,9 @@ public class Avion extends Aerien {
 
     private int nbMoteur;
 
-    public Avion Avion(){
-        return new Avion();
+    public Avion(String marque, String modele, int vitesseMax, int prixLocationJour, String etat, int heureDeVol, int nbMoteur) {
+        super(marque, modele, vitesseMax, prixLocationJour, etat, heureDeVol);
+        this.nbMoteur = nbMoteur;
     }
 
     //set

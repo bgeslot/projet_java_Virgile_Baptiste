@@ -6,6 +6,14 @@ public abstract class Vehicule {
     private int prixLocationJour;
     private String etat;
 
+    public Vehicule(String marque, String modele, int vitesseMax, int prixLocationJour, String etat) {
+        this.marque = marque;
+        this.modele = modele;
+        this.vitesseMax = vitesseMax;
+        this.prixLocationJour = prixLocationJour;
+        this.etat = etat;
+    }
+
     //set
 
     public void setMarque(String aMarque){

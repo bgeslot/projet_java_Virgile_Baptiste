@@ -2,40 +2,101 @@ import java.util.ArrayList;
 
 public class MenuVehicule {
 
-    private ArrayList listeVehicule;
+    private ArrayList listeVoiture;
+    private ArrayList listeMoto;
+    private ArrayList listeAvion;
 
-    public MenuVehicule MenuVrhicule(){
-        return new MenuVehicule();
+    public MenuVehicule() {
+        listeVoiture=new ArrayList();
+        listeMoto=new ArrayList();
+        listeAvion=new ArrayList();
     }
 
     //set
 
-    public void setListeVehicule(ArrayList listeVehicule) {
-        this.listeVehicule = listeVehicule;
+    public void setListeAvion(ArrayList listeAvion) {
+        this.listeAvion = listeAvion;
     }
 
+    public void setListeMoto(ArrayList listeMoto) {
+        this.listeMoto = listeMoto;
+    }
+
+    public void setListeVoiture(ArrayList listeVoiture) {
+        this.listeVoiture = listeVoiture;
+    }
     //get
 
-    public ArrayList getListeVehicule() {
-        return listeVehicule;
+    public ArrayList getListeAvion() {
+        return listeAvion;
     }
 
+    public ArrayList getListeMoto() {
+        return listeMoto;
+    }
+
+    public ArrayList getListeVoiture() {
+        return listeVoiture;
+    }
     //usefull methode
 
-   public void addVehicule(Vehicule aVehicule){
+   public void addVoiture(Voiture aVoiture){
        ArrayList newListe=new ArrayList();
-       ArrayList oldListe=listeVehicule;
+       ArrayList oldListe=listeVoiture;
        int n=oldListe.size();
        for(int i=0;i<n;++i){
            newListe.add(i,oldListe.get(i));
        }
-       newListe.add(n,aVehicule);
+       newListe.add(n,aVoiture);
 
     }
 
-    public void delVehicule(Vehicule aVehicule){
-        ArrayList listToModif=listeVehicule;
-        if(listToModif.remove(aVehicule)){
+    public void addMoto(Moto aMoto){
+        ArrayList newListe=new ArrayList();
+        ArrayList oldListe=listeMoto;
+        int n=oldListe.size();
+        for(int i=0;i<n;++i){
+            newListe.add(i,oldListe.get(i));
+        }
+        newListe.add(n,aMoto);
+
+    }
+
+    public void addAvion(Voiture aAvion){
+        ArrayList newListe=new ArrayList();
+        ArrayList oldListe=listeAvion;
+        int n=oldListe.size();
+        for(int i=0;i<n;++i){
+            newListe.add(i,oldListe.get(i));
+        }
+        newListe.add(n,aAvion);
+
+    }
+
+
+    public void delVoiture(Voiture aVoiture){
+        ArrayList listToModif=listeVoiture;
+        if(listToModif.remove(aVoiture)){
+            System.out.println("Element Suprimer");
+        }
+        else{
+            System.out.println("Il n'y a pas de tel vehicule");
+        }
+    }
+
+    public void delMoto(Moto aMoto){
+        ArrayList listToModif=listeMoto;
+        if(listToModif.remove(aMoto)){
+            System.out.println("Element Suprimer");
+        }
+        else{
+            System.out.println("Il n'y a pas de tel vehicule");
+        }
+    }
+
+    public void delAvion(Voiture aAvion){
+        ArrayList listToModif=listeAvion;
+        if(listToModif.remove(aAvion)){
             System.out.println("Element Suprimer");
         }
         else{

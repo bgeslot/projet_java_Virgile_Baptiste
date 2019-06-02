@@ -2,6 +2,12 @@ public class Aerien extends Vehicule {
 
     private int heureDeVol;
 
+    public Aerien(String marque, String modele, int vitesseMax, int prixLocationJour, String etat, int heureDeVol) {
+        super(marque, modele, vitesseMax, prixLocationJour, etat);
+        this.heureDeVol = heureDeVol;
+    }
+
+
     //set
 
     public void setHeureDeVol(int heureDeVol) {
