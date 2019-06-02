@@ -39,13 +39,7 @@ public class FenetreMain implements ActionListener {
         panel21.add(boutonNouvLocation);
         panel22.add(boutonConsulterLocation);
         panel31.add(boutonNouvVehicule);
-        panel32.add(boutonConsulterVehicule);/*
-        boutonNouvClient.setPreferredSize(new Dimension(220,25));
-        boutonConsulterClient.setPreferredSize(new Dimension(220,25));
-        boutonNouvLocation.setPreferredSize(new Dimension(220,25));
-        boutonConsulterLocation.setPreferredSize(new Dimension(220,25));
-        boutonNouvVehicule.setPreferredSize(new Dimension(220,25));
-        boutonConsulterVehicule.setPreferredSize(new Dimension(220,25));*/
+        panel32.add(boutonConsulterVehicule);
         boutonNouvClient.addActionListener(this);
         boutonConsulterClient.addActionListener(this);
         boutonNouvLocation.addActionListener(this);
