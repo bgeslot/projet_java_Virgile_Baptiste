@@ -110,5 +110,6 @@ public class FenetreConsulterLocation implements ActionListener, ListSelectionLi
     @Override
     public void valueChanged(ListSelectionEvent e) {
         int location = e.getLastIndex();
+
     }
 }
