@@ -4,7 +4,9 @@ public class MenuLocation {
     private ArrayList listeLocation;
 
     public MenuLocation MenuLocation(){
-        return new MenuLocation();
+        MenuLocation newMenu=new MenuLocation();
+        newMenu.setListeLocation(new ArrayList());
+        return newMenu;
     }
 
     //set
