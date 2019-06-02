@@ -100,6 +100,8 @@ public class FenetreNouvMoto implements ActionListener {
         }
         else if (recup==boutonAjouter)
         {
+            Moto newMoto = new Moto(fieldMarque.getText(),fieldModele.getText(),fieldvitesseMax.getText(),fieldPrixLocationJour.getText(),fieldEtat.getText(),fieldKm.getText(),fieldPuissance.getText());
+            (main.menuVehicule).addMoto(newMoto);
             fenetre.dispose();
         }
     }
