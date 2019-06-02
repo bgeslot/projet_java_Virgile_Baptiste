@@ -13,10 +13,10 @@ public class FenetreMain implements ActionListener {
     private JPanel panel22 = new JPanel();
     private JPanel panel31 = new JPanel();
     private JPanel panel32 = new JPanel();
-    private JButton boutonNouvClient = new JButton("Ajouter un nouveau client");
+    private JButton boutonNouvClient = new JButton("    Ajouter un nouveau client   ");
     private JButton boutonNouvLocation = new JButton("Ajouter une nouvelle location");
-    private JButton boutonNouvVehicule = new JButton("Ajouter nouveau véhicule");
-    private JButton boutonConsulterClient = new JButton("Consulter la liste des clients");
+    private JButton boutonNouvVehicule = new JButton(" Ajouter un nouveau véhicule ");
+    private JButton boutonConsulterClient = new JButton("   Consulter la liste des clients  ");
     private JButton boutonConsulterLocation = new JButton("Consulter la liste des locations");
     private JButton boutonConsulterVehicule = new JButton("Consulter la liste des véhicules");
 
