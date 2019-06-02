@@ -3,7 +3,7 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class FenetreNouvClient implements ActionListener {
+public class FenetreNouvVoiture implements ActionListener {
     private Main main;
     private JFrame fenetre=new JFrame();
     private JPanel panel=new JPanel();
@@ -19,21 +19,21 @@ public class FenetreNouvClient implements ActionListener {
     private JPanel panel52=new JPanel();
     private JPanel panel61=new JPanel();
     private JPanel panel62=new JPanel();
-    private JTextField fieldNom = new JTextField();
-    private JTextField fieldPrenom = new JTextField();
-    private JTextField fieldDateDeNaissance = new JTextField();
-    private JTextField fieldAdresseMail = new JTextField();
-    private JTextField fieldNumeroTelephone = new JTextField();
+    private JTextField fieldMarque = new JTextField();
+    private JTextField fieldModele = new JTextField();
+    private JTextField fieldvitesseMax = new JTextField();
+    private JTextField fieldPrixLocationJour = new JTextField();
+    private JTextField fieldEtat = new JTextField();
     private JButton boutonAjouter = new JButton("Ajouter");
     private JButton boutonReset = new JButton("Reset");
 
-    public FenetreNouvClient(Main m) {
+    public FenetreNouvVoiture(Main m) {
         main=m;
-        fenetre.setTitle("Ajout client");
+        fenetre.setTitle("Ajout voiture");
         fenetre.setLocationRelativeTo(null);
         fenetre.setVisible(true);
         fenetre.setContentPane(panel);
-        panel.setLayout(new GridLayout(6,2));
+        panel.setLayout(new GridLayout(7,2));
         panel.add(panel11);
         panel.add(panel12);
         panel.add(panel21);
@@ -46,23 +46,23 @@ public class FenetreNouvClient implements ActionListener {
         panel.add(panel52);
         panel.add(panel61);
         panel.add(panel62);
-        panel11.add(new Label("Nom :"));
-        panel12.add(fieldNom);
-        panel21.add(new Label("Prénom :"));
-        panel22.add(fieldPrenom);
-        panel31.add(new Label("Date de naissance :"));
-        panel32.add(fieldDateDeNaissance);
-        panel41.add(new Label("Adresse mail :"));
-        panel42.add(fieldAdresseMail);
-        panel51.add(new Label("Numéro de téléphone :"));
-        panel52.add(fieldNumeroTelephone);
+        panel11.add(new Label("Marque :"));
+        panel12.add(fieldMarque);
+        panel21.add(new Label("Modele :"));
+        panel22.add(fieldModele);
+        panel31.add(new Label("Vitesse Maximale :"));
+        panel32.add(fieldvitesseMax);
+        panel41.add(new Label("Prix de location par jour de base :"));
+        panel42.add(fieldPrixLocationJour);
+        panel51.add(new Label("État :"));
+        panel52.add(fieldEtat);
         panel61.add(boutonAjouter);
         panel62.add(boutonReset);
-        fieldNom.setColumns(15);
-        fieldAdresseMail.setColumns(15);
-        fieldDateDeNaissance.setColumns(15);
-        fieldNumeroTelephone.setColumns(15);
-        fieldPrenom.setColumns(15);
+        fieldEtat.setColumns(15);
+        fieldMarque.setColumns(15);
+        fieldModele.setColumns(15);
+        fieldvitesseMax.setColumns(15);
+        fieldPrixLocationJour.setColumns(15);
         boutonAjouter.addActionListener(this);
         boutonReset.addActionListener(this);
 
@@ -72,17 +72,17 @@ public class FenetreNouvClient implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
         JButton recup = (JButton) e.getSource();
-        if (recup==boutonAjouter)
+        if (recup==boutonReset)
+        {
+            fieldPrixLocationJour.setText("");
+            fieldvitesseMax.setText("");
+            fieldModele.setText("");
+            fieldMarque.setText("");
+            fieldEtat.setText("");
+        }
+        else if (recup==boutonAjouter)
         {
 
-        }
-        else if (recup==boutonReset)
-        {
-            fieldPrenom.setText("");
-            fieldNumeroTelephone.setText("");
-            fieldDateDeNaissance.setText("");
-            fieldAdresseMail.setText("");
-            fieldNom.setText("");
         }
     }
 }

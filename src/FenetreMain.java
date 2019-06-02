@@ -4,6 +4,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class FenetreMain implements ActionListener {
+    private Main main;
     private JFrame fenetre = new JFrame();
     private JPanel panel = new JPanel();
     private JPanel panel11 = new JPanel();
@@ -19,7 +20,8 @@ public class FenetreMain implements ActionListener {
     private JButton boutonConsulterLocation = new JButton("Consulter la liste des locations");
     private JButton boutonConsulterVehicule = new JButton("Consulter la liste des véhicules");
 
-    public FenetreMain() {
+    public FenetreMain(Main m) {
+        main=m;
         fenetre.setTitle("Accueil");
         fenetre.setLocationRelativeTo(null);
         fenetre.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -53,16 +55,12 @@ public class FenetreMain implements ActionListener {
         fenetre.pack();
     }
 
-    public static void main(String[] args) {
-        FenetreMain test = new FenetreMain();
-    }
-
     @Override
     public void actionPerformed(ActionEvent e) {
         JButton recup = (JButton) e.getSource();
         if (recup==boutonNouvClient)
         {
-            new FenetreNouvClient();
+            new FenetreNouvClient(main);
         }
         else if (recup==boutonConsulterClient)
         {
@@ -78,7 +76,7 @@ public class FenetreMain implements ActionListener {
         }
         else if (recup==boutonNouvVehicule)
         {
-            new FenetreNouvVehicule();
+            new FenetreNouvVehicule(main);
         }
         else if (recup==boutonConsulterVehicule)
         {
