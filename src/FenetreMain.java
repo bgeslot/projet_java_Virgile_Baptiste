@@ -14,7 +14,7 @@ public class FenetreMain implements ActionListener {
     private JPanel panel31 = new JPanel();
     private JPanel panel32 = new JPanel();
     private JButton boutonNouvClient = new JButton("    Ajouter un nouveau client   ");
-    private JButton boutonNouvLocation = new JButton("Ajouter une nouvelle location");
+    private JButton boutonNouvLocation = new JButton("DEBUG");
     private JButton boutonNouvVehicule = new JButton(" Ajouter un nouveau véhicule ");
     private JButton boutonConsulterClient = new JButton("   Consulter la liste des clients  ");
     private JButton boutonConsulterLocation = new JButton("Consulter la liste des locations");
@@ -63,6 +63,7 @@ public class FenetreMain implements ActionListener {
         }
         else if (recup==boutonNouvLocation)
         {
+            System.out.println("Nombre de Clients : "+main.menuClient.getListeClient().size());
             new FenetreNouvLocation();
         }
         else if (recup==boutonConsulterLocation)
