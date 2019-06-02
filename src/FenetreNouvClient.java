@@ -1,7 +1,9 @@
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
-public class FenetreNouvClient {
+public class FenetreNouvClient implements ActionListener {
     JFrame fenetre=new JFrame();
     JPanel panel=new JPanel();
     JPanel panel11=new JPanel();
@@ -23,6 +25,7 @@ public class FenetreNouvClient {
     JTextField fieldNumeroTelephone = new JTextField();
     JButton boutonAjouter = new JButton("Ajouter");
     JButton boutonReset = new JButton("Reset");
+
     public FenetreNouvClient() {
         fenetre.setTitle("Ajout client");
         fenetre.setLocationRelativeTo(null);
@@ -42,11 +45,42 @@ public class FenetreNouvClient {
         panel.add(panel61);
         panel.add(panel62);
         panel11.add(new Label("Nom :"));
+        panel12.add(fieldNom);
         panel21.add(new Label("Prénom :"));
+        panel22.add(fieldPrenom);
         panel31.add(new Label("Date de naissance :"));
+        panel32.add(fieldDateDeNaissance);
         panel41.add(new Label("Adresse mail :"));
+        panel42.add(fieldAdresseMail);
         panel51.add(new Label("Numéro de téléphone :"));
+        panel52.add(fieldNumeroTelephone);
+        panel61.add(boutonAjouter);
+        panel62.add(boutonReset);
+        fieldNom.setColumns(15);
+        fieldAdresseMail.setColumns(15);
+        fieldDateDeNaissance.setColumns(15);
+        fieldNumeroTelephone.setColumns(15);
+        fieldPrenom.setColumns(15);
+        boutonAjouter.addActionListener(this);
+        boutonReset.addActionListener(this);
 
         fenetre.pack();
+    }
+
+    @Override
+    public void actionPerformed(ActionEvent e) {
+        JButton recup = (JButton) e.getSource();
+        if (recup==boutonAjouter)
+        {
+
+        }
+        else if (recup==boutonReset)
+        {
+            fieldPrenom.setText("");
+            fieldNumeroTelephone.setText("");
+            fieldDateDeNaissance.setText("");
+            fieldAdresseMail.setText("");
+            fieldNom.setText("");
+        }
     }
 }
