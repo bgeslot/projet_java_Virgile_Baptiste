@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.Calendar;
 
 public class Client {
@@ -5,13 +6,17 @@ public class Client {
     private String nom;
     private String prenom;
     private Calendar dateDeNaissance;
-    private Location[] ListeLocationEnCours;
+    private ArrayList listeLocationEnCours;
     private String adresseMail;
     private String numTelephone;
 
-    public  Client( )
-    {
-
+    public Client(String nom, String prenom, Calendar dateDeNaissance, String adresseMail, String numTelephone) {
+        this.nom = nom;
+        this.prenom = prenom;
+        this.dateDeNaissance = dateDeNaissance;
+        this.adresseMail = adresseMail;
+        this.numTelephone = numTelephone;
+        listeLocationEnCours = new ArrayList();
     }
 
     //set
@@ -24,8 +29,8 @@ public class Client {
         this.dateDeNaissance = dateDeNaissance;
     }
 
-    public void setListeLocationEnCours(Location[] listeLocationEnCours) {
-        ListeLocationEnCours = listeLocationEnCours;
+    public void setListeLocationEnCours(ArrayList listeLocationEnCours) {
+        listeLocationEnCours = listeLocationEnCours;
     }
 
     public void setNom(String nom) {
@@ -46,8 +51,8 @@ public class Client {
         return dateDeNaissance;
     }
 
-    public Location[] getListeLocationEnCours() {
-        return ListeLocationEnCours;
+    public ArrayList getListeLocationEnCours() {
+        return listeLocationEnCours;
     }
 
     public String getNom() {

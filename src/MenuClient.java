@@ -4,8 +4,8 @@ public class MenuClient {
 
     private ArrayList listeClient;
 
-    public MenuClient MenuClient(){
-        return new MenuClient();
+    public MenuClient() {
+        listeClient = new ArrayList();
     }
 
     //set
