@@ -41,36 +41,17 @@ public class MenuVehicule {
     //usefull methode
 
    public void addVoiture(Voiture aVoiture){
-       ArrayList newListe=new ArrayList();
-       ArrayList oldListe=listeVoiture;
-       int n=oldListe.size();
-       for(int i=0;i<n;++i){
-           newListe.add(i,oldListe.get(i));
-       }
-       newListe.add(n,aVoiture);
+       (this.listeVoiture).add(aVoiture);
 
     }
 
     public void addMoto(Moto aMoto){
-        ArrayList newListe=new ArrayList();
-        ArrayList oldListe=listeMoto;
-        int n=oldListe.size();
-        for(int i=0;i<n;++i){
-            newListe.add(i,oldListe.get(i));
-        }
-        newListe.add(n,aMoto);
+        (this.listeMoto).add(aMoto);
 
     }
 
     public void addAvion(Avion aAvion){
-        ArrayList newListe=new ArrayList();
-        ArrayList oldListe=listeAvion;
-        int n=oldListe.size();
-        for(int i=0;i<n;++i){
-            newListe.add(i,oldListe.get(i));
-        }
-        newListe.add(n,aAvion);
-
+        (this.listeAvion).add(aAvion);
     }
 
 
