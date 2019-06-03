@@ -36,7 +36,7 @@ public class FenetreConsulterMoto implements ActionListener, ListSelectionListen
     private JLabel labelEtat = new JLabel("");
     private JLabel labelKm = new JLabel("");
     private JLabel labelPuissance = new JLabel("");
-    private JButton boutonRendre = new JButton("Rendre");
+    private JButton boutonLouer = new JButton("Louer");
     private JButton boutonSupprimer = new JButton("Supprimer");
 
     public FenetreConsulterMoto(Main m) {
@@ -78,7 +78,7 @@ public class FenetreConsulterMoto implements ActionListener, ListSelectionListen
         panel62.add(labelKm);
         panel71.add(new JLabel("Puissance :"));
         panel72.add(labelPuissance);
-        panel81.add(boutonRendre);
+        panel81.add(boutonLouer);
         panel82.add(boutonSupprimer);
         jList.addListSelectionListener(this);
         boutonSupprimer.addActionListener(this);
@@ -87,11 +87,19 @@ public class FenetreConsulterMoto implements ActionListener, ListSelectionListen
     }
     @Override
     public void actionPerformed(ActionEvent e) {
+        JButton recup = (JButton) e.getSource();
+        if (recup==boutonLouer)
+        {
+            new FenetreNouvLocation(main);
+        }
+        else if (recup==boutonSupprimer)
+        {
 
+        }
     }
 
     @Override
     public void valueChanged(ListSelectionEvent e) {
-
+        int index=jList.getSelectedIndex();
     }
 }
