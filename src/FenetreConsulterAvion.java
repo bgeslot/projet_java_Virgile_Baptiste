@@ -4,6 +4,7 @@ import javax.swing.event.ListSelectionListener;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
 
 public class FenetreConsulterAvion implements ActionListener, ListSelectionListener {
     private Main main;
@@ -26,8 +27,8 @@ public class FenetreConsulterAvion implements ActionListener, ListSelectionListe
     private JPanel panel72 = new JPanel();
     private JPanel panel81 = new JPanel();
     private JPanel panel82 = new JPanel();
-    String[] data = {"Location 1","Location 2","Location 3","Location 4","Location 5","Location 6","Location 7","Location 8","Location 9","Location 10","Location 11","Location 12","Location 13","Location 14","Location 15","Location 16","Location 17","Location 18"};
-    private JList<String> jList= new JList(data);
+    //String[] data = {"Location 1","Location 2","Location 3","Location 4","Location 5","Location 6","Location 7","Location 8","Location 9","Location 10","Location 11","Location 12","Location 13","Location 14","Location 15","Location 16","Location 17","Location 18"};
+    private JList<String> jList= null;//data);
     private JScrollPane scrollPane = new JScrollPane(jList);
     private JLabel labelMarque = new JLabel("");
     private JLabel labelModele = new JLabel("");
@@ -40,6 +41,10 @@ public class FenetreConsulterAvion implements ActionListener, ListSelectionListe
     private JButton boutonSupprimer = new JButton("Supprimer");
     public FenetreConsulterAvion(Main m) {
         main = m;
+        int length=main.menuVehicule.getListeAvion().size();
+        String[] data=new String[length];
+        data=getAvion(main,data);
+        jList= new JList(data);
         fenetre.setTitle("Consulter liste clients");
         fenetre.setContentPane(panel);
         fenetre.setLocationRelativeTo(null);
@@ -83,6 +88,18 @@ public class FenetreConsulterAvion implements ActionListener, ListSelectionListe
         boutonSupprimer.addActionListener(this);
         boutonSupprimer.addActionListener(this);
         fenetre.pack();
+    }
+
+    public String[] getAvion(Main m,String[] data){
+        m=main;
+        ArrayList listeAvion;
+        listeAvion = main.menuVehicule.getListeAvion();
+        int length=listeAvion.size();
+        data=new String[length];
+        for(int i=0;i<length; i++){
+            data[i]=(((Avion)(listeAvion.get(i))).getMarque()+" "+((Avion)(listeAvion.get(i))).getModele());
+        }
+        return data;
     }
 
     @Override

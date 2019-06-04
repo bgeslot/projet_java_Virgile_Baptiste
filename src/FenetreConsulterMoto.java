@@ -4,6 +4,7 @@ import javax.swing.event.ListSelectionListener;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
 
 public class FenetreConsulterMoto implements ActionListener, ListSelectionListener {
     private Main main;
@@ -26,8 +27,8 @@ public class FenetreConsulterMoto implements ActionListener, ListSelectionListen
     private JPanel panel72 = new JPanel();
     private JPanel panel81 = new JPanel();
     private JPanel panel82 = new JPanel();
-    String[] data = {"Moto 1","Moto 2","Moto 3","Moto 4","Moto 5","Moto 6","Moto 7","Moto 8","Moto 9","Moto 10","Moto 11","Moto 12","Moto 13","Moto 14","Moto 15","Moto 16","Moto 17","Moto 18"};
-    private JList<String> jList= new JList(data);
+    //String[] data = {"Location 1","Location 2","Location 3","Location 4","Location 5","Location 6","Location 7","Location 8","Location 9","Location 10","Location 11","Location 12","Location 13","Location 14","Location 15","Location 16","Location 17","Location 18"};
+    private JList<String> jList= null;//data);
     private JScrollPane scrollPane = new JScrollPane(jList);
     private JLabel labelMarque = new JLabel("");
     private JLabel labelModele = new JLabel("");
@@ -41,6 +42,10 @@ public class FenetreConsulterMoto implements ActionListener, ListSelectionListen
 
     public FenetreConsulterMoto(Main m) {
         main = m;
+        int length=main.menuVehicule.getListeMoto().size();
+        String[] data=new String[length];
+        data=getMoto(main,data);
+        jList= new JList(data);
         fenetre.setTitle("Consulter liste clients");
         fenetre.setContentPane(panel);
         fenetre.setLocationRelativeTo(null);
@@ -85,6 +90,19 @@ public class FenetreConsulterMoto implements ActionListener, ListSelectionListen
         boutonSupprimer.addActionListener(this);
         fenetre.pack();
     }
+
+    public String[] getMoto(Main m,String[] data){
+        m=main;
+        ArrayList listeMoto;
+        listeMoto = main.menuVehicule.getListeAvion();
+        int length=listeMoto.size();
+        data=new String[length];
+        for(int i=0;i<length; i++){
+            data[i]=(((Moto)(listeMoto.get(i))).getMarque()+" "+((Moto)(listeMoto.get(i))).getModele());
+        }
+        return data;
+    }
+
     @Override
     public void actionPerformed(ActionEvent e) {
         JButton recup = (JButton) e.getSource();
