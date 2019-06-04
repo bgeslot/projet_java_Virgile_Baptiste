@@ -1,7 +1,9 @@
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
-public class FenetreNouvLocation {
+public class FenetreNouvLocation implements ActionListener {
     private Main main;
     private Vehicule vehicule;
     private JFrame fenetre = new JFrame();
@@ -46,6 +48,8 @@ public class FenetreNouvLocation {
         fieldDateDebut.setColumns(15);
         fieldDuree.setColumns(15);
         fieldKmPrevi.setColumns(15);
+        boutonAjouter.addActionListener(this);
+        boutonAnnuler.addActionListener(this);
         panel.setLayout(new GridLayout(9,2));
         panel.add(panel11);
         panel.add(panel12);
@@ -66,7 +70,7 @@ public class FenetreNouvLocation {
         panel.add(panel91);
         panel.add(panel92);
         panel11.add(new JLabel("Location de :"));
-        panel12.add(new JLabel(vehicule.getMarque()+" "+vehicule.getMarque()));
+        panel12.add(new JLabel(vehicule.getMarque()+" "+vehicule.getModele()));
         panel21.add(new JLabel("Numéro de Location :"));
         panel22.add(new JLabel(""));
         panel31.add(new JLabel("Client :"));
@@ -85,5 +89,18 @@ public class FenetreNouvLocation {
         panel92.add(boutonAnnuler);
 
         fenetre.pack();
+    }
+
+    @Override
+    public void actionPerformed(ActionEvent e) {
+        JButton recup = (JButton) e.getSource();
+        if (recup==boutonAjouter)
+        {
+
+        }
+        else if (recup==boutonAnnuler)
+        {
+            fenetre.dispose();
+        }
     }
 }
