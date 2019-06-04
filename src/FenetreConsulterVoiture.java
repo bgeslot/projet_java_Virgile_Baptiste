@@ -4,6 +4,7 @@ import javax.swing.event.ListSelectionListener;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
 
 public class FenetreConsulterVoiture implements ActionListener, ListSelectionListener {
     private Main main;
@@ -28,8 +29,8 @@ public class FenetreConsulterVoiture implements ActionListener, ListSelectionLis
     private JPanel panel82 = new JPanel();
     private JPanel panel91 = new JPanel();
     private JPanel panel92 = new JPanel();
-    String[] data = {"Voiture 1","Voiture 2","Voiture 3","Voiture 4","Voiture 5","Voiture 6","Voiture 7","Voiture 8","Voiture 9","Voiture 10","Voiture 11","Voiture 12","Voiture 13","Voiture 14","Voiture 15","Voiture 16","Voiture 17","Voiture 18"};
-    private JList<String> jList= new JList(data);
+//    String[] data = {"Voiture 1","Voiture 2","Voiture 3","Voiture 4","Voiture 5","Voiture 6","Voiture 7","Voiture 8","Voiture 9","Voiture 10","Voiture 11","Voiture 12","Voiture 13","Voiture 14","Voiture 15","Voiture 16","Voiture 17","Voiture 18"};
+    private JList<String> jList= null;//data);
     private JScrollPane scrollPane = new JScrollPane(jList);
     private JLabel labelMarque = new JLabel("");
     private JLabel labelModele = new JLabel("");
@@ -43,6 +44,10 @@ public class FenetreConsulterVoiture implements ActionListener, ListSelectionLis
     private JButton boutonSupprimer = new JButton("Supprimer");
     public FenetreConsulterVoiture(Main m) {
         main = m;
+        int length=main.menuVehicule.getListeVoiture().size();
+        String[] data=new String[length];
+        data=getVoiture(main,data);
+        jList= new JList(data);
         fenetre.setTitle("Consulter liste clients");
         fenetre.setContentPane(panel);
         fenetre.setLocationRelativeTo(null);
@@ -91,6 +96,19 @@ public class FenetreConsulterVoiture implements ActionListener, ListSelectionLis
         boutonSupprimer.addActionListener(this);
         fenetre.pack();
     }
+
+    public String[] getVoiture(Main m,String[] data){
+        m=main;
+        ArrayList listeVoiture;
+        listeVoiture = main.menuVehicule.getListeVoiture();
+        int length=listeVoiture.size();
+        data=new String[length];
+        for(int i=0;i<length; i++){
+            data[i]=(((Voiture)(listeVoiture.get(i))).getMarque()+" "+((Voiture)(listeVoiture.get(i))).getModele());
+        }
+        return data;
+    }
+
     @Override
     public void actionPerformed(ActionEvent e) {
 
