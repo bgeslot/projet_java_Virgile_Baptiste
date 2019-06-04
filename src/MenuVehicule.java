@@ -56,15 +56,21 @@ public class MenuVehicule {
 
 
     public void delVoiture(int i){
-        listeVoiture.remove(i);
+        if(i!=-1) {
+            listeVoiture.remove(i);
+        }
     }
 
     public void delMoto(int i){
-        listeMoto.remove(i);
+        if(i!=-1) {
+            listeMoto.remove(i);
+        }
     }
 
     public void delAvion(int i){
-        listeAvion.remove(i);
+        if(i!=-1) {
+            listeAvion.remove(i);
+        }
     }
 
     // other

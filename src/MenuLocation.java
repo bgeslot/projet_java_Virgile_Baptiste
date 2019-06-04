@@ -29,7 +29,9 @@ public class MenuLocation {
     }
 
     public void delLocation(int i){
-        listeLocation.remove(i);
+        if(i!=-1) {
+            listeLocation.remove(i);
+        }
     }
 
     // other

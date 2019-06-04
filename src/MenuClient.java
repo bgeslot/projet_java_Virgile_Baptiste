@@ -28,7 +28,9 @@ public class MenuClient {
     }
 
     public void delClient(int i){
-        listeClient.remove(i);
+        if(i!=-1) {
+            listeClient.remove(i);
+        }
     }
 
     // other
