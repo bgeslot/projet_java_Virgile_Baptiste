@@ -47,6 +47,9 @@ public class FenetreMain implements ActionListener {
         boutonNouvVehicule.addActionListener(this);
         boutonConsulterVehicule.addActionListener(this);
         fenetre.pack();
+        Dimension windowSize = fenetre.getSize();
+        Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
+        fenetre.setLocation(screenSize.width/2-windowSize.width/2,screenSize.height/2-windowSize.height/2);
 
     }
 

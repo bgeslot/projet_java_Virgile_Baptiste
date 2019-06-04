@@ -120,6 +120,9 @@ public class FenetreNouvLocation implements ActionListener {
         panel92.add(boutonAnnuler);
 
         fenetre.pack();
+        Dimension windowSize = fenetre.getSize();
+        Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
+        fenetre.setLocation(screenSize.width/2-windowSize.width/2,screenSize.height/2-windowSize.height/2);
     }
 
     @Override

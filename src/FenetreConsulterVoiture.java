@@ -122,6 +122,9 @@ public class FenetreConsulterVoiture implements ActionListener, ListSelectionLis
             main.menuVehicule.delVoiture(jList.getSelectedIndex());
             new FenetreConsulterAvion(main);
             fenetre.dispose();
+            Dimension windowSize = fenetre.getSize();
+            Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
+            fenetre.setLocation(screenSize.width/2-windowSize.width/2,screenSize.height/2-windowSize.height/2);
         }
     }
 
@@ -139,5 +142,8 @@ public class FenetreConsulterVoiture implements ActionListener, ListSelectionLis
         labelPrixLoc.setText(voiture.getPrixLocationJour());
         labelNbPlace.setText(voiture.getPuissance());
         fenetre.pack();
+        Dimension windowSize = fenetre.getSize();
+        Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
+        fenetre.setLocation(screenSize.width/2-windowSize.width/2,screenSize.height/2-windowSize.height/2);
     }
 }

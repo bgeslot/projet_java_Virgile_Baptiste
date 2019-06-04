@@ -89,6 +89,9 @@ public class FenetreConsulterAvion implements ActionListener, ListSelectionListe
         boutonSupprimer.addActionListener(this);
         boutonAjouter.addActionListener(this);
         fenetre.pack();
+        Dimension windowSize = fenetre.getSize();
+        Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
+        fenetre.setLocation(screenSize.width/2-windowSize.width/2,screenSize.height/2-windowSize.height/2);
     }
 
     public String[] getAvion(Main m,String[] data){
@@ -131,5 +134,8 @@ public class FenetreConsulterAvion implements ActionListener, ListSelectionListe
         labelNbMoteur.setText(avion.getNbMoteur());
         labelPrixLoc.setText(avion.getPrixLocationJour());
         fenetre.pack();
+        Dimension windowSize = fenetre.getSize();
+        Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
+        fenetre.setLocation(screenSize.width/2-windowSize.width/2,screenSize.height/2-windowSize.height/2);
     }
 }

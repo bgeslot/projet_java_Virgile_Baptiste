@@ -90,6 +90,9 @@ public class FenetreConsulterMoto implements ActionListener, ListSelectionListen
         boutonLouer.addActionListener(this);
         boutonSupprimer.addActionListener(this);
         fenetre.pack();
+        Dimension windowSize = fenetre.getSize();
+        Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
+        fenetre.setLocation(screenSize.width/2-windowSize.width/2,screenSize.height/2-windowSize.height/2);
     }
 
     public String[] getMoto(Main m,String[] data){
@@ -133,5 +136,8 @@ public class FenetreConsulterMoto implements ActionListener, ListSelectionListen
         labelPuissance.setText(moto.getPuissance());
         labelPrixLoc.setText(moto.getPrixLocationJour());
         fenetre.pack();
+        Dimension windowSize = fenetre.getSize();
+        Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
+        fenetre.setLocation(screenSize.width/2-windowSize.width/2,screenSize.height/2-windowSize.height/2);
     }
 }

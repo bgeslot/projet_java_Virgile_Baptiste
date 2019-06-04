@@ -75,6 +75,9 @@ public class FenetreConsulterClient<a> implements ActionListener, ListSelectionL
         boutonAjouter.addActionListener(this);
         boutonSupprimer.addActionListener(this);
         fenetre.pack();
+        Dimension windowSize = fenetre.getSize();
+        Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
+        fenetre.setLocation(screenSize.width/2-windowSize.width/2,screenSize.height/2-windowSize.height/2);
     }
 
     public String[] getClient(Main m,String[] data){
@@ -116,5 +119,8 @@ public class FenetreConsulterClient<a> implements ActionListener, ListSelectionL
         labelPrenom.setText(client.getPrenom());
         labelTelephone.setText(client.getNumTelephone());
         fenetre.pack();
+        Dimension windowSize = fenetre.getSize();
+        Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
+        fenetre.setLocation(screenSize.width/2-windowSize.width/2,screenSize.height/2-windowSize.height/2);
     }
 }
