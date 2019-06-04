@@ -87,7 +87,7 @@ public class FenetreConsulterAvion implements ActionListener, ListSelectionListe
         panel82.add(boutonSupprimer);
         jList.addListSelectionListener(this);
         boutonSupprimer.addActionListener(this);
-        boutonSupprimer.addActionListener(this);
+        boutonAjouter.addActionListener(this);
         fenetre.pack();
     }
 
