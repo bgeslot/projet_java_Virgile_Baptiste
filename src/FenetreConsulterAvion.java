@@ -118,6 +118,16 @@ public class FenetreConsulterAvion implements ActionListener, ListSelectionListe
 
     @Override
     public void valueChanged(ListSelectionEvent e) {
-
+        int index = jList.getSelectedIndex();
+        System.out.println(index);
+        Avion avion = (Avion) main.menuVehicule.getListeAvion().get(index);
+        labelModele.setText(avion.getModele());
+        labelMarque.setText(avion.getMarque());
+        labelVitesseMax.setText(avion.getVitesseMax());
+        labelEtat.setText(avion.getEtat());
+        labelNbHeureVol.setText(avion.getHeureDeVol());
+        labelNbMoteur.setText(avion.getNbMoteur());
+        labelPrixLoc.setText(avion.getPrixLocationJour());
+        fenetre.pack();
     }
 }
