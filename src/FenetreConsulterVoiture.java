@@ -93,7 +93,7 @@ public class FenetreConsulterVoiture implements ActionListener, ListSelectionLis
         panel91.add(boutonRendre);
         panel92.add(boutonSupprimer);
         jList.addListSelectionListener(this);
-        boutonSupprimer.addActionListener(this);
+        boutonRendre.addActionListener(this);
         boutonSupprimer.addActionListener(this);
         fenetre.pack();
     }
@@ -112,7 +112,15 @@ public class FenetreConsulterVoiture implements ActionListener, ListSelectionLis
 
     @Override
     public void actionPerformed(ActionEvent e) {
-
+        JButton recup = (JButton) e.getSource();
+        if (recup==boutonRendre)
+        {
+            new FenetreNouvVoiture(main);
+        }
+        else if (recup==boutonSupprimer)
+        {
+            main.menuVehicule.delVoiture(jList.getSelectedIndex());
+        }
     }
 
     @Override

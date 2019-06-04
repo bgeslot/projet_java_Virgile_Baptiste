@@ -87,7 +87,7 @@ public class FenetreConsulterMoto implements ActionListener, ListSelectionListen
         panel81.add(boutonLouer);
         panel82.add(boutonSupprimer);
         jList.addListSelectionListener(this);
-        boutonSupprimer.addActionListener(this);
+        boutonLouer.addActionListener(this);
         boutonSupprimer.addActionListener(this);
         fenetre.pack();
     }
