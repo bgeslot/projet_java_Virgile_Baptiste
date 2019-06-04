@@ -1,3 +1,5 @@
+import com.sun.deploy.util.StringUtils;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -58,17 +60,17 @@ public class FenetreNouvLocation implements ActionListener {
                 JTextField textField = (JTextField) e.getSource();
                 String text = textField.getText();
                 int val;
-                if (text!="")
+                try
                 {
                     val = Integer.parseInt(text);
                 }
-                else
+                catch (NumberFormatException er)
                 {
                     val=0;
                 }
                 if (val>=7)
                 {
-
+                    System.out.println("val avant set = "+val);
                     boxReduction.setEnabled(true);
                 }
                 else
