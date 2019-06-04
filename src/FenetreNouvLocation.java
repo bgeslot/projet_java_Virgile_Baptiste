@@ -47,6 +47,7 @@ public class FenetreNouvLocation implements ActionListener {
         fenetre.setVisible(true);
         fenetre.setContentPane(panel);
         jComboBox = new JComboBox(clients);
+        boxReduction.setEnabled(false);
         fieldDateDebut.setColumns(15);
         fieldDuree.setColumns(15);
         fieldKmPrevi.setColumns(15);
@@ -56,6 +57,25 @@ public class FenetreNouvLocation implements ActionListener {
             public void keyReleased(KeyEvent e) {
                 JTextField textField = (JTextField) e.getSource();
                 String text = textField.getText();
+                int val;
+                if (text!="")
+                {
+                    val = Integer.parseInt(text);
+                }
+                else
+                {
+                    val=0;
+                }
+                if (val>=7)
+                {
+
+                    boxReduction.setEnabled(true);
+                }
+                else
+                {
+                    boxReduction.setSelected(false);
+                    boxReduction.setEnabled(false);
+                }
             }
         });
         panel.setLayout(new GridLayout(9, 2));
