@@ -94,7 +94,7 @@ public class FenetreConsulterMoto implements ActionListener, ListSelectionListen
     public String[] getMoto(Main m,String[] data){
         m=main;
         ArrayList listeMoto;
-        listeMoto = main.menuVehicule.getListeAvion();
+        listeMoto = main.menuVehicule.getListeMoto();
         int length=listeMoto.size();
         data=new String[length];
         for(int i=0;i<length; i++){
