@@ -28,14 +28,8 @@ public class MenuLocation {
 
     }
 
-    public void delLocation(Location aLocation){
-        ArrayList listToModif=listeLocation;
-        if(listToModif.remove(aLocation)){
-            System.out.println("Element Suprimer");
-        }
-        else{
-            System.out.println("Il n'y a pas de tel location");
-        }
+    public void delLocation(int i){
+        listeLocation.remove(i);
     }
 
     // other

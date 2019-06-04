@@ -27,14 +27,8 @@ public class MenuClient {
 
     }
 
-    public void delClient(Client aClient){
-        ArrayList listToModif=listeClient;
-        if(listToModif.remove(aClient)){
-            System.out.println("Element Suprimer");
-        }
-        else{
-            System.out.println("Il n'y a pas de tel client");
-        }
+    public void delClient(int i){
+        listeClient.remove(i);
     }
 
     // other

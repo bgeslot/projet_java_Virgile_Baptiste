@@ -90,7 +90,7 @@ public class FenetreConsulterClient<a> implements ActionListener, ListSelectionL
         }
         else if (recup==boutonSupprimer)
         {
-
+            (main.menuClient).delClient(jList.getSelectedIndex());
         }
     }
 

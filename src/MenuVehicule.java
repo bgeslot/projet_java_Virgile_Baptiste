@@ -55,34 +55,16 @@ public class MenuVehicule {
     }
 
 
-    public void delVoiture(Voiture aVoiture){
-        ArrayList listToModif=listeVoiture;
-        if(listToModif.remove(aVoiture)){
-            System.out.println("Element Suprimer");
-        }
-        else{
-            System.out.println("Il n'y a pas de tel vehicule");
-        }
+    public void delVoiture(int i){
+        listeVoiture.remove(i);
     }
 
-    public void delMoto(Moto aMoto){
-        ArrayList listToModif=listeMoto;
-        if(listToModif.remove(aMoto)){
-            System.out.println("Element Suprimer");
-        }
-        else{
-            System.out.println("Il n'y a pas de tel vehicule");
-        }
+    public void delMoto(int i){
+        listeMoto.remove(i);
     }
 
-    public void delAvion(Avion aAvion){
-        ArrayList listToModif=listeAvion;
-        if(listToModif.remove(aAvion)){
-            System.out.println("Element Suprimer");
-        }
-        else{
-            System.out.println("Il n'y a pas de tel vehicule");
-        }
+    public void delAvion(int i){
+        listeAvion.remove(i);
     }
 
     // other
