@@ -129,9 +129,9 @@ public class FenetreNouvLocation implements ActionListener {
     public void actionPerformed(ActionEvent e) {
         JButton recup = (JButton) e.getSource();
         if (recup == boutonAjouter) {
-            //int i=main.menuLocation.getNewID();
-            //Location location=new Location(i,fieldDateDebut.getText(),fieldDuree.getText(),fieldKmPrevi.getText(),boxReduction.isSelected());
-            //main.menuLocation.addLocation(location);
+            int i=main.menuLocation.getNewID();
+            Location location=new Location(i,fieldDateDebut.getText(),fieldDuree.getText(),fieldKmPrevi.getText(),"a",boxReduction.isSelected());
+            main.menuLocation.addLocation(location);
             fenetre.dispose();
         } else if (recup == boutonAnnuler) {
             fenetre.dispose();

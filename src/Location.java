@@ -11,17 +11,13 @@ public class Location {
     private String PrixPrevu;
     private boolean reduction;
 
-    public Location Location(int numLocation/*,Vehicule newVehicule,Client newClient*/,String newDateDebut,String newDurre,String newKmPrevu,String newPrixPrevu,boolean newReduction){
-        Location newLocation= new Location();
-        this.numLocation=numLocation;
-       // newLocation.setVehicule(newVehicule);
-        //newLocation.setClient(newClient);
-        newLocation.setDataDebut(newDateDebut);
-        newLocation.setDateFin(newDurre);
-        newLocation.setKmPrevu(newKmPrevu);
-        newLocation.setPrixPrevu(newPrixPrevu);
-        newLocation.setReduction(newReduction);
-        return newLocation;
+    public Location(int numLocation, String dataDebut, String durre, String kmPrevu, String prixPrevu, boolean reduction) {
+        this.numLocation = numLocation;
+        this.dataDebut = dataDebut;
+        this.durre = durre;
+        this.kmPrevu = kmPrevu;
+        PrixPrevu = prixPrevu;
+        this.reduction = reduction;
     }
 
     //set
