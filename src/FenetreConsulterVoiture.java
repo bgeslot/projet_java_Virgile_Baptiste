@@ -48,6 +48,7 @@ public class FenetreConsulterVoiture implements ActionListener, ListSelectionLis
         String[] data=new String[length];
         data=getVoiture(main,data);
         jList= new JList(data);
+        JScrollPane scrollPane = new JScrollPane(jList);
         fenetre.setTitle("Consulter liste clients");
         fenetre.setContentPane(panel);
         fenetre.setLocationRelativeTo(null);

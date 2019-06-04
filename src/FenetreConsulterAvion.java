@@ -45,6 +45,7 @@ public class FenetreConsulterAvion implements ActionListener, ListSelectionListe
         String[] data=new String[length];
         data=getAvion(main,data);
         jList= new JList(data);
+        JScrollPane scrollPane = new JScrollPane(jList);
         fenetre.setTitle("Consulter liste clients");
         fenetre.setContentPane(panel);
         fenetre.setLocationRelativeTo(null);
