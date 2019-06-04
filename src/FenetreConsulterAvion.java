@@ -112,7 +112,7 @@ public class FenetreConsulterAvion implements ActionListener, ListSelectionListe
         }
         else if (recup==boutonSupprimer)
         {
-            (main.menuVehicule).delAvion(jList.getSelectedIndex());
+            main.menuVehicule.delAvion(jList.getSelectedIndex());
         }
     }
 
