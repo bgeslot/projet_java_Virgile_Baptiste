@@ -4,6 +4,8 @@ import javax.swing.event.DocumentListener;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.KeyAdapter;
+import java.awt.event.KeyEvent;
 
 public class FenetreNouvLocation implements ActionListener {
     private Main main;
@@ -52,15 +54,10 @@ public class FenetreNouvLocation implements ActionListener {
         fieldKmPrevi.setColumns(15);
         boutonAjouter.addActionListener(this);
         boutonAnnuler.addActionListener(this);
-        fieldDuree.getDocument().addDocumentListener(new DocumentListener() {
-            public void changedUpdate(DocumentEvent e) {
-                System.out.println("OUIIIIIIIIIII");
-            }
-
-            public void removeUpdate(DocumentEvent e) {
-            }
-
-            public void insertUpdate(DocumentEvent e) {
+        fieldDuree.addKeyListener(new KeyAdapter() {
+            public void keyReleased(KeyEvent e) {
+                JTextField textField = (JTextField) e.getSource();
+                String text = textField.getText();
             }
         });
         panel.setLayout(new GridLayout(9, 2));
