@@ -49,7 +49,7 @@ public class FenetreConsulterVoiture implements ActionListener, ListSelectionLis
         data=getVoiture(main,data);
         jList= new JList(data);
         JScrollPane scrollPane = new JScrollPane(jList);
-        fenetre.setTitle("Consulter liste clients");
+        fenetre.setTitle("Consulter liste Voitures");
         fenetre.setContentPane(panel);
         fenetre.setLocationRelativeTo(null);
         fenetre.setVisible(true);

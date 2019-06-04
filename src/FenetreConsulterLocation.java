@@ -45,7 +45,7 @@ public class FenetreConsulterLocation implements ActionListener, ListSelectionLi
 
         public FenetreConsulterLocation(Main m) {
             main = m;
-            fenetre.setTitle("Consulter liste clients");
+            fenetre.setTitle("Consulter liste locations");
             fenetre.setContentPane(panel);
             fenetre.setLocationRelativeTo(null);
             fenetre.setVisible(true);

@@ -17,7 +17,7 @@ public class FenetreConsulterVehicule implements ActionListener {
     public FenetreConsulterVehicule(Main m)
     {
         main=m;
-        fenetre.setTitle("Consulter véhicules");
+        fenetre.setTitle("Consulter liste véhicules");
         fenetre.setContentPane(panel);
         fenetre.setLocationRelativeTo(null);
         fenetre.setVisible(true);
