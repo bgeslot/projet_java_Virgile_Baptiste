@@ -28,7 +28,7 @@ public class FenetreConsulterAvion implements ActionListener, ListSelectionListe
     private JPanel panel81 = new JPanel();
     private JPanel panel82 = new JPanel();
     //String[] data = {"Location 1","Location 2","Location 3","Location 4","Location 5","Location 6","Location 7","Location 8","Location 9","Location 10","Location 11","Location 12","Location 13","Location 14","Location 15","Location 16","Location 17","Location 18"};
-    private JList<String> jList= new JList();//data);
+    private JList<String> jList= null;//data);
     private JScrollPane scrollPane = new JScrollPane(jList);
     private JLabel labelMarque = new JLabel("");
     private JLabel labelModele = new JLabel("");
