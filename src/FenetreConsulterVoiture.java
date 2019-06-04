@@ -120,6 +120,8 @@ public class FenetreConsulterVoiture implements ActionListener, ListSelectionLis
         else if (recup==boutonSupprimer)
         {
             main.menuVehicule.delVoiture(jList.getSelectedIndex());
+            new FenetreConsulterAvion(main);
+            fenetre.dispose();
         }
     }
 

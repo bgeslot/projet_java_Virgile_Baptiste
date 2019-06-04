@@ -115,6 +115,8 @@ public class FenetreConsulterMoto implements ActionListener, ListSelectionListen
         else if (recup==boutonSupprimer)
         {
             main.menuVehicule.delMoto(jList.getSelectedIndex());
+            new FenetreConsulterAvion(main);
+            fenetre.dispose();
         }
     }
 

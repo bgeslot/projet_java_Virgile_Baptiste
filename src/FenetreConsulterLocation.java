@@ -103,7 +103,8 @@ public class FenetreConsulterLocation implements ActionListener, ListSelectionLi
         }
         else if (recup==boutonSupprimer)
         {
-
+            new FenetreConsulterAvion(main);
+            fenetre.dispose();
         }
     }
 
