@@ -5,17 +5,17 @@ public class Location {
     private int numLocation;
     private Vehicule vehicule;
     private Client client;
-    private Calendar dataDebut;
-    private int durre;
-    private float kmPrevu;
-    private float PrixPrevu;
+    private String dataDebut;
+    private String durre;
+    private String kmPrevu;
+    private String PrixPrevu;
     private boolean reduction;
 
-    public Location Location(int newNumLocation,Vehicule newVehicule,Client newClient,Calendar newDateDebut,int newDurre,float newKmPrevu,float newPrixPrevu,boolean newReduction){
+    public Location Location(int numLocation/*,Vehicule newVehicule,Client newClient*/,String newDateDebut,String newDurre,String newKmPrevu,String newPrixPrevu,boolean newReduction){
         Location newLocation= new Location();
-        newLocation.setNumLocation(newNumLocation);
-        newLocation.setVehicule(newVehicule);
-        newLocation.setClient(newClient);
+        this.numLocation=numLocation;
+       // newLocation.setVehicule(newVehicule);
+        //newLocation.setClient(newClient);
         newLocation.setDataDebut(newDateDebut);
         newLocation.setDateFin(newDurre);
         newLocation.setKmPrevu(newKmPrevu);
@@ -31,15 +31,15 @@ public class Location {
         this.client = client;
     }
 
-    public void setDataDebut(Calendar dataDebut) {
+    public void setDataDebut(String dataDebut) {
         this.dataDebut = dataDebut;
     }
 
-    public void setDateFin(int durre) {
+    public void setDateFin(String durre) {
         this.durre = durre;
     }
 
-    public void setKmPrevu(float kmPrevu) {
+    public void setKmPrevu(String kmPrevu) {
         this.kmPrevu = kmPrevu;
     }
 
@@ -47,7 +47,7 @@ public class Location {
         this.numLocation = numLocation;
     }
 
-    public void setPrixPrevu(float prixPrevu) {
+    public void setPrixPrevu(String prixPrevu) {
         PrixPrevu = prixPrevu;
     }
 
@@ -62,11 +62,11 @@ public class Location {
     //get
 
 
-    public Calendar getDataDebut() {
+    public String getDataDebut() {
         return dataDebut;
     }
 
-    public int getDateFin() {
+    public String getDateFin() {
         return durre;
     }
 
@@ -74,11 +74,11 @@ public class Location {
         return client;
     }
 
-    public float getKmPrevu() {
+    public String getKmPrevu() {
         return kmPrevu;
     }
 
-    public float getPrixPrevu() {
+    public String getPrixPrevu() {
         return PrixPrevu;
     }
 

@@ -6,6 +6,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
+import java.util.Calendar;
 
 public class FenetreNouvLocation implements ActionListener {
     private Main main;
@@ -125,6 +126,9 @@ public class FenetreNouvLocation implements ActionListener {
     public void actionPerformed(ActionEvent e) {
         JButton recup = (JButton) e.getSource();
         if (recup == boutonAjouter) {
+            //int i=main.menuLocation.getNewID();
+            //Location location=new Location(i,fieldDateDebut.getText(),fieldDuree.getText(),fieldKmPrevi.getText(),boxReduction.isSelected());
+            //main.menuLocation.addLocation(location);
             fenetre.dispose();
         } else if (recup == boutonAnnuler) {
             fenetre.dispose();
