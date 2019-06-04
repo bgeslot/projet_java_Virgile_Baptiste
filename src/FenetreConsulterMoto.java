@@ -114,12 +114,22 @@ public class FenetreConsulterMoto implements ActionListener, ListSelectionListen
         }
         else if (recup==boutonSupprimer)
         {
-
+            main.menuVehicule.delMoto(jList.getSelectedIndex());
         }
     }
 
     @Override
     public void valueChanged(ListSelectionEvent e) {
-        int index=jList.getSelectedIndex();
+        int index = jList.getSelectedIndex();
+        System.out.println(index);
+        Moto moto = (Moto) main.menuVehicule.getListeMoto().get(index);
+        labelModele.setText(moto.getModele());
+        labelMarque.setText(moto.getMarque());
+        labelVitesseMax.setText(moto.getVitesseMax());
+        labelEtat.setText(moto.getEtat());
+        labelKm.setText(moto.getKm());
+        labelPuissance.setText(moto.getPuissance());
+        labelPrixLoc.setText(moto.getPrixLocationJour());
+        fenetre.pack();
     }
 }
