@@ -35,13 +35,9 @@ public class FenetreConsulterClient<a> implements ActionListener, ListSelectionL
 
     public FenetreConsulterClient(Main m) {
         main = m;
-        ArrayList listeClient;
-        listeClient = main.menuClient.getListeClient();
-        int length=listeClient.size();
+        int length=main.menuClient.getListeClient().size();
         String[] data=new String[length];
-        for(int i=0;i<length; i++){
-            data[i]=(((Client)(listeClient.get(i))).getNom()+" "+((Client)(listeClient.get(i))).getPrenom());
-        }
+        data=getClient(main,data);
         jList= new JList(data);
         JScrollPane scrollPane = new JScrollPane(jList);
         fenetre.setTitle("Consulter liste clients");
@@ -79,6 +75,18 @@ public class FenetreConsulterClient<a> implements ActionListener, ListSelectionL
         boutonAjouter.addActionListener(this);
         boutonSupprimer.addActionListener(this);
         fenetre.pack();
+    }
+
+    public String[] getClient(Main m,String[] data){
+        m=main;
+        ArrayList listeClient;
+        listeClient = main.menuClient.getListeClient();
+        int length=listeClient.size();
+        data=new String[length];
+        for(int i=0;i<length; i++){
+            data[i]=(((Client)(listeClient.get(i))).getNom()+" "+((Client)(listeClient.get(i))).getPrenom());
+        }
+        return data;
     }
 
     @Override
