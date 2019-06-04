@@ -41,7 +41,7 @@ public class FenetreConsulterAvion implements ActionListener, ListSelectionListe
     private JButton boutonSupprimer = new JButton("Supprimer");
     public FenetreConsulterAvion(Main m) {
         main = m;
-        int length=main.menuClient.getListeClient().size();
+        int length=main.menuVehicule.getListeAvion().size();
         String[] data=new String[length];
         data=getAvion(main,data);
         jList= new JList(data);
