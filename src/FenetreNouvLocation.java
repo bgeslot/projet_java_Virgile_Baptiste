@@ -3,14 +3,17 @@ import java.awt.*;
 
 public class FenetreNouvLocation {
     private Main main;
+    private Vehicule vehicule;
     private JFrame fenetre = new JFrame();
     private JPanel panel = new JPanel();
+    private JLabel labelPrix = new JLabel();
     private JComboBox jComboBox;
     private JTextField fieldDateDebut=new JTextField();
-    private JTextField fieldDateFin=new JTextField();
+    private JTextField fieldDuree=new JTextField();
     private JTextField fieldKmPrevi=new JTextField();
-    private JTextField fieldPrixPrevi=new JTextField();
-    private JCheckBox reduction=new JCheckBox();
+    private JCheckBox boxReduction=new JCheckBox();
+    private JButton boutonAjouter = new JButton("Ajouter");
+    private JButton boutonAnnuler = new JButton("Annuler");
     private JPanel panel11=new JPanel();
     private JPanel panel12=new JPanel();
     private JPanel panel21=new JPanel();
@@ -32,13 +35,17 @@ public class FenetreNouvLocation {
 
     String[] clients={"Client 0","Client 1","Client 2","Client 3","Client 4","Client 5","Client 6"};
 
-    public FenetreNouvLocation(Main m,Vehicule vehicule) {
-        main = m;
+    public FenetreNouvLocation(Main main,Vehicule vehicule) {
+        this.main = main;
+        this.vehicule=vehicule;
         fenetre.setTitle("Nouvelle location");
         fenetre.setLocationRelativeTo(null);
         fenetre.setVisible(true);
         fenetre.setContentPane(panel);
         jComboBox = new JComboBox(clients);
+        fieldDateDebut.setColumns(15);
+        fieldDuree.setColumns(15);
+        fieldKmPrevi.setColumns(15);
         panel.setLayout(new GridLayout(9,2));
         panel.add(panel11);
         panel.add(panel12);
@@ -57,26 +64,26 @@ public class FenetreNouvLocation {
         panel.add(panel81);
         panel.add(panel82);
         panel.add(panel91);
-        panel.add(panel92);/*
-        panel11.add();
-        panel12.add();
-        panel21.add();
-        panel22.add();
-        panel31.add();
-        panel32.add();
-        panel41.add();
-        panel42.add();
-        panel51.add();
-        panel52.add();
-        panel61.add();
-        panel62.add();
-        panel71.add();
-        panel72.add();
-        panel81.add();
-        panel82.add();
-        panel91.add();
-        panel92.add();
-        */
+        panel.add(panel92);
+        panel11.add(new JLabel("Location de :"));
+        panel12.add(new JLabel(vehicule.getMarque()+" "+vehicule.getMarque()));
+        panel21.add(new JLabel("Numéro de Location :"));
+        panel22.add(new JLabel(""));
+        panel31.add(new JLabel("Client :"));
+        panel32.add(jComboBox);
+        panel41.add(new JLabel("Date de début :"));
+        panel42.add(fieldDateDebut);
+        panel51.add(new JLabel("Durée (en jours) :"));
+        panel52.add(fieldDuree);
+        panel61.add(new JLabel("Km prévisionnels :"));
+        panel62.add(fieldKmPrevi);
+        panel71.add(new JLabel("Réduction :"));
+        panel72.add(boxReduction);
+        panel81.add(new JLabel("Prix prévisionnel :"));
+        panel82.add(labelPrix);
+        panel91.add(boutonAjouter);
+        panel92.add(boutonAnnuler);
+
         fenetre.pack();
     }
 }

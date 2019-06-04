@@ -64,7 +64,7 @@ public class FenetreMain implements ActionListener {
         else if (recup==boutonNouvLocation)
         {
             System.out.println("Nombre de Clients : "+main.menuClient.getListeClient().size());
-            new FenetreNouvLocation(main,new Avion("","","","","","",""));
+            new FenetreNouvLocation(main,new Avion("Airbus","A380","","","","",""));
         }
         else if (recup==boutonConsulterLocation)
         {
