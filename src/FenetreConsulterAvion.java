@@ -36,7 +36,7 @@ public class FenetreConsulterAvion implements ActionListener, ListSelectionListe
     private JLabel labelEtat = new JLabel("");
     private JLabel labelNbHeureVol = new JLabel("");
     private JLabel labelNbMoteur = new JLabel("");
-    private JButton boutonRendre = new JButton("Rendre");
+    private JButton boutonAjouter = new JButton("Ajouter");
     private JButton boutonSupprimer = new JButton("Supprimer");
     public FenetreConsulterAvion(Main m) {
         main = m;
@@ -77,7 +77,7 @@ public class FenetreConsulterAvion implements ActionListener, ListSelectionListe
         panel62.add(labelNbHeureVol);
         panel71.add(new JLabel("Nb de moteurs :"));
         panel72.add(labelNbMoteur);
-        panel81.add(boutonRendre);
+        panel81.add(boutonAjouter);
         panel82.add(boutonSupprimer);
         jList.addListSelectionListener(this);
         boutonSupprimer.addActionListener(this);
@@ -87,7 +87,15 @@ public class FenetreConsulterAvion implements ActionListener, ListSelectionListe
 
     @Override
     public void actionPerformed(ActionEvent e) {
-
+        JButton recup = (JButton) e.getSource();
+        if (recup==boutonAjouter)
+        {
+            new FenetreNouvAvion(main);
+        }
+        else if (recup==boutonSupprimer)
+        {
+            (main.menuVehicule).delAvion(jList.getSelectedIndex());
+        }
     }
 
     @Override
