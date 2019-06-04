@@ -6,18 +6,18 @@ public class Location {
     private Vehicule vehicule;
     private Client client;
     private Calendar dataDebut;
-    private Calendar dateFin;
+    private int durre;
     private float kmPrevu;
     private float PrixPrevu;
     private boolean reduction;
 
-    public Location Location(int newNumLocation,Vehicule newVehicule,Client newClient,Calendar newDateDebut,Calendar newDateFin,float newKmPrevu,float newPrixPrevu,boolean newReduction){
+    public Location Location(int newNumLocation,Vehicule newVehicule,Client newClient,Calendar newDateDebut,int newDurre,float newKmPrevu,float newPrixPrevu,boolean newReduction){
         Location newLocation= new Location();
         newLocation.setNumLocation(newNumLocation);
         newLocation.setVehicule(newVehicule);
         newLocation.setClient(newClient);
         newLocation.setDataDebut(newDateDebut);
-        newLocation.setDateFin(newDateFin);
+        newLocation.setDateFin(newDurre);
         newLocation.setKmPrevu(newKmPrevu);
         newLocation.setPrixPrevu(newPrixPrevu);
         newLocation.setReduction(newReduction);
@@ -35,8 +35,8 @@ public class Location {
         this.dataDebut = dataDebut;
     }
 
-    public void setDateFin(Calendar dateFin) {
-        this.dateFin = dateFin;
+    public void setDateFin(int durre) {
+        this.durre = durre;
     }
 
     public void setKmPrevu(float kmPrevu) {
@@ -66,8 +66,8 @@ public class Location {
         return dataDebut;
     }
 
-    public Calendar getDateFin() {
-        return dateFin;
+    public int getDateFin() {
+        return durre;
     }
 
     public Client getClient() {
