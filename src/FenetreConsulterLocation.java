@@ -4,6 +4,7 @@ import javax.swing.event.ListSelectionListener;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
 
 public class FenetreConsulterLocation implements ActionListener, ListSelectionListener
 {
@@ -29,8 +30,9 @@ public class FenetreConsulterLocation implements ActionListener, ListSelectionLi
         private JPanel panel82 = new JPanel();
         private JPanel panel91 = new JPanel();
         private JPanel panel92 = new JPanel();
-        String[] data = {"Location 1","Location 2","Location 3","Location 4","Location 5","Location 6","Location 7","Location 8","Location 9","Location 10","Location 11","Location 12","Location 13","Location 14","Location 15","Location 16","Location 17","Location 18"};
-        private JList<String> jList= new JList(data);
+        //String[] data = {"Location 1","Location 2","Location 3","Location 4","Location 5","Location 6","Location 7","Location 8","Location 9","Location 10","Location 11","Location 12","Location 13","Location 14","Location 15","Location 16","Location 17","Location 18"};
+        //private JList<String> jList= new JList(data);
+        private JList<String> jList= null;//data);
         private JScrollPane scrollPane = new JScrollPane(jList);
         private JLabel labelNumLoc = new JLabel("");
         private JLabel labelVehicule = new JLabel("");
@@ -45,6 +47,10 @@ public class FenetreConsulterLocation implements ActionListener, ListSelectionLi
 
         public FenetreConsulterLocation(Main m) {
             main = m;
+            int length=main.menuLocation.getListeLocation().size();
+            String[] data=new String[length];
+            data=getLocation(main,data);
+            jList= new JList(data);
             fenetre.setTitle("Consulter liste locations");
             fenetre.setContentPane(panel);
             fenetre.setLocationRelativeTo(null);
@@ -96,6 +102,18 @@ public class FenetreConsulterLocation implements ActionListener, ListSelectionLi
             Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
             fenetre.setLocation(screenSize.width/2-windowSize.width/2,screenSize.height/2-windowSize.height/2);
         }
+
+    public String[] getLocation(Main m,String[] data){
+        m=main;
+        ArrayList listeLocation;
+        listeLocation = main.menuLocation.getListeLocation();
+        int length=listeLocation.size();
+        data=new String[length];
+        for(int i=0;i<length; i++) {
+            data[i] = String.valueOf(((Location)listeLocation.get(i)).getNumLocation());
+        }
+        return data;
+    }
 
     @Override
     public void actionPerformed(ActionEvent e) {
