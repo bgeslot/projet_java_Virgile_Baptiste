@@ -29,9 +29,10 @@ public class FenetreConsulterVoiture implements ActionListener, ListSelectionLis
     private JPanel panel82 = new JPanel();
     private JPanel panel91 = new JPanel();
     private JPanel panel92 = new JPanel();
-//    String[] data = {"Voiture 1","Voiture 2","Voiture 3","Voiture 4","Voiture 5","Voiture 6","Voiture 7","Voiture 8","Voiture 9","Voiture 10","Voiture 11","Voiture 12","Voiture 13","Voiture 14","Voiture 15","Voiture 16","Voiture 17","Voiture 18"};
-    private JList<String> jList= null;//data);
-    private JScrollPane scrollPane = new JScrollPane(jList);
+    private JPanel panel101 = new JPanel();
+    private JPanel panel102 = new JPanel();
+    private JList<String> jList;
+    private JScrollPane scrollPane;
     private JLabel labelMarque = new JLabel("");
     private JLabel labelModele = new JLabel("");
     private JLabel labelVitesseMax = new JLabel("");
@@ -40,8 +41,10 @@ public class FenetreConsulterVoiture implements ActionListener, ListSelectionLis
     private JLabel labelKm = new JLabel("");
     private JLabel labelPuissance = new JLabel("");
     private JLabel labelNbPlace = new JLabel("");
-    private JButton boutonRendre = new JButton("Rendre");
+    private JButton boutonAjouter = new JButton("Ajouter");
     private JButton boutonSupprimer = new JButton("Supprimer");
+    private JButton boutonLouer = new JButton("Louer");
+    private JButton boutonModifier = new JButton("Supprimer");
     public FenetreConsulterVoiture(Main m) {
         main = m;
         int length=main.menuVehicule.getListeVoiture().size();
@@ -49,7 +52,7 @@ public class FenetreConsulterVoiture implements ActionListener, ListSelectionLis
         data=getVoiture(main,data);
         jList= new JList(data);
         jList.setSelectionMode(ListSelectionModel.SINGLE_SELECTION );
-        JScrollPane scrollPane = new JScrollPane(jList);
+        scrollPane = new JScrollPane(jList);
         scrollPane.setPreferredSize(new Dimension(200,400));
         fenetre.setTitle("Consulter liste Voitures");
         fenetre.setContentPane(panel);
@@ -57,7 +60,7 @@ public class FenetreConsulterVoiture implements ActionListener, ListSelectionLis
         fenetre.setVisible(true);
         panel.add(scrollPane);
         panel.add(panelDroite);
-        panelDroite.setLayout(new GridLayout(9, 2));
+        panelDroite.setLayout(new GridLayout(10, 2));
         panelDroite.add(panel11);
         panelDroite.add(panel12);
         panelDroite.add(panel21);
@@ -76,6 +79,8 @@ public class FenetreConsulterVoiture implements ActionListener, ListSelectionLis
         panelDroite.add(panel82);
         panelDroite.add(panel91);
         panelDroite.add(panel92);
+        panelDroite.add(panel101);
+        panelDroite.add(panel102);
         panel11.add(new JLabel("Marque :"));
         panel12.add(labelMarque);
         panel21.add(new JLabel("Modèle :"));
@@ -92,10 +97,14 @@ public class FenetreConsulterVoiture implements ActionListener, ListSelectionLis
         panel72.add(labelPuissance);
         panel81.add(new JLabel("Nb de places :"));
         panel82.add(labelNbPlace);
-        panel91.add(boutonRendre);
+        panel91.add(boutonLouer);
         panel92.add(boutonSupprimer);
+        panel101.add(boutonModifier);
+        panel102.add(boutonAjouter);
         jList.addListSelectionListener(this);
-        boutonRendre.addActionListener(this);
+        boutonLouer.addActionListener(this);
+        boutonSupprimer.addActionListener(this);
+        boutonLouer.addActionListener(this);
         boutonSupprimer.addActionListener(this);
         fenetre.pack();
         Dimension windowSize = fenetre.getSize();
@@ -118,7 +127,7 @@ public class FenetreConsulterVoiture implements ActionListener, ListSelectionLis
     @Override
     public void actionPerformed(ActionEvent e) {
         JButton recup = (JButton) e.getSource();
-        if (recup==boutonRendre)
+        if (recup==boutonAjouter)
         {
             new FenetreNouvVoiture(main);
         }
@@ -131,6 +140,14 @@ public class FenetreConsulterVoiture implements ActionListener, ListSelectionLis
             }
             main.fenetreConsulterVoiture = new FenetreConsulterVoiture(main);
             fenetre.dispose();
+        }
+        else if (recup==boutonLouer)
+        {
+            new FenetreNouvLocation(main,(Voiture) main.menuVehicule.getListeVoiture().get(jList.getSelectedIndex()));
+        }
+        else if (recup==boutonModifier)
+        {
+
         }
     }
 
