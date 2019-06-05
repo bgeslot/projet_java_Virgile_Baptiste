@@ -45,9 +45,9 @@ public class FenetreConsulterLocation implements ActionListener, ListSelectionLi
         private JButton boutonRendre = new JButton("Rendre");
         private JButton boutonSupprimer = new JButton("Supprimer");
 
-        public FenetreConsulterLocation(Main m) {
-            main = m;
-            int length=main.menuLocation.getListeLocation().size();
+        public FenetreConsulterLocation(Main main) {
+            this.main = main;
+            int length=main.menuLocation.listeLocation.size();
             String[] data=new String[length];
             data=getLocation(data);
             jList= new JList(data);

@@ -1,14 +1,12 @@
 import java.util.ArrayList;
 
 public class MenuLocation {
-    private ArrayList listeLocation;
+    public ArrayList listeLocation;
     private int numLocaMin;
 
-    public MenuLocation MenuLocation(){
-        MenuLocation newMenu=new MenuLocation();
-        newMenu.setListeLocation(new ArrayList());
+    public MenuLocation(){
+        this.setListeLocation(new ArrayList());
         numLocaMin=0;
-        return newMenu;
     }
 
     //set
