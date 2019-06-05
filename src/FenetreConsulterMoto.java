@@ -47,7 +47,7 @@ public class FenetreConsulterMoto implements ActionListener, ListSelectionListen
         main = m;
         int length=main.menuVehicule.getListeMoto().size();
         String[] data=new String[length];
-        data=getMoto(main,data);
+        data=getMoto(data);
         jList= new JList(data);
         jList.setSelectionMode(ListSelectionModel.SINGLE_SELECTION );
         scrollPane = new JScrollPane(jList);
@@ -106,8 +106,7 @@ public class FenetreConsulterMoto implements ActionListener, ListSelectionListen
         fenetre.setLocation(screenSize.width/2-windowSize.width/2,screenSize.height/2-windowSize.height/2);
     }
 
-    public String[] getMoto(Main m,String[] data){
-        m=main;
+    public String[] getMoto(String[] data){
         ArrayList listeMoto;
         listeMoto = main.menuVehicule.getListeMoto();
         int length=listeMoto.size();
@@ -129,12 +128,12 @@ public class FenetreConsulterMoto implements ActionListener, ListSelectionListen
         else if (recup==boutonSupprimer)
         {
             main.menuVehicule.delMoto(jList.getSelectedIndex());
-            new FenetreConsulterAvion(main);
+            main.fenetreConsulterMoto = new FenetreConsulterMoto(main);
             fenetre.dispose();
         }
-        else if (recup==boutonLouer)
+        else if (recup==boutonAjouter)
         {
-            new FenetreNouvLocation(main,(Moto) main.menuVehicule.getListeMoto().get(jList.getSelectedIndex()));
+            new FenetreNouvMoto(main);
         }
         else if (recup==boutonModifier)
         {

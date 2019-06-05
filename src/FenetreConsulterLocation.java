@@ -55,6 +55,7 @@ public class FenetreConsulterLocation implements ActionListener, ListSelectionLi
             fenetre.setLocationRelativeTo(null);
             fenetre.setVisible(true);
             panel.add(scrollPane);
+            scrollPane.setPreferredSize(new Dimension(200,400));
             panel.add(panelDroite);
             panelDroite.setLayout(new GridLayout(10,2));
             panelDroite.add(panel11);
@@ -95,7 +96,7 @@ public class FenetreConsulterLocation implements ActionListener, ListSelectionLi
             panel92.add(boutonSupprimer);
             jList.addListSelectionListener(this);
             boutonSupprimer.addActionListener(this);
-            boutonSupprimer.addActionListener(this);
+            boutonRendre.addActionListener(this);
             fenetre.pack();
             Dimension windowSize = fenetre.getSize();
             Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
@@ -122,7 +123,8 @@ public class FenetreConsulterLocation implements ActionListener, ListSelectionLi
         }
         else if (recup==boutonSupprimer)
         {
-            new FenetreConsulterAvion(main);
+            main.menuLocation.delLocation(jList.getSelectedIndex());
+            main.fenetreConsulterLocation = new FenetreConsulterLocation(main);
             fenetre.dispose();
         }
     }
