@@ -11,5 +11,10 @@ public class Main {
     {
         Main main=new Main();
         new FenetreMain(main);
+        //serializationClient((main.getMenuClient()).getListeClient());
+    }
+
+    public MenuClient getMenuClient() {
+        return menuClient;
     }
 }
