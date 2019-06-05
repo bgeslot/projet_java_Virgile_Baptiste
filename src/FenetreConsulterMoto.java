@@ -46,6 +46,7 @@ public class FenetreConsulterMoto implements ActionListener, ListSelectionListen
         String[] data=new String[length];
         data=getMoto(main,data);
         jList= new JList(data);
+        jList.setSelectionMode(ListSelectionModel.SINGLE_SELECTION );
         JScrollPane scrollPane = new JScrollPane(jList);
         scrollPane.setPreferredSize(new Dimension(200,400));
         fenetre.setTitle("Consulter liste motos");

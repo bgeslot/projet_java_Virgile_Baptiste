@@ -12,8 +12,8 @@ public class FenetreConsulterVehicule implements ActionListener {
     private JPanel panel3 = new JPanel();
     private JPanel panel4 = new JPanel();
     private JButton boutonVoiture = new JButton("Voiture");
-    private JButton boutonMoto = new JButton("Moto");
-    private JButton boutonAvion = new JButton("Avion");
+    private JButton boutonMoto = new JButton("  Moto  ");
+    private JButton boutonAvion = new JButton("  Avion ");
     public FenetreConsulterVehicule(Main m)
     {
         main=m;

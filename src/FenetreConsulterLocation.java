@@ -49,8 +49,9 @@ public class FenetreConsulterLocation implements ActionListener, ListSelectionLi
             main = m;
             int length=main.menuLocation.getListeLocation().size();
             String[] data=new String[length];
-            data=getLocation(main,data);
+            data=getLocation(data);
             jList= new JList(data);
+            jList.setSelectionMode(ListSelectionModel.SINGLE_SELECTION );
             fenetre.setTitle("Consulter liste locations");
             fenetre.setContentPane(panel);
             fenetre.setLocationRelativeTo(null);
@@ -103,8 +104,7 @@ public class FenetreConsulterLocation implements ActionListener, ListSelectionLi
             fenetre.setLocation(screenSize.width/2-windowSize.width/2,screenSize.height/2-windowSize.height/2);
         }
 
-    public String[] getLocation(Main m,String[] data){
-        m=main;
+    public String[] getLocation(String[] data){
         ArrayList listeLocation;
         listeLocation = main.menuLocation.getListeLocation();
         int length=listeLocation.size();

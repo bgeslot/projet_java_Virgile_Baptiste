@@ -39,6 +39,7 @@ public class FenetreConsulterClient<a> implements ActionListener, ListSelectionL
         String[] data=new String[length];
         data=getClient(data);
         jList= new JList(data);
+        jList.setSelectionMode(ListSelectionModel.SINGLE_SELECTION );
         JScrollPane scrollPane = new JScrollPane(jList);
         scrollPane.setPreferredSize(new Dimension(200,400));
         fenetre.setTitle("Consulter liste clients");
