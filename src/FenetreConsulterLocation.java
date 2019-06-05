@@ -30,9 +30,7 @@ public class FenetreConsulterLocation implements ActionListener, ListSelectionLi
         private JPanel panel82 = new JPanel();
         private JPanel panel91 = new JPanel();
         private JPanel panel92 = new JPanel();
-        //String[] data = {"Location 1","Location 2","Location 3","Location 4","Location 5","Location 6","Location 7","Location 8","Location 9","Location 10","Location 11","Location 12","Location 13","Location 14","Location 15","Location 16","Location 17","Location 18"};
-        //private JList<String> jList= new JList(data);
-        private JList<String> jList= null;//data);
+        private JList<String> jList;
         private JScrollPane scrollPane = new JScrollPane(jList);
         private JLabel labelNumLoc = new JLabel("");
         private JLabel labelVehicule = new JLabel("");
@@ -41,9 +39,9 @@ public class FenetreConsulterLocation implements ActionListener, ListSelectionLi
         private JLabel labelDateFin = new JLabel("");
         private JLabel labelKmPrevi = new JLabel("");
         private JLabel labelPrixPrevi = new JLabel("");
-        private JLabel labelReduction = new JLabel("");
         private JButton boutonRendre = new JButton("Rendre");
         private JButton boutonSupprimer = new JButton("Supprimer");
+
 
         public FenetreConsulterLocation(Main main) {
             this.main = main;
@@ -58,7 +56,7 @@ public class FenetreConsulterLocation implements ActionListener, ListSelectionLi
             fenetre.setVisible(true);
             panel.add(scrollPane);
             panel.add(panelDroite);
-            panelDroite.setLayout(new GridLayout(9,2));
+            panelDroite.setLayout(new GridLayout(10,2));
             panelDroite.add(panel11);
             panelDroite.add(panel12);
             panelDroite.add(panel21);

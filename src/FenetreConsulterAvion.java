@@ -27,6 +27,8 @@ public class FenetreConsulterAvion implements ActionListener, ListSelectionListe
     private JPanel panel72 = new JPanel();
     private JPanel panel81 = new JPanel();
     private JPanel panel82 = new JPanel();
+    private JPanel panel91 = new JPanel();
+    private JPanel panel92 = new JPanel();
     //String[] data = {"Location 1","Location 2","Location 3","Location 4","Location 5","Location 6","Location 7","Location 8","Location 9","Location 10","Location 11","Location 12","Location 13","Location 14","Location 15","Location 16","Location 17","Location 18"};
     private JList<String> jList= null;//data);
     private JScrollPane scrollPane = new JScrollPane(jList);
@@ -39,6 +41,8 @@ public class FenetreConsulterAvion implements ActionListener, ListSelectionListe
     private JLabel labelNbMoteur = new JLabel("");
     private JButton boutonAjouter = new JButton("Ajouter");
     private JButton boutonSupprimer = new JButton("Supprimer");
+    private JButton boutonModifier = new JButton("Supprimer");
+    private JButton boutonLouer = new JButton("Supprimer");
     public FenetreConsulterAvion(Main m) {
         main = m;
         int length=main.menuVehicule.getListeAvion().size();
@@ -54,7 +58,7 @@ public class FenetreConsulterAvion implements ActionListener, ListSelectionListe
         fenetre.setVisible(true);
         panel.add(scrollPane);
         panel.add(panelDroite);
-        panelDroite.setLayout(new GridLayout(8, 2));
+        panelDroite.setLayout(new GridLayout(9, 2));
         panelDroite.add(panel11);
         panelDroite.add(panel12);
         panelDroite.add(panel21);
@@ -71,6 +75,8 @@ public class FenetreConsulterAvion implements ActionListener, ListSelectionListe
         panelDroite.add(panel72);
         panelDroite.add(panel81);
         panelDroite.add(panel82);
+        panelDroite.add(panel91);
+        panelDroite.add(panel92);
         panel11.add(new JLabel("Marque :"));
         panel12.add(labelMarque);
         panel21.add(new JLabel("Modèle :"));
@@ -87,6 +93,8 @@ public class FenetreConsulterAvion implements ActionListener, ListSelectionListe
         panel72.add(labelNbMoteur);
         panel81.add(boutonAjouter);
         panel82.add(boutonSupprimer);
+        panel91.add(boutonModifier);
+        panel92.add(boutonLouer);
         jList.addListSelectionListener(this);
         boutonSupprimer.addActionListener(this);
         boutonAjouter.addActionListener(this);
@@ -124,6 +132,14 @@ public class FenetreConsulterAvion implements ActionListener, ListSelectionListe
             }
             main.fenetreConsulterAvion = new FenetreConsulterAvion(main);
             fenetre.dispose();
+        }
+        else if (recup==boutonLouer)
+        {
+            new FenetreNouvLocation(main,(Avion) main.menuVehicule.getListeAvion().get(jList.getSelectedIndex()));
+        }
+        else if (recup==boutonModifier)
+        {
+
         }
     }
 

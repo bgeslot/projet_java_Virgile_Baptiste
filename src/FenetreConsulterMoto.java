@@ -27,8 +27,9 @@ public class FenetreConsulterMoto implements ActionListener, ListSelectionListen
     private JPanel panel72 = new JPanel();
     private JPanel panel81 = new JPanel();
     private JPanel panel82 = new JPanel();
-    //String[] data = {"Location 1","Location 2","Location 3","Location 4","Location 5","Location 6","Location 7","Location 8","Location 9","Location 10","Location 11","Location 12","Location 13","Location 14","Location 15","Location 16","Location 17","Location 18"};
-    private JList<String> jList= null;//data);
+    private JPanel panel91 = new JPanel();
+    private JPanel panel92 = new JPanel();
+    private JList<String> jList= null;
     private JScrollPane scrollPane = new JScrollPane(jList);
     private JLabel labelMarque = new JLabel("");
     private JLabel labelModele = new JLabel("");
@@ -37,8 +38,10 @@ public class FenetreConsulterMoto implements ActionListener, ListSelectionListen
     private JLabel labelEtat = new JLabel("");
     private JLabel labelKm = new JLabel("");
     private JLabel labelPuissance = new JLabel("");
-    private JButton boutonLouer = new JButton("Louer");
+    private JButton boutonAjouter = new JButton("Ajouter");
     private JButton boutonSupprimer = new JButton("Supprimer");
+    private JButton boutonLouer = new JButton("Louer");
+    private JButton boutonModifier = new JButton("Modifier");
 
     public FenetreConsulterMoto(Main m) {
         main = m;
@@ -55,7 +58,7 @@ public class FenetreConsulterMoto implements ActionListener, ListSelectionListen
         fenetre.setVisible(true);
         panel.add(scrollPane);
         panel.add(panelDroite);
-        panelDroite.setLayout(new GridLayout(8, 2));
+        panelDroite.setLayout(new GridLayout(9, 2));
         panelDroite.add(panel11);
         panelDroite.add(panel12);
         panelDroite.add(panel21);
@@ -72,6 +75,8 @@ public class FenetreConsulterMoto implements ActionListener, ListSelectionListen
         panelDroite.add(panel72);
         panelDroite.add(panel81);
         panelDroite.add(panel82);
+        panelDroite.add(panel91);
+        panelDroite.add(panel92);
         panel11.add(new JLabel("Marque :"));
         panel12.add(labelMarque);
         panel21.add(new JLabel("Modèle :"));
@@ -86,11 +91,15 @@ public class FenetreConsulterMoto implements ActionListener, ListSelectionListen
         panel62.add(labelKm);
         panel71.add(new JLabel("Puissance :"));
         panel72.add(labelPuissance);
-        panel81.add(boutonLouer);
+        panel81.add(boutonAjouter);
         panel82.add(boutonSupprimer);
+        panel91.add(boutonLouer);
+        panel92.add(boutonModifier);
         jList.addListSelectionListener(this);
         boutonLouer.addActionListener(this);
         boutonSupprimer.addActionListener(this);
+        boutonAjouter.addActionListener(this);
+        boutonModifier.addActionListener(this);
         fenetre.pack();
         Dimension windowSize = fenetre.getSize();
         Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
@@ -122,6 +131,14 @@ public class FenetreConsulterMoto implements ActionListener, ListSelectionListen
             main.menuVehicule.delMoto(jList.getSelectedIndex());
             new FenetreConsulterAvion(main);
             fenetre.dispose();
+        }
+        else if (recup==boutonLouer)
+        {
+            new FenetreNouvLocation(main,(Moto) main.menuVehicule.getListeMoto().get(jList.getSelectedIndex()));
+        }
+        else if (recup==boutonModifier)
+        {
+
         }
     }
 
