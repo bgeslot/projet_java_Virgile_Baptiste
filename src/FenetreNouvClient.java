@@ -4,7 +4,6 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.util.Calendar;
 
 public class FenetreNouvClient implements ActionListener {
     private Main main;
@@ -28,10 +27,10 @@ public class FenetreNouvClient implements ActionListener {
     private JTextField fieldAdresseMail = new JTextField();
     private JTextField fieldNumeroTelephone = new JTextField();
     private JButton boutonAjouter = new JButton("Ajouter");
-    private JButton boutonReset = new JButton("Reset");
+    private JButton boutonAnnuler = new JButton("Annuler");
 
-    public FenetreNouvClient(Main m) {
-        main=m;
+    public FenetreNouvClient(Main main) {
+        this.main=main;
         fenetre.setTitle("Ajout client");
         fenetre.setLocationRelativeTo(null);
         fenetre.setVisible(true);
@@ -60,15 +59,14 @@ public class FenetreNouvClient implements ActionListener {
         panel51.add(new Label("Numéro de téléphone :"));
         panel52.add(fieldNumeroTelephone);
         panel61.add(boutonAjouter);
-        panel62.add(boutonReset);
+        panel62.add(boutonAnnuler);
         fieldNom.setColumns(15);
         fieldAdresseMail.setColumns(15);
         fieldDateDeNaissance.setColumns(15);
         fieldNumeroTelephone.setColumns(15);
         fieldPrenom.setColumns(15);
         boutonAjouter.addActionListener(this);
-        boutonReset.addActionListener(this);
-
+        boutonAnnuler.addActionListener(this);
         fenetre.pack();
         Dimension windowSize = fenetre.getSize();
         Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
@@ -89,7 +87,7 @@ public class FenetreNouvClient implements ActionListener {
             main.fenetreConsulterClient = new FenetreConsulterClient(main);
             fenetre.dispose();
         }
-        else if (recup==boutonReset)
+        else if (recup==boutonAnnuler)
         {
             fieldPrenom.setText("");
             fieldNumeroTelephone.setText("");
