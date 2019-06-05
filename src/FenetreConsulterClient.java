@@ -8,7 +8,7 @@ import java.util.ArrayList;
 
 public class FenetreConsulterClient<a> implements ActionListener, ListSelectionListener {
     private Main main;
-    private JFrame fenetre = new JFrame();
+    public JFrame fenetre = new JFrame();
     private JPanel panel = new JPanel();
     private JPanel panelDroite = new JPanel();
     private JPanel panel11 = new JPanel();
@@ -37,7 +37,7 @@ public class FenetreConsulterClient<a> implements ActionListener, ListSelectionL
         main = m;
         int length=main.menuClient.getListeClient().size();
         String[] data=new String[length];
-        data=getClient(main,data);
+        data=getClient(data);
         jList= new JList(data);
         JScrollPane scrollPane = new JScrollPane(jList);
         scrollPane.setPreferredSize(new Dimension(200,400));
@@ -81,8 +81,7 @@ public class FenetreConsulterClient<a> implements ActionListener, ListSelectionL
         fenetre.setLocation(screenSize.width/2-windowSize.width/2,screenSize.height/2-windowSize.height/2);
     }
 
-    public String[] getClient(Main m,String[] data){
-        m=main;
+    public String[] getClient(String[] data){
         ArrayList listeClient;
         listeClient = main.menuClient.getListeClient();
         int length=listeClient.size();

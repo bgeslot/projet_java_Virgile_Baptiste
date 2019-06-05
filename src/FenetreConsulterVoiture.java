@@ -8,7 +8,7 @@ import java.util.ArrayList;
 
 public class FenetreConsulterVoiture implements ActionListener, ListSelectionListener {
     private Main main;
-    private JFrame fenetre = new JFrame();
+    public JFrame fenetre = new JFrame();
     private JPanel panel = new JPanel();
     private JPanel panelDroite = new JPanel();
     private JPanel panel11 = new JPanel();
@@ -97,6 +97,9 @@ public class FenetreConsulterVoiture implements ActionListener, ListSelectionLis
         boutonRendre.addActionListener(this);
         boutonSupprimer.addActionListener(this);
         fenetre.pack();
+        Dimension windowSize = fenetre.getSize();
+        Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
+        fenetre.setLocation(screenSize.width/2-windowSize.width/2,screenSize.height/2-windowSize.height/2);
     }
 
     public String[] getVoiture(Main m,String[] data){
@@ -121,11 +124,12 @@ public class FenetreConsulterVoiture implements ActionListener, ListSelectionLis
         else if (recup==boutonSupprimer)
         {
             main.menuVehicule.delVoiture(jList.getSelectedIndex());
-            new FenetreConsulterAvion(main);
+            if (main.fenetreConsulterVoiture!=null)
+            {
+                main.fenetreConsulterVoiture.fenetre.dispose();
+            }
+            main.fenetreConsulterVoiture = new FenetreConsulterVoiture(main);
             fenetre.dispose();
-            Dimension windowSize = fenetre.getSize();
-            Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
-            fenetre.setLocation(screenSize.width/2-windowSize.width/2,screenSize.height/2-windowSize.height/2);
         }
     }
 

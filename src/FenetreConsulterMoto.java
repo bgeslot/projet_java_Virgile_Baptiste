@@ -8,7 +8,7 @@ import java.util.ArrayList;
 
 public class FenetreConsulterMoto implements ActionListener, ListSelectionListener {
     private Main main;
-    private JFrame fenetre = new JFrame();
+    public JFrame fenetre = new JFrame();
     private JPanel panel = new JPanel();
     private JPanel panelDroite = new JPanel();
     private JPanel panel11 = new JPanel();

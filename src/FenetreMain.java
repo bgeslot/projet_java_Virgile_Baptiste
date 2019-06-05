@@ -62,7 +62,11 @@ public class FenetreMain implements ActionListener {
         }
         else if (recup==boutonConsulterClient)
         {
-            new FenetreConsulterClient(main);
+            if (main.fenetreConsulterClient!=null)
+            {
+                main.fenetreConsulterClient.fenetre.dispose();
+            }
+            main.fenetreConsulterClient = new FenetreConsulterClient(main);
         }
         else if (recup==boutonNouvLocation)
         {
@@ -71,7 +75,11 @@ public class FenetreMain implements ActionListener {
         }
         else if (recup==boutonConsulterLocation)
         {
-            new FenetreConsulterLocation(main);
+            if (main.fenetreConsulterLocation!=null)
+            {
+                main.fenetreConsulterLocation.fenetre.dispose();
+            }
+            main.fenetreConsulterLocation = new FenetreConsulterLocation(main);
         }
         else if (recup==boutonNouvVehicule)
         {

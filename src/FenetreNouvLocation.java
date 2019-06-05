@@ -132,6 +132,11 @@ public class FenetreNouvLocation implements ActionListener {
             int i=main.menuLocation.getNewID();
             Location location=new Location(i,fieldDateDebut.getText(),fieldDuree.getText(),fieldKmPrevi.getText(),"a",boxReduction.isSelected());
             main.menuLocation.addLocation(location);
+            if (main.fenetreConsulterLocation!=null)
+            {
+                main.fenetreConsulterLocation.fenetre.dispose();
+            }
+            main.fenetreConsulterLocation = new FenetreConsulterLocation(main);
             fenetre.dispose();
         } else if (recup == boutonAnnuler) {
             fenetre.dispose();

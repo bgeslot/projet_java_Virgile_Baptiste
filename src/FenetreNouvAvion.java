@@ -105,6 +105,11 @@ public class FenetreNouvAvion implements ActionListener {
         {
             Avion newAvion = new Avion(fieldMarque.getText(),fieldModele.getText(),fieldvitesseMax.getText(),fieldPrixLocationJour.getText(),fieldEtat.getText(),fieldNbHeureVol.getText(),fieldNbMoteur.getText());
             (main.menuVehicule).addAvion(newAvion);
+            if (main.fenetreConsulterAvion!=null)
+            {
+                main.fenetreConsulterAvion.fenetre.dispose();
+            }
+            main.fenetreConsulterAvion = new FenetreConsulterAvion(main);
             fenetre.dispose();
         }
     }

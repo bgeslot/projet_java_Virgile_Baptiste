@@ -44,18 +44,30 @@ public class FenetreConsulterVehicule implements ActionListener {
         JButton recup = (JButton) e.getSource();
         if (recup == boutonAvion)
         {
-            new FenetreConsulterAvion(main);
             fenetre.dispose();
+            if (main.fenetreConsulterAvion!=null)
+            {
+                main.fenetreConsulterAvion.fenetre.dispose();
+            }
+            main.fenetreConsulterAvion = new FenetreConsulterAvion(main);
         }
         else if (recup == boutonMoto)
         {
-            new FenetreConsulterMoto(main);
             fenetre.dispose();
+            if (main.fenetreConsulterMoto!=null)
+            {
+                main.fenetreConsulterMoto.fenetre.dispose();
+            }
+            main.fenetreConsulterMoto = new FenetreConsulterMoto(main);
         }
         else if (recup == boutonVoiture)
         {
-            new FenetreConsulterVoiture(main);
             fenetre.dispose();
+            if (main.fenetreConsulterVoiture!=null)
+            {
+                main.fenetreConsulterVoiture.fenetre.dispose();
+            }
+            main.fenetreConsulterVoiture = new FenetreConsulterVoiture(main);
         }
     }
 }

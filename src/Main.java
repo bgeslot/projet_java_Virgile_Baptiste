@@ -1,11 +1,15 @@
 public class Main {
-    MenuVehicule menuVehicule=new MenuVehicule();
-    MenuClient menuClient=new MenuClient();
-    MenuLocation menuLocation=new MenuLocation();
+    public MenuVehicule menuVehicule=new MenuVehicule();
+    public MenuClient menuClient=new MenuClient();
+    public MenuLocation menuLocation=new MenuLocation();
+    public FenetreConsulterAvion fenetreConsulterAvion=null;
+    public FenetreConsulterVoiture fenetreConsulterVoiture=null;
+    public FenetreConsulterMoto fenetreConsulterMoto=null;
+    public FenetreConsulterClient fenetreConsulterClient=null;
+    public FenetreConsulterLocation fenetreConsulterLocation=null;
     public static void main(String[] args)
     {
         Main main=new Main();
         new FenetreMain(main);
     }
-
 }

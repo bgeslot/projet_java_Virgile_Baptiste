@@ -114,6 +114,11 @@ public class FenetreNouvVoiture implements ActionListener {
         {
             Voiture newVoiture=new Voiture(fieldMarque.getText(),fieldModele.getText(),fieldvitesseMax.getText(),fieldPrixLocationJour.getText(),fieldEtat.getText(),fieldKm.getText(),fieldPuissance.getText(),fieldNbPlace.getText());
             (main.menuVehicule).addVoiture(newVoiture);
+            if (main.fenetreConsulterVoiture!=null)
+            {
+                main.fenetreConsulterVoiture.fenetre.dispose();
+            }
+            main.fenetreConsulterVoiture = new FenetreConsulterVoiture(main);
             fenetre.dispose();
         }
     }

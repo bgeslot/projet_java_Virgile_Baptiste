@@ -106,6 +106,11 @@ public class FenetreNouvMoto implements ActionListener {
             Moto newMoto = new Moto(fieldMarque.getText(),fieldModele.getText(),fieldvitesseMax.getText(),fieldPrixLocationJour.getText(),fieldEtat.getText(),fieldKm.getText(),fieldPuissance.getText());
             (main.menuVehicule).addMoto(newMoto);
             fenetre.dispose();
+            if (main.fenetreConsulterMoto!=null)
+            {
+                main.fenetreConsulterMoto.fenetre.dispose();
+            }
+            main.fenetreConsulterMoto = new FenetreConsulterMoto(main);
         }
     }
 }

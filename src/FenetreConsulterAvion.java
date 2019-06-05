@@ -8,7 +8,7 @@ import java.util.ArrayList;
 
 public class FenetreConsulterAvion implements ActionListener, ListSelectionListener {
     private Main main;
-    private JFrame fenetre = new JFrame();
+    public JFrame fenetre = new JFrame();
     private JPanel panel = new JPanel();
     private JPanel panelDroite = new JPanel();
     private JPanel panel11 = new JPanel();
@@ -43,7 +43,7 @@ public class FenetreConsulterAvion implements ActionListener, ListSelectionListe
         main = m;
         int length=main.menuVehicule.getListeAvion().size();
         String[] data=new String[length];
-        data=getAvion(main,data);
+        data=getAvion(data);
         jList= new JList(data);
         JScrollPane scrollPane = new JScrollPane(jList);
         scrollPane.setPreferredSize(new Dimension(200,400));
@@ -95,8 +95,7 @@ public class FenetreConsulterAvion implements ActionListener, ListSelectionListe
         fenetre.setLocation(screenSize.width/2-windowSize.width/2,screenSize.height/2-windowSize.height/2);
     }
 
-    public String[] getAvion(Main m,String[] data){
-        m=main;
+    public String[] getAvion(String[] data){
         ArrayList listeAvion;
         listeAvion = main.menuVehicule.getListeAvion();
         int length=listeAvion.size();
@@ -118,6 +117,11 @@ public class FenetreConsulterAvion implements ActionListener, ListSelectionListe
         {
             main.menuVehicule.delAvion(jList.getSelectedIndex());
             new FenetreConsulterAvion(main);
+            if (main.fenetreConsulterAvion!=null)
+            {
+                main.fenetreConsulterAvion.fenetre.dispose();
+            }
+            main.fenetreConsulterAvion = new FenetreConsulterAvion(main);
             fenetre.dispose();
         }
     }

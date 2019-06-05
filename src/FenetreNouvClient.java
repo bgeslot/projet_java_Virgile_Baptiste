@@ -82,6 +82,11 @@ public class FenetreNouvClient implements ActionListener {
         {
             Client newClient=new Client(fieldNom.getText(),fieldPrenom.getText(),fieldDateDeNaissance.getText(),fieldAdresseMail.getText(),fieldNumeroTelephone.getText());
             (main.menuClient).addClient(newClient);
+            if (main.fenetreConsulterClient!=null)
+            {
+                main.fenetreConsulterClient.fenetre.dispose();
+            }
+            main.fenetreConsulterClient = new FenetreConsulterClient(main);
             fenetre.dispose();
         }
         else if (recup==boutonReset)
