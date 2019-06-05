@@ -10,10 +10,7 @@ public class FenetreMain implements ActionListener {
     private JPanel panel1 = new JPanel();
     private JPanel panel2 = new JPanel();
     private JPanel panel3 = new JPanel();
-    private JButton boutonNouvClient = new JButton("    Ajouter un nouveau client   ");
-    private JButton boutonNouvLocation = new JButton("DEBUG");
-    private JButton boutonNouvVehicule = new JButton(" Ajouter un nouveau véhicule ");
-    private JButton boutonConsulterClient = new JButton("   Consulter la liste des clients  ");
+    private JButton boutonConsulterClient = new JButton("Consulter la liste des clients");
     private JButton boutonConsulterLocation = new JButton("Consulter la liste des locations");
     private JButton boutonConsulterVehicule = new JButton("Consulter la liste des véhicules");
 
@@ -28,15 +25,18 @@ public class FenetreMain implements ActionListener {
         panel.add(panel1);
         panel.add(panel2);
         panel.add(panel3);
+        panel1.setLayout(new FlowLayout(FlowLayout.CENTER,30,20));
+        panel2.setLayout(new FlowLayout(FlowLayout.CENTER,30,20));
+        panel3.setLayout(new FlowLayout(FlowLayout.CENTER,30,20));
         panel1.add(boutonConsulterClient);
         panel2.add(boutonConsulterLocation);
         panel3.add(boutonConsulterVehicule);
-        boutonNouvClient.addActionListener(this);
         boutonConsulterClient.addActionListener(this);
-        boutonNouvLocation.addActionListener(this);
         boutonConsulterLocation.addActionListener(this);
-        boutonNouvVehicule.addActionListener(this);
         boutonConsulterVehicule.addActionListener(this);
+        Dimension tailleBouton=boutonConsulterLocation.getPreferredSize();
+        boutonConsulterVehicule.setPreferredSize(tailleBouton);
+        boutonConsulterClient.setPreferredSize(tailleBouton);
         fenetre.pack();
         Dimension windowSize = fenetre.getSize();
         Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
@@ -47,11 +47,7 @@ public class FenetreMain implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
         JButton recup = (JButton) e.getSource();
-        if (recup==boutonNouvClient)
-        {
-            new FenetreNouvClient(main);
-        }
-        else if (recup==boutonConsulterClient)
+        if (recup==boutonConsulterClient)
         {
             if (main.fenetreConsulterClient!=null)
             {
@@ -59,11 +55,7 @@ public class FenetreMain implements ActionListener {
             }
             main.fenetreConsulterClient = new FenetreConsulterClient(main);
         }
-        else if (recup==boutonNouvLocation)
-        {
-            System.out.println("Nombre de Clients : "+main.menuClient.getListeClient().size());
-            new FenetreNouvLocation(main,new Avion("Airbus","A380","","","","",""));
-        }
+
         else if (recup==boutonConsulterLocation)
         {
             if (main.fenetreConsulterLocation!=null)
@@ -71,10 +63,6 @@ public class FenetreMain implements ActionListener {
                 main.fenetreConsulterLocation.fenetre.dispose();
             }
             main.fenetreConsulterLocation = new FenetreConsulterLocation(main);
-        }
-        else if (recup==boutonNouvVehicule)
-        {
-            new FenetreNouvVehicule(main);
         }
         else if (recup==boutonConsulterVehicule)
         {
