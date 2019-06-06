@@ -3,8 +3,9 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class FenetreNouvVoiture implements ActionListener {
+public class FenetreModifierVoiture implements ActionListener {
     private Main main;
+    private Voiture voiture;
     private JFrame fenetre=new JFrame();
     private JPanel panel=new JPanel();
     private JPanel panel11=new JPanel();
@@ -33,11 +34,12 @@ public class FenetreNouvVoiture implements ActionListener {
     private JTextField fieldKm = new JTextField();
     private JTextField fieldNbPlace = new JTextField();
     private JTextField fieldPuissance = new JTextField();
-    private JButton boutonAjouter = new JButton("Ajouter");
-    private JButton boutonReset = new JButton("Reset");
+    private JButton boutonModifier = new JButton("Modifier");
+    private JButton boutonAnnuler = new JButton("Annuler");
 
-    public FenetreNouvVoiture(Main m) {
-        main=m;
+    public FenetreModifierVoiture(Main main,Voiture voiture) {
+        this.main=main;
+        this.voiture=voiture;
         fenetre.setTitle("Ajout voiture");
         fenetre.setLocationRelativeTo(null);
         fenetre.setVisible(true);
@@ -77,8 +79,16 @@ public class FenetreNouvVoiture implements ActionListener {
         panel72.add(fieldNbPlace);
         panel81.add(new Label("Puissance :"));
         panel82.add(fieldPuissance);
-        panel91.add(boutonAjouter);
-        panel92.add(boutonReset);
+        fieldEtat.setText(voiture.getEtat());
+        fieldKm.setText(voiture.getKm());
+        fieldMarque.setText(voiture.getMarque());
+        fieldModele.setText(voiture.getModele());
+        fieldNbPlace.setText(voiture.getNbPlace());
+        fieldPrixLocationJour.setText(voiture.getPrixLocationJour());
+        fieldPuissance.setText(voiture.getPuissance());
+        fieldVitesseMax.setText(voiture.getVitesseMax());
+        panel91.add(boutonModifier);
+        panel92.add(boutonAnnuler);
         fieldEtat.setColumns(15);
         fieldMarque.setColumns(15);
         fieldModele.setColumns(15);
@@ -87,8 +97,8 @@ public class FenetreNouvVoiture implements ActionListener {
         fieldKm.setColumns(15);
         fieldNbPlace.setColumns(15);
         fieldPuissance.setColumns(15);
-        boutonAjouter.addActionListener(this);
-        boutonReset.addActionListener(this);
+        boutonModifier.addActionListener(this);
+        boutonAnnuler.addActionListener(this);
 
         fenetre.pack();
         Dimension windowSize = fenetre.getSize();
@@ -99,26 +109,25 @@ public class FenetreNouvVoiture implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
         JButton recup = (JButton) e.getSource();
-        if (recup==boutonReset)
+        if (recup==boutonModifier)
         {
-            fieldPrixLocationJour.setText("");
-            fieldVitesseMax.setText("");
-            fieldModele.setText("");
-            fieldMarque.setText("");
-            fieldEtat.setText("");
-            fieldKm.setText("");
-            fieldPuissance.setText("");
-            fieldNbPlace.setText("");
-        }
-        else if (recup==boutonAjouter)
-        {
-            Voiture newVoiture=new Voiture(fieldMarque.getText(),fieldModele.getText(),fieldVitesseMax.getText(),fieldPrixLocationJour.getText(),fieldEtat.getText(),fieldKm.getText(),fieldPuissance.getText(),fieldNbPlace.getText());
-            (main.menuVehicule).addVoiture(newVoiture);
+            voiture.setNbPlace(fieldNbPlace.getText());
+            voiture.setEtat(fieldEtat.getText());
+            voiture.setKm(fieldKm.getText());
+            voiture.setMarque(fieldMarque.getText());
+            voiture.setModele(fieldModele.getText());
+            voiture.setPrixLocationJour(fieldPrixLocationJour.getText());
+            voiture.setPuissance(fieldPuissance.getText());
+            voiture.setVitesseMax(fieldVitesseMax.getText());
             if (main.fenetreConsulterVoiture!=null)
             {
                 main.fenetreConsulterVoiture.fenetre.dispose();
             }
             main.fenetreConsulterVoiture = new FenetreConsulterVoiture(main);
+            fenetre.dispose();
+        }
+        else if (recup==boutonAnnuler)
+        {
             fenetre.dispose();
         }
     }

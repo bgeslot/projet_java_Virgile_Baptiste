@@ -3,8 +3,9 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class FenetreNouvVoiture implements ActionListener {
+public class FenetreModifierAvion implements ActionListener {
     private Main main;
+    private Avion avion;
     private JFrame fenetre=new JFrame();
     private JPanel panel=new JPanel();
     private JPanel panel11=new JPanel();
@@ -23,26 +24,24 @@ public class FenetreNouvVoiture implements ActionListener {
     private JPanel panel72=new JPanel();
     private JPanel panel81=new JPanel();
     private JPanel panel82=new JPanel();
-    private JPanel panel91=new JPanel();
-    private JPanel panel92=new JPanel();
     private JTextField fieldMarque = new JTextField();
     private JTextField fieldModele = new JTextField();
-    private JTextField fieldVitesseMax = new JTextField();
+    private JTextField fieldvitesseMax = new JTextField();
     private JTextField fieldPrixLocationJour = new JTextField();
     private JTextField fieldEtat = new JTextField();
-    private JTextField fieldKm = new JTextField();
-    private JTextField fieldNbPlace = new JTextField();
-    private JTextField fieldPuissance = new JTextField();
-    private JButton boutonAjouter = new JButton("Ajouter");
-    private JButton boutonReset = new JButton("Reset");
+    private JTextField fieldNbHeureVol = new JTextField();
+    private JTextField fieldNbMoteur = new JTextField();
+    private JButton boutonModifier = new JButton("Modifier");
+    private JButton boutonAnnuler = new JButton("Annuler");
 
-    public FenetreNouvVoiture(Main m) {
-        main=m;
-        fenetre.setTitle("Ajout voiture");
+    public FenetreModifierAvion(Main main,Avion avion) {
+        this.main=main;
+        this.avion=avion;
+        fenetre.setTitle("Ajout Avion");
         fenetre.setLocationRelativeTo(null);
         fenetre.setVisible(true);
         fenetre.setContentPane(panel);
-        panel.setLayout(new GridLayout(9,2));
+        panel.setLayout(new GridLayout(8,2));
         panel.add(panel11);
         panel.add(panel12);
         panel.add(panel21);
@@ -59,36 +58,37 @@ public class FenetreNouvVoiture implements ActionListener {
         panel.add(panel72);
         panel.add(panel81);
         panel.add(panel82);
-        panel.add(panel91);
-        panel.add(panel92);
         panel11.add(new Label("Marque :"));
         panel12.add(fieldMarque);
         panel21.add(new Label("Modele :"));
         panel22.add(fieldModele);
         panel31.add(new Label("Vitesse Maximale :"));
-        panel32.add(fieldVitesseMax);
+        panel32.add(fieldvitesseMax);
         panel41.add(new Label("Prix de location par jour de base :"));
         panel42.add(fieldPrixLocationJour);
         panel51.add(new Label("État :"));
         panel52.add(fieldEtat);
-        panel61.add(new Label("Nombre de kilomètres :"));
-        panel62.add(fieldKm);
-        panel71.add(new Label("Nombre de places :"));
-        panel72.add(fieldNbPlace);
-        panel81.add(new Label("Puissance :"));
-        panel82.add(fieldPuissance);
-        panel91.add(boutonAjouter);
-        panel92.add(boutonReset);
+        panel61.add(new Label("Nombre d'heures de vol :"));
+        panel62.add(fieldNbHeureVol);
+        panel71.add(new Label("Nombre de moteurs :"));
+        panel72.add(fieldNbMoteur);
+        fieldEtat.setText(avion.getEtat());
+        fieldMarque.setText(avion.getMarque());
+        fieldModele.setText(avion.getModele());
+        fieldNbHeureVol.setText(avion.getHeureDeVol());
+        fieldPrixLocationJour.setText(avion.getPrixLocationJour());
+        fieldvitesseMax.setText(avion.getVitesseMax());
+        panel81.add(boutonModifier);
+        panel82.add(boutonAnnuler);
         fieldEtat.setColumns(15);
         fieldMarque.setColumns(15);
         fieldModele.setColumns(15);
-        fieldVitesseMax.setColumns(15);
+        fieldvitesseMax.setColumns(15);
         fieldPrixLocationJour.setColumns(15);
-        fieldKm.setColumns(15);
-        fieldNbPlace.setColumns(15);
-        fieldPuissance.setColumns(15);
-        boutonAjouter.addActionListener(this);
-        boutonReset.addActionListener(this);
+        fieldNbHeureVol.setColumns(15);
+        fieldNbMoteur.setColumns(15);
+        boutonModifier.addActionListener(this);
+        boutonAnnuler.addActionListener(this);
 
         fenetre.pack();
         Dimension windowSize = fenetre.getSize();
@@ -99,27 +99,26 @@ public class FenetreNouvVoiture implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
         JButton recup = (JButton) e.getSource();
-        if (recup==boutonReset)
+        if (recup==boutonAnnuler)
         {
-            fieldPrixLocationJour.setText("");
-            fieldVitesseMax.setText("");
-            fieldModele.setText("");
-            fieldMarque.setText("");
-            fieldEtat.setText("");
-            fieldKm.setText("");
-            fieldPuissance.setText("");
-            fieldNbPlace.setText("");
+            fenetre.dispose();
         }
-        else if (recup==boutonAjouter)
+        else if (recup==boutonModifier)
         {
-            Voiture newVoiture=new Voiture(fieldMarque.getText(),fieldModele.getText(),fieldVitesseMax.getText(),fieldPrixLocationJour.getText(),fieldEtat.getText(),fieldKm.getText(),fieldPuissance.getText(),fieldNbPlace.getText());
-            (main.menuVehicule).addVoiture(newVoiture);
-            if (main.fenetreConsulterVoiture!=null)
+            avion.setNbMoteur(fieldNbMoteur.getText());
+            avion.setHeureDeVol(fieldNbHeureVol.getText());
+            avion.setEtat(fieldEtat.getText());
+            avion.setMarque(fieldMarque.getText());
+            avion.setModele(fieldModele.getText());
+            avion.setPrixLocationJour(fieldPrixLocationJour.getText());
+            avion.setVitesseMax(fieldvitesseMax.getText());
+            if (main.fenetreConsulterAvion!=null)
             {
-                main.fenetreConsulterVoiture.fenetre.dispose();
+                main.fenetreConsulterAvion.fenetre.dispose();
             }
-            main.fenetreConsulterVoiture = new FenetreConsulterVoiture(main);
+            main.fenetreConsulterAvion = new FenetreConsulterAvion(main);
             fenetre.dispose();
         }
     }
 }
+
