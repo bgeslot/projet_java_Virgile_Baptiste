@@ -1,8 +1,55 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <java version="1.8.0_211" class="java.beans.XMLDecoder">
- <object class="MenuLocation">
+ <object class="MenuLocation" id="MenuLocation0">
   <void property="numLocaMin">
-   <int>14</int>
+   <int>21</int>
   </void>
  </object>
+<void class="Client" id="Client0">
+ <void property="dateDeNaissance">
+  <string>06/04/1982</string>
+ </void>
+ <void property="nom">
+  <string>Beauregard</string>
+ </void>
+ <void property="numTelephone">
+  <string>06.54.83.52</string>
+ </void>
+ <void property="prenom">
+  <string>Gérard</string>
+ </void>
+ <void property="adresseMail">
+  <string>yeux.revolver@hotmail.com</string>
+ </void>
+</void>
+<void class="Location" id="Location0">
+ <void property="dataDebut">
+  <string>15/10/2019</string>
+ </void>
+ <void property="dateFin">
+  <string>10</string>
+ </void>
+ <void property="kmPrevu">
+  <string>1000</string>
+ </void>
+ <void property="numLocation">
+  <int>20</int>
+ </void>
+ <void property="prixPrevu">
+  <string>a</string>
+ </void>
+ <void property="client">
+  <object idref="Client0"/>
+ </void>
+</void>
+<void class="MenuLocation" id="Field0" method="getField">
+ <string>listeLocation</string>
+ <void id="ArrayList0" method="get">
+  <object idref="MenuLocation0"/>
+  <void method="add">
+   <object idref="Location0"/>
+  </void>
+ </void>
+</void>
+<void idref="ArrayList0"/>
 </java>

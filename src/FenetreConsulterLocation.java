@@ -48,7 +48,6 @@ public class FenetreConsulterLocation implements ActionListener, ListSelectionLi
         int length=main.menuLocation.listeLocation.size();
         String[] data=new String[length];
         data=getLocation(data);
-        System.out.println(data[length-1]);
         jList= new JList(data);
         scrollPane =new JScrollPane(jList);
         jList.setSelectionMode(ListSelectionModel.SINGLE_SELECTION );
@@ -135,7 +134,7 @@ public class FenetreConsulterLocation implements ActionListener, ListSelectionLi
     public void valueChanged(ListSelectionEvent e) {
         int index = e.getLastIndex();
         Location location=(Location) main.menuLocation.getListeLocation().get(index);
-        labelNumLoc.setText(Integer.toString(location.getNumLocation()));
+        labelNumLoc.setText(String.valueOf(((Location) main.menuLocation.getListeLocation().get(jList.getSelectedIndex())).getNumLocation()));
         labelClient.setText(location.getClient().toString());
         labelDateDebut.setText(location.getDataDebut());
         labelDateFin.setText(location.getDateFin());

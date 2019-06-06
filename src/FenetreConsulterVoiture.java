@@ -167,7 +167,7 @@ public class FenetreConsulterVoiture implements ActionListener, ListSelectionLis
         labelKm.setText(voiture.getKm());
         labelPuissance.setText(voiture.getPuissance());
         labelPrixLoc.setText(voiture.getPrixLocationJour());
-        labelNbPlace.setText(voiture.getPuissance());
+        labelNbPlace.setText(voiture.getNbPlace());
         fenetre.pack();
         Dimension windowSize = fenetre.getSize();
         Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
