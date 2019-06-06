@@ -2,6 +2,9 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
+import java.io.IOException;
 
 public class FenetreMain implements ActionListener {
     private Main main;
@@ -14,11 +17,25 @@ public class FenetreMain implements ActionListener {
     private JButton boutonConsulterLocation = new JButton("Consulter la liste des locations");
     private JButton boutonConsulterVehicule = new JButton("Consulter la liste des véhicules");
 
-    public FenetreMain(Main m) {
-        main=m;
+    public FenetreMain(Main main) {
+        this.main=main;
         fenetre.setTitle("Accueil");
         fenetre.setLocationRelativeTo(null);
-        fenetre.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        fenetre.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
+        fenetre.addWindowListener(new WindowAdapter() {
+                                      public void windowClosing(WindowEvent e)
+                                      {
+                                          try
+                                          {
+                                              main.serializeToXML();
+                                          }
+                                          catch(Exception ex)
+                                          {
+                                              System.out.println(ex);
+                                          }
+                                          System.exit(0);
+                                      }
+                                  });
         fenetre.setVisible(true);
         fenetre.setContentPane(panel);
         panel.setLayout(new GridLayout(3,1));

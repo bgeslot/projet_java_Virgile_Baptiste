@@ -1,5 +1,8 @@
 import java.beans.ExceptionListener;
+import java.beans.XMLDecoder;
 import java.beans.XMLEncoder;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 
@@ -14,11 +17,8 @@ public class Main {
     public FenetreConsulterLocation fenetreConsulterLocation=null;
     public static void main(String[] args) throws IOException {
         Main main=new Main();
+        main.deserializeFromXML();
         new FenetreMain(main);
-        System.out.println(main.menuVehicule.getListeVoiture().size());
-        main.menuVehicule.addVoiture(new Voiture("","","","","","","",""));
-        System.out.println(main.menuVehicule.getListeVoiture().size());
-        Main.serializeToXML(main);
         //serializationClient((main.getMenuClient()).getListeClient());
     }
 
@@ -26,18 +26,61 @@ public class Main {
         return menuClient;
     }
 
-    private static void serializeToXML (Main main) throws IOException
+    public void serializeToXML () throws IOException
     {
-        FileOutputStream fos = new FileOutputStream("menuVehicule.xml");
-        XMLEncoder encoder = new XMLEncoder(fos);
-        encoder.setExceptionListener(new ExceptionListener() {
+        FileOutputStream fosVehicule = new FileOutputStream("menuVehicule.xml");
+        XMLEncoder encoderVehicule = new XMLEncoder(fosVehicule);
+        encoderVehicule.setExceptionListener(new ExceptionListener() {
             public void exceptionThrown(Exception e) {
                 System.out.println("Exception! :"+e.toString());
             }
         });
-        encoder.writeObject(main.menuVehicule);
-        encoder.close();
-        fos.close();
+        encoderVehicule.writeObject(this.menuVehicule);
+        encoderVehicule.close();
+        fosVehicule.close();
+
+        FileOutputStream fosClient = new FileOutputStream("menuClient.xml");
+        XMLEncoder encoderClient = new XMLEncoder(fosClient);
+        encoderClient.setExceptionListener(new ExceptionListener() {
+            public void exceptionThrown(Exception e) {
+                System.out.println("Exception! :"+e.toString());
+            }
+        });
+        encoderClient.writeObject(this.menuClient);
+        encoderClient.close();
+        fosClient.close();
+
+        FileOutputStream fosLocation = new FileOutputStream("menuLocation.xml");
+        XMLEncoder encoderLocation = new XMLEncoder(fosLocation);
+        encoderLocation.setExceptionListener(new ExceptionListener() {
+            public void exceptionThrown(Exception e) {
+                System.out.println("Exception! :"+e.toString());
+            }
+        });
+        encoderLocation.writeObject(this.menuLocation);
+        encoderLocation.close();
+        fosLocation.close();
+
+    }
+
+    public void deserializeFromXML() throws IOException {
+        FileInputStream fisClient = new FileInputStream("menuClient.xml");
+        XMLDecoder decoderClient = new XMLDecoder(fisClient);
+        menuClient = (MenuClient) decoderClient.readObject();
+        decoderClient.close();
+        fisClient.close();
+
+        FileInputStream fisLocation = new FileInputStream("menuLocation.xml");
+        XMLDecoder decoderLocation = new XMLDecoder(fisLocation);
+        menuLocation = (MenuLocation) decoderLocation.readObject();
+        decoderLocation.close();
+        fisLocation.close();
+
+        FileInputStream fisVehicule = new FileInputStream("menuVehicule.xml");
+        XMLDecoder decoderVehicule = new XMLDecoder(fisVehicule);
+        menuVehicule = (MenuVehicule) decoderVehicule.readObject();
+        decoderVehicule.close();
+        fisVehicule.close();
     }
 }
 
