@@ -98,9 +98,11 @@ public class FenetreConsulterAvion implements ActionListener, ListSelectionListe
         boutonLouer.setPreferredSize(tailleBouton);
         boutonModifier.setPreferredSize(tailleBouton);
         boutonAjouter.setPreferredSize(tailleBouton);
-        jList.addListSelectionListener(this);
         boutonSupprimer.addActionListener(this);
         boutonAjouter.addActionListener(this);
+        boutonModifier.addActionListener(this);
+        boutonLouer.addActionListener(this);
+        jList.addListSelectionListener(this);
         fenetre.pack();
         Dimension windowSize = fenetre.getSize();
         Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
@@ -149,7 +151,6 @@ public class FenetreConsulterAvion implements ActionListener, ListSelectionListe
     @Override
     public void valueChanged(ListSelectionEvent e) {
         int index = jList.getSelectedIndex();
-        System.out.println(index);
         Avion avion = (Avion) main.menuVehicule.getListeAvion().get(index);
         labelModele.setText(avion.getModele());
         labelMarque.setText(avion.getMarque());

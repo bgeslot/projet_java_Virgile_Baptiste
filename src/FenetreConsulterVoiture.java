@@ -158,7 +158,6 @@ public class FenetreConsulterVoiture implements ActionListener, ListSelectionLis
     @Override
     public void valueChanged(ListSelectionEvent e) {
         int index = jList.getSelectedIndex();
-        System.out.println(index);
         Voiture voiture = (Voiture) main.menuVehicule.getListeVoiture().get(index);
         labelModele.setText(voiture.getModele());
         labelMarque.setText(voiture.getMarque());

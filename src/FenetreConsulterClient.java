@@ -125,7 +125,6 @@ public class FenetreConsulterClient<a> implements ActionListener, ListSelectionL
     public void valueChanged(ListSelectionEvent e) {
 
         int index = jList.getSelectedIndex();
-        System.out.println(index);
         Client client = (Client) main.menuClient.getListeClient().get(index);
         labelDateDeNaissance.setText(client.getDateDeNaissance());
         labelMail.setText(client.getAdresseMail());

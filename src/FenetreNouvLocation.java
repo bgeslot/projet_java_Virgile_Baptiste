@@ -57,26 +57,35 @@ public class FenetreNouvLocation implements ActionListener {
         boutonAnnuler.addActionListener(this);
         fieldDuree.addKeyListener(new KeyAdapter() {
             public void keyReleased(KeyEvent e) {
-                JTextField textField = (JTextField) e.getSource();
-                String text = textField.getText();
-                int val;
+                int nbKm;
+                int nbJour;
+                String stringNbJour=fieldDuree.getText();
+                String stringNbKm=fieldKmPrevi.getText();
                 try
                 {
-                    val = Integer.parseInt(text);
+                    nbJour = Integer.parseInt(stringNbJour);
                 }
                 catch (NumberFormatException er)
                 {
-                    val=0;
+                    nbJour=0;
                 }
-                if (val>=7)
+                if (nbJour>=7)
                 {
-                    System.out.println("val avant set = "+val);
                     boxReduction.setEnabled(true);
                 }
                 else
                 {
                     boxReduction.setSelected(false);
                     boxReduction.setEnabled(false);
+                }
+                int nbKm;
+                try
+                {
+                    nbKm = Integer.parseInt(text);
+                }
+                catch (NumberFormatException er)
+                {
+                    nbKm=0;
                 }
             }
         });
@@ -102,7 +111,7 @@ public class FenetreNouvLocation implements ActionListener {
         panel11.add(new JLabel("Location de :"));
         panel12.add(new JLabel(vehicule.getMarque() + " " + vehicule.getModele()));
         panel21.add(new JLabel("Numéro de Location :"));
-        panel22.add(new JLabel(""));
+        panel22.add(new JLabel(String.valueOf(main.menuLocation.getActualID())));
         panel31.add(new JLabel("Client :"));
         panel32.add(jComboBox);
         panel41.add(new JLabel("Date de début :"));
@@ -129,7 +138,7 @@ public class FenetreNouvLocation implements ActionListener {
         JButton recup = (JButton) e.getSource();
         if (recup == boutonAjouter) {
             int i=main.menuLocation.getNumLocaMin();
-            Location location=new Location((Client) main.menuClient.getListeClient().get(jComboBox.getSelectedIndex()),i,fieldDateDebut.getText(),fieldDuree.getText(),fieldKmPrevi.getText(),boxReduction.isSelected());
+            Location location=new Location((Client) main.menuClient.getListeClient().get(jComboBox.getSelectedIndex()),i,fieldDateDebut.getText(),fieldDuree.getText(),fieldKmPrevi.getText(),boxReduction.isSelected(),vehicule);
             main.menuLocation.setNumLocaMin(main.menuLocation.getNewID());
             main.menuLocation.addLocation(location);
             if (main.fenetreConsulterLocation!=null)

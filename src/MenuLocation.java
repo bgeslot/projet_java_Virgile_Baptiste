@@ -27,6 +27,11 @@ public class MenuLocation {
     public int getNumLocaMin() {
         return numLocaMin;
     }
+
+    public int getActualID()
+    {
+        return this.numLocaMin+1;
+    }
 //usefull methode
 
     public int getNewID(){
