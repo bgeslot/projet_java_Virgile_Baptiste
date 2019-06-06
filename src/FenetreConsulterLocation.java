@@ -48,7 +48,9 @@ public class FenetreConsulterLocation implements ActionListener, ListSelectionLi
             int length=main.menuLocation.listeLocation.size();
             String[] data=new String[length];
             data=getLocation(data);
+            System.out.println(data[length-1]);
             jList= new JList(data);
+            scrollPane =new JScrollPane(jList);
             jList.setSelectionMode(ListSelectionModel.SINGLE_SELECTION );
             fenetre.setTitle("Consulter liste locations");
             fenetre.setContentPane(panel);
