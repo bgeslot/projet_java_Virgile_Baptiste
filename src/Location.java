@@ -19,7 +19,7 @@ public class Location {
         this.client=client;
         this.numLocation = numLocation;
         this.dataDebut = dataDebut;
-        this.durre = durre;
+        this.durre = duree;
         this.kmPrevu = kmPrevu;
         this.PrixPrevu = this.prixLocation(duree,kmPrevu);
         this.reduction = reduction;
