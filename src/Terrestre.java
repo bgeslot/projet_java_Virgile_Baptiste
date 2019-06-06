@@ -9,7 +9,9 @@ public abstract class Terrestre extends Vehicule {
         this.puissance = puissance;
     }
 
-    // seter
+    public Terrestre() {
+    }
+// seter
 
     public void setKm(String km) {
         this.km = km;

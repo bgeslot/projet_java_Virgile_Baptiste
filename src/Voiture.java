@@ -4,6 +4,10 @@ public class Voiture extends Terrestre {
 
     //new car
 
+    public Voiture()
+    {
+    }
+
     public Voiture(String marque, String modele, String vitesseMax, String prixLocationJour, String etat, String km, String puissance, String nbPlace) {
         super(marque, modele, vitesseMax, prixLocationJour, etat, km, puissance);
         this.nbPlace = nbPlace;

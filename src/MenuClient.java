@@ -8,7 +8,8 @@ public class MenuClient {
 
     private ArrayList listeClient;
 
-    public MenuClient() {
+    public MenuClient()
+    {
         listeClient = new ArrayList();
     }
 
@@ -26,9 +27,9 @@ public class MenuClient {
 
     //usefull methode
 
-    public void addClient(Client aClient){
+    public void addClient(Client aClient)
+    {
         (this.listeClient).add(aClient);
-
     }
 
     public void delClient(int i){

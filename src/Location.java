@@ -11,12 +11,18 @@ public class Location {
     private String PrixPrevu;
     private boolean reduction;
 
-    public Location(int numLocation, String dataDebut, String durre, String kmPrevu, String prixPrevu, boolean reduction) {
+    public Location()
+    {
+
+    }
+
+    public Location(int numLocation, String dataDebut, String durre, String kmPrevu, String prixPrevu, boolean reduction)
+    {
         this.numLocation = numLocation;
         this.dataDebut = dataDebut;
         this.durre = durre;
         this.kmPrevu = kmPrevu;
-        PrixPrevu = prixPrevu;
+        this.PrixPrevu = prixPrevu;
         this.reduction = reduction;
     }
 

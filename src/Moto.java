@@ -2,6 +2,9 @@ public class Moto extends Terrestre {
 
     //new bike
 
+    public Moto() {
+    }
+
     public Moto(String marque, String modele, String vitesseMax, String prixLocationJour, String etat, String km, String puissance) {
         super(marque, modele, vitesseMax, prixLocationJour, etat, km, puissance);
     }

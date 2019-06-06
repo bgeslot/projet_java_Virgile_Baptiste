@@ -6,6 +6,9 @@ public abstract class Vehicule {
     private String prixLocationJour;
     private String etat;
 
+    public Vehicule() {
+    }
+
     public Vehicule(String marque, String modele, String vitesseMax, String prixLocationJour, String etat) {
         this.marque = marque;
         this.modele = modele;
