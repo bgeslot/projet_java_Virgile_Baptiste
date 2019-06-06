@@ -91,8 +91,14 @@ public class Location {
         return vehicule;
     }
 
+
     //other metode
 
+    public int prixLocation(String uneDuree,String unKilometrage){
+        int temps=Integer.parseInt(uneDuree);
+        int km=Integer.parseInt(unKilometrage);
+        return (temps*Integer.parseInt(vehicule.getPrixLocationJour())+km);
+    }
 
     @Override
     public String toString() {
