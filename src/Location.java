@@ -6,7 +6,7 @@ public class Location {
     private String dataDebut;
     private String durre;
     private String kmPrevu;
-    private String PrixPrevu;
+    private int PrixPrevu;
     private boolean reduction;
 
     public Location()
@@ -14,14 +14,14 @@ public class Location {
 
     }
 
-    public Location(Client client,int numLocation, String dataDebut, String durre, String kmPrevu, String prixPrevu, boolean reduction)
+    public Location(Client client,int numLocation, String dataDebut, String duree, String kmPrevu, boolean reduction)
     {
         this.client=client;
         this.numLocation = numLocation;
         this.dataDebut = dataDebut;
         this.durre = durre;
         this.kmPrevu = kmPrevu;
-        this.PrixPrevu = prixPrevu;
+        this.PrixPrevu = this.prixLocation(duree,kmPrevu);
         this.reduction = reduction;
     }
 
@@ -48,7 +48,7 @@ public class Location {
         this.numLocation = numLocation;
     }
 
-    public void setPrixPrevu(String prixPrevu) {
+    public void setPrixPrevu(int prixPrevu) {
         PrixPrevu = prixPrevu;
     }
 
@@ -79,7 +79,7 @@ public class Location {
         return kmPrevu;
     }
 
-    public String getPrixPrevu() {
+    public int getPrixPrevu() {
         return PrixPrevu;
     }
 

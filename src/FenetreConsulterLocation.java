@@ -139,6 +139,6 @@ public class FenetreConsulterLocation implements ActionListener, ListSelectionLi
         labelDateDebut.setText(location.getDataDebut());
         labelDateFin.setText(location.getDateFin());
         labelKmPrevi.setText(location.getKmPrevu());
-        labelPrixPrevi.setText(location.getPrixPrevu());
+        labelPrixPrevi.setText(Integer.toString(location.getPrixPrevu()));
     }
 }
