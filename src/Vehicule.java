@@ -55,6 +55,10 @@ public abstract class Vehicule {
 
     //other methode
 
+    public String getNameVehicule(){
+        return (this.marque+""+this.modele);
+    }
+
     @Override
     public boolean equals(Object obj) {
         return super.equals(obj);
