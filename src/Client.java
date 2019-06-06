@@ -78,6 +78,11 @@ public class Client {
 
     //other Metode
 
+    public String toString(){
+        String newString=new String();
+        newString=this.getNom()+""+this.getPrenom();
+        return newString;
+    }
 
     @Override
     public boolean equals(Object obj) {
@@ -87,10 +92,5 @@ public class Client {
     @Override
     public int hashCode() {
         return super.hashCode();
-    }
-
-    @Override
-    public String toString() {
-        return super.toString();
     }
 }

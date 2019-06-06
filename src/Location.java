@@ -1,5 +1,3 @@
-import java.util.Calendar;
-
 public class Location {
 
     private int numLocation;

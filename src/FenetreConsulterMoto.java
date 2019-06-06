@@ -144,7 +144,6 @@ public class FenetreConsulterMoto implements ActionListener, ListSelectionListen
     @Override
     public void valueChanged(ListSelectionEvent e) {
         int index = jList.getSelectedIndex();
-        System.out.println(index);
         Moto moto = (Moto) main.menuVehicule.getListeMoto().get(index);
         labelModele.setText(moto.getModele());
         labelMarque.setText(moto.getMarque());
