@@ -4,7 +4,7 @@ public class Location {
     private Vehicule vehicule;
     private Client client;
     private String dataDebut;
-    private String durre;
+    private String duree;
     private String kmPrevu;
     private int PrixPrevu;
     private boolean reduction;
@@ -20,9 +20,8 @@ public class Location {
         this.client=client;
         this.numLocation = numLocation;
         this.dataDebut = dataDebut;
-        this.durre = duree;
+        this.duree = duree;
         this.kmPrevu = kmPrevu;
-        this.PrixPrevu = this.prixLocation(duree,kmPrevu);
         this.reduction = reduction;
     }
 
@@ -38,7 +37,7 @@ public class Location {
     }
 
     public void setDateFin(String durre) {
-        this.durre = durre;
+        this.duree = durre;
     }
 
     public void setKmPrevu(String kmPrevu) {
@@ -69,7 +68,7 @@ public class Location {
     }
 
     public String getDateFin() {
-        return durre;
+        return duree;
     }
 
     public Client getClient() {
@@ -95,10 +94,15 @@ public class Location {
 
     //other metode
 
-    public int prixLocation(String uneDuree,String unKilometrage){
-        int temps=Integer.parseInt(uneDuree);
-        int km=Integer.parseInt(unKilometrage);
-        return (temps*Integer.parseInt(vehicule.getPrixLocationJour())+km);
+    public static int prixLocation(Vehicule vehicule, int duree,int kilometrage, boolean reduction){
+        //int temps=Integer.parseInt(uneDuree);
+        //int km=Integer.parseInt(unKilometrage);
+        int res=duree*Integer.parseInt(vehicule.getPrixLocationJour())+kilometrage;
+        if (reduction)
+        {
+            res=(int) (0.9*res);
+        }
+        return res;
     }
 
     @Override

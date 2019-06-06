@@ -69,6 +69,14 @@ public class FenetreNouvLocation implements ActionListener {
                 {
                     nbJour=0;
                 }
+                try
+                {
+                    nbKm = Integer.parseInt(stringNbKm);
+                }
+                catch (NumberFormatException er)
+                {
+                    nbKm=0;
+                }
                 if (nbJour>=7)
                 {
                     boxReduction.setEnabled(true);
@@ -78,15 +86,7 @@ public class FenetreNouvLocation implements ActionListener {
                     boxReduction.setSelected(false);
                     boxReduction.setEnabled(false);
                 }
-                int nbKm;
-                try
-                {
-                    nbKm = Integer.parseInt(text);
-                }
-                catch (NumberFormatException er)
-                {
-                    nbKm=0;
-                }
+                labelPrix.setText(String.valueOf(Location.prixLocation(vehicule,nbJour,nbKm,boxReduction.isSelected())));
             }
         });
         panel.setLayout(new GridLayout(9, 2));
