@@ -137,7 +137,7 @@ public class FenetreConsulterMoto implements ActionListener, ListSelectionListen
         }
         else if (recup==boutonModifier)
         {
-
+            new FenetreModifierMoto(main, (Moto) main.menuVehicule.getListeMoto().get(jList.getSelectedIndex()));
         }
     }
 

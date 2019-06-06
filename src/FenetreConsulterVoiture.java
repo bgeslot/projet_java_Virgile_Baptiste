@@ -147,7 +147,7 @@ public class FenetreConsulterVoiture implements ActionListener, ListSelectionLis
         }
         else if (recup==boutonModifier)
         {
-
+            new FenetreModifierVoiture(main, (Voiture) main.menuVehicule.getListeVoiture().get(jList.getSelectedIndex()));
         }
     }
 

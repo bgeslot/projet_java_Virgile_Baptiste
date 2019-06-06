@@ -113,7 +113,7 @@ public class FenetreConsulterClient<a> implements ActionListener, ListSelectionL
         }
         else if (recup==boutonModifier)
         {
-
+            new FenetreModifierClient(main, (Client) main.menuClient.getListeClient().get(jList.getSelectedIndex()));
         }
     }
 

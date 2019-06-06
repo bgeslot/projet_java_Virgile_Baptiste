@@ -138,7 +138,7 @@ public class FenetreConsulterAvion implements ActionListener, ListSelectionListe
         }
         else if (recup==boutonModifier)
         {
-
+            new FenetreModifierAvion(main, (Avion) main.menuVehicule.getListeAvion().get(jList.getSelectedIndex()));
         }
     }
 

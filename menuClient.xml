@@ -40,25 +40,6 @@
      </void>
     </object>
    </void>
-   <void method="add">
-    <object class="Client">
-     <void property="adresseMail">
-      <string></string>
-     </void>
-     <void property="dateDeNaissance">
-      <string></string>
-     </void>
-     <void property="nom">
-      <string>aze</string>
-     </void>
-     <void property="numTelephone">
-      <string></string>
-     </void>
-     <void property="prenom">
-      <string></string>
-     </void>
-    </object>
-   </void>
   </void>
  </object>
 </java>

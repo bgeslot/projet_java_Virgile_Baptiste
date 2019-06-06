@@ -72,6 +72,13 @@ public class FenetreModifierMoto implements ActionListener {
         panel62.add(fieldKm);
         panel71.add(new Label("Puissance :"));
         panel72.add(fieldPuissance);
+        fieldPrixLocationJour.setText(moto.getPrixLocationJour());
+        fieldvitesseMax.setText(moto.getVitesseMax());
+        fieldModele.setText(moto.getModele());
+        fieldMarque.setText(moto.getMarque());
+        fieldEtat.setText(moto.getEtat());
+        fieldKm.setText(moto.getKm());
+        fieldPuissance.setText(moto.getPuissance());
         panel81.add(boutonModifier);
         panel82.add(boutonAnnuler);
         fieldEtat.setColumns(15);
@@ -95,13 +102,19 @@ public class FenetreModifierMoto implements ActionListener {
         JButton recup = (JButton) e.getSource();
         if (recup==boutonModifier)
         {
-            fieldPrixLocationJour.setText(moto.getPrixLocationJour());
-            fieldvitesseMax.setText(moto.getVitesseMax());
-            fieldModele.setText(moto.getModele());
-            fieldMarque.setText(moto.getMarque());
-            fieldEtat.setText(moto.getEtat());
-            fieldKm.setText(moto.getKm());
-            fieldPuissance.setText(moto.getPuissance());
+            moto.setEtat(fieldEtat.getText());
+            moto.setKm(fieldKm.getText());
+            moto.setMarque(fieldMarque.getText());
+            moto.setModele(fieldModele.getText());
+            moto.setPrixLocationJour(fieldPrixLocationJour.getText());
+            moto.setPuissance(fieldPuissance.getText());
+            moto.setVitesseMax(fieldvitesseMax.getText());
+            if (main.fenetreConsulterMoto!=null)
+            {
+                main.fenetreConsulterMoto.fenetre.dispose();
+            }
+            main.fenetreConsulterMoto = new FenetreConsulterMoto(main);
+            fenetre.dispose();
         }
         else if (recup==boutonAnnuler)
         {

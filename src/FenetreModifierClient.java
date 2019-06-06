@@ -87,7 +87,7 @@ public class FenetreModifierClient implements ActionListener {
         {
             client.setAdresseMail(fieldAdresseMail.getText());
             client.setDateDeNaissance(fieldDateDeNaissance.getText());
-            client.setNom(fieldNom.getName());
+            client.setNom(fieldNom.getText());
             client.setNumTelephone(fieldNumeroTelephone.getText());
             client.setPrenom(fieldPrenom.getText());
             if (main.fenetreConsulterClient!=null)
