@@ -41,7 +41,7 @@ public class FenetreConsulterClient<a> implements ActionListener, ListSelectionL
         main = m;
         int length=main.menuClient.getListeClient().size();
         String[] data=new String[length];
-        data=getClient(data);
+        data=main.menuClient.getClient(data);
         jList= new JList(data);
         jList.setSelectionMode(ListSelectionModel.SINGLE_SELECTION );
         scrollPane = new JScrollPane(jList);
@@ -92,16 +92,7 @@ public class FenetreConsulterClient<a> implements ActionListener, ListSelectionL
         fenetre.setLocation(screenSize.width/2-windowSize.width/2,screenSize.height/2-windowSize.height/2);
     }
 
-    public String[] getClient(String[] data){
-        ArrayList listeClient;
-        listeClient = main.menuClient.getListeClient();
-        int length=listeClient.size();
-        data=new String[length];
-        for(int i=0;i<length; i++){
-            data[i]=(((Client)(listeClient.get(i))).getNom()+" "+((Client)(listeClient.get(i))).getPrenom());
-        }
-        return data;
-    }
+
 
     @Override
     public void actionPerformed(ActionEvent e) {

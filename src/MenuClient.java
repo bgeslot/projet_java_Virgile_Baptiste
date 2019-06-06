@@ -25,6 +25,7 @@ public class MenuClient {
         return listeClient;
     }
 
+
     //usefull methode
 
     public void addClient(Client aClient)
@@ -36,6 +37,17 @@ public class MenuClient {
         if(i!=-1) {
             listeClient.remove(i);
         }
+    }
+
+    public String[] getClient(String[] data){
+        ArrayList listeClient;
+        listeClient = this.getListeClient();
+        int length=listeClient.size();
+        data=new String[length];
+        for(int i=0;i<length; i++){
+            data[i]=(((Client)(listeClient.get(i))).getNom()+" "+((Client)(listeClient.get(i))).getPrenom());
+        }
+        return data;
     }
 
     // other

@@ -1,12 +1,9 @@
-import com.sun.deploy.util.StringUtils;
-
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
-import java.util.Calendar;
 
 public class FenetreNouvLocation implements ActionListener {
     private Main main;
@@ -40,10 +37,12 @@ public class FenetreNouvLocation implements ActionListener {
     private JPanel panel91 = new JPanel();
     private JPanel panel92 = new JPanel();
 
-    String[] clients = {"Client 0", "Client 1", "Client 2", "Client 3", "Client 4", "Client 5", "Client 6"};
+
 
     public FenetreNouvLocation(Main main, Vehicule vehicule) {
         this.main = main;
+        String[] dataClient =new String[main.getMenuClient().getListeClient().size()];
+        String[] clients = (main.menuClient).getClient(dataClient);
         this.vehicule = vehicule;
         fenetre.setTitle("Nouvelle location");
         fenetre.setLocationRelativeTo(null);
