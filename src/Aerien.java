@@ -4,7 +4,6 @@ public class Aerien extends Vehicule {
 
     public Aerien()
     {
-
     }
 
     public Aerien(String marque, String modele, String vitesseMax, String prixLocationJour, String etat, String heureDeVol) {
