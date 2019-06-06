@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<java version="1.8.0_211" class="java.beans.XMLDecoder">
+<java version="1.8.0_191" class="java.beans.XMLDecoder">
  <object class="MenuClient" id="MenuClient0">
   <void property="listeClient">
    <void method="add">
@@ -18,6 +18,28 @@
      </void>
      <void property="prenom">
       <string>Virgile</string>
+     </void>
+    </object>
+   </void>
+   <void method="add">
+    <object class="Client">
+     <void property="adresseMail">
+      <string>baptiste.geslot@gmail.com</string>
+     </void>
+     <void property="dateDeNaissance">
+      <string>04/06/1996</string>
+     </void>
+     <void property="listeLocationEnCours">
+      <object class="java.util.ArrayList"/>
+     </void>
+     <void property="nom">
+      <string>Geslot</string>
+     </void>
+     <void property="numTelephone">
+      <string>0649779210</string>
+     </void>
+     <void property="prenom">
+      <string>Baptiste</string>
      </void>
     </object>
    </void>
