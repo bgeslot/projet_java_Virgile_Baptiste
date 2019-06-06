@@ -80,7 +80,7 @@ public class Client {
 
     public String toString(){
         String newString=new String();
-        newString=this.getNom()+""+this.getPrenom();
+        newString=this.getPrenom()+" "+this.getNom();
         return newString;
     }
 

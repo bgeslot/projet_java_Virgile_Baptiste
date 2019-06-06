@@ -129,7 +129,7 @@ public class FenetreNouvLocation implements ActionListener {
         JButton recup = (JButton) e.getSource();
         if (recup == boutonAjouter) {
             int i=main.menuLocation.getNumLocaMin();
-            Location location=new Location(i,fieldDateDebut.getText(),fieldDuree.getText(),fieldKmPrevi.getText(),"a",boxReduction.isSelected());
+            Location location=new Location((Client) main.menuClient.getListeClient().get(jComboBox.getSelectedIndex()),i,fieldDateDebut.getText(),fieldDuree.getText(),fieldKmPrevi.getText(),"a",boxReduction.isSelected());
             main.menuLocation.setNumLocaMin(main.menuLocation.getNewID());
             main.menuLocation.addLocation(location);
             if (main.fenetreConsulterLocation!=null)

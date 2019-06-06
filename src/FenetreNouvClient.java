@@ -48,10 +48,10 @@ public class FenetreNouvClient implements ActionListener {
         panel.add(panel52);
         panel.add(panel61);
         panel.add(panel62);
-        panel11.add(new Label("Nom :"));
-        panel12.add(fieldNom);
-        panel21.add(new Label("Prénom :"));
-        panel22.add(fieldPrenom);
+        panel11.add(new Label("Prénom :"));
+        panel12.add(fieldPrenom);
+        panel21.add(new Label("Nom :"));
+        panel22.add(fieldNom);
         panel31.add(new Label("Date de naissance :"));
         panel32.add(fieldDateDeNaissance);
         panel41.add(new Label("Adresse mail :"));

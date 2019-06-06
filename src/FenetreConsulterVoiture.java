@@ -101,6 +101,10 @@ public class FenetreConsulterVoiture implements ActionListener, ListSelectionLis
         panel92.add(boutonModifier);
         panel101.add(boutonLouer);
         panel102.add(boutonSupprimer);
+        Dimension tailleBouton=boutonSupprimer.getPreferredSize();
+        boutonLouer.setPreferredSize(tailleBouton);
+        boutonModifier.setPreferredSize(tailleBouton);
+        boutonAjouter.setPreferredSize(tailleBouton);
         jList.addListSelectionListener(this);
         boutonAjouter.addActionListener(this);
         boutonSupprimer.addActionListener(this);

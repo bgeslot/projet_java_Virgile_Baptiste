@@ -14,8 +14,9 @@ public class Location {
 
     }
 
-    public Location(int numLocation, String dataDebut, String durre, String kmPrevu, String prixPrevu, boolean reduction)
+    public Location(Client client,int numLocation, String dataDebut, String durre, String kmPrevu, String prixPrevu, boolean reduction)
     {
+        this.client=client;
         this.numLocation = numLocation;
         this.dataDebut = dataDebut;
         this.durre = durre;

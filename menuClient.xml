@@ -14,7 +14,7 @@
       <string>Petermann</string>
      </void>
      <void property="numTelephone">
-      <string>0611331714</string>
+      <string>06.11.33.17.14</string>
      </void>
      <void property="prenom">
       <string>Virgile</string>
@@ -33,10 +33,29 @@
       <string>Geslot</string>
      </void>
      <void property="numTelephone">
-      <string>0649779210</string>
+      <string>06.49.77.92.10</string>
      </void>
      <void property="prenom">
       <string>Baptiste</string>
+     </void>
+    </object>
+   </void>
+   <void method="add">
+    <object class="Client">
+     <void property="adresseMail">
+      <string>yeux.revolver@hotmail.com</string>
+     </void>
+     <void property="dateDeNaissance">
+      <string>06/04/1982</string>
+     </void>
+     <void property="nom">
+      <string>Beauregard</string>
+     </void>
+     <void property="numTelephone">
+      <string>06.54.83.52</string>
+     </void>
+     <void property="prenom">
+      <string>Gérard</string>
      </void>
     </object>
    </void>

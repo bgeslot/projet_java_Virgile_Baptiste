@@ -52,23 +52,6 @@ public class MenuClient {
 
     // other
 
-    public static  void serializationClient(MenuClient menuClient) {
-        XMLEncoder encoder = null;
-        try {
-            encoder = new XMLEncoder(new BufferedOutputStream(new FileOutputStream("client.xml")));
-            encoder.writeObject(menuClient.getListeClient());
-            encoder.flush();
-        }
-        catch (FileNotFoundException e) {
-            e.printStackTrace();
-        }
-        finally {
-            if (encoder != null) {
-                encoder.close();
-            }
-        }
-    }
-
 
     @Override
     public boolean equals(Object obj) {

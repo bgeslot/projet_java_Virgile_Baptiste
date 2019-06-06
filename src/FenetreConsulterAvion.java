@@ -94,6 +94,10 @@ public class FenetreConsulterAvion implements ActionListener, ListSelectionListe
         panel82.add(boutonModifier);
         panel91.add(boutonLouer);
         panel92.add(boutonSupprimer);
+        Dimension tailleBouton=boutonSupprimer.getPreferredSize();
+        boutonLouer.setPreferredSize(tailleBouton);
+        boutonModifier.setPreferredSize(tailleBouton);
+        boutonAjouter.setPreferredSize(tailleBouton);
         jList.addListSelectionListener(this);
         boutonSupprimer.addActionListener(this);
         boutonAjouter.addActionListener(this);

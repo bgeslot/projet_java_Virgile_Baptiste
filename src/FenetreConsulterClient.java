@@ -67,10 +67,10 @@ public class FenetreConsulterClient<a> implements ActionListener, ListSelectionL
         panelDroite.add(panel62);
         panelDroite.add(panel71);
         panelDroite.add(panel72);
-        panel11.add(new JLabel("Nom :"));
-        panel12.add(labelNom);
-        panel21.add(new JLabel("Prénom :"));
-        panel22.add(labelPrenom);
+        panel11.add(new JLabel("Prénom :"));
+        panel12.add(labelPrenom);
+        panel21.add(new JLabel("Nom :"));
+        panel22.add(labelNom);
         panel31.add(new JLabel("Naissance :"));
         panel32.add(labelDateDeNaissance);
         panel41.add(new JLabel("Adresse Mail :"));
@@ -86,6 +86,10 @@ public class FenetreConsulterClient<a> implements ActionListener, ListSelectionL
         boutonSupprimer.addActionListener(this);
         boutonAnnuler.addActionListener(this);
         boutonModifier.addActionListener(this);
+        Dimension tailleBouton=boutonSupprimer.getPreferredSize();
+        boutonAnnuler.setPreferredSize(tailleBouton);
+        boutonModifier.setPreferredSize(tailleBouton);
+        boutonAjouter.setPreferredSize(tailleBouton);
         fenetre.pack();
         Dimension windowSize = fenetre.getSize();
         Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();

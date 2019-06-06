@@ -100,6 +100,10 @@ public class FenetreConsulterMoto implements ActionListener, ListSelectionListen
         boutonSupprimer.addActionListener(this);
         boutonAjouter.addActionListener(this);
         boutonModifier.addActionListener(this);
+        Dimension tailleBouton=boutonSupprimer.getPreferredSize();
+        boutonLouer.setPreferredSize(tailleBouton);
+        boutonModifier.setPreferredSize(tailleBouton);
+        boutonAjouter.setPreferredSize(tailleBouton);
         fenetre.pack();
         Dimension windowSize = fenetre.getSize();
         Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
