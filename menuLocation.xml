@@ -2,50 +2,70 @@
 <java version="1.8.0_211" class="java.beans.XMLDecoder">
  <object class="MenuLocation" id="MenuLocation0">
   <void property="numLocaMin">
-   <int>22</int>
+   <int>25</int>
   </void>
  </object>
-<void class="Voiture" id="Voiture0">
- <void property="km">
-  <string>5000</string>
- </void>
- <void property="marque">
-  <string>Audi</string>
- </void>
- <void property="modele">
-  <string>A3 - 2019</string>
- </void>
- <void property="nbPlace">
-  <string>5</string>
- </void>
- <void property="prixLocationJour">
-  <string>25</string>
- </void>
- <void property="puissance">
-  <string>6 CV</string>
- </void>
- <void property="vitesseMax">
-  <string>211 Km/h</string>
- </void>
- <void property="etat">
-  <string>Bon</string>
- </void>
-</void>
 <void class="Client" id="Client0">
  <void property="dateDeNaissance">
-  <string>14/12/1998</string>
+  <string>09/06/1999</string>
+ </void>
+ <void property="listeLocationEnCours">
+  <object class="java.util.ArrayList"/>
  </void>
  <void property="nom">
-  <string>Plantet</string>
+  <string>Petermann</string>
  </void>
  <void property="numTelephone">
-  <string>06.38.62..44.15</string>
+  <string>06.11.33.17.14</string>
  </void>
  <void property="prenom">
-  <string>Cédric</string>
+  <string>Virgile</string>
  </void>
  <void property="adresseMail">
-  <string>cedric.plantet@gmail.com</string>
+  <string>virgile.petermann@gmail.com</string>
+ </void>
+</void>
+<void class="Avion" id="Avion0">
+ <void property="heureDeVol">
+  <string>1000</string>
+ </void>
+ <void property="marque">
+  <string>Boeing</string>
+ </void>
+ <void property="modele">
+  <string>737</string>
+ </void>
+ <void property="nbMoteur">
+  <string>2</string>
+ </void>
+ <void property="prixLocationJour">
+  <string>10000</string>
+ </void>
+ <void property="vitesseMax">
+  <string>825 Km/h</string>
+ </void>
+ <void property="etat">
+  <string>Excellent</string>
+ </void>
+</void>
+<void class="Location" id="Location0">
+ <void property="dataDebut">
+  <string>09/06/2019</string>
+ </void>
+ <void property="dateFin">
+  <string>15</string>
+ </void>
+ <void property="kmPrevu">
+  <string>10</string>
+ </void>
+ <void property="numLocation">
+  <int>24</int>
+ </void>
+ <void property="vehicule">
+  <object idref="Avion0"/>
+ </void>
+ <void property="client">
+  <object idref="Client0"/>
  </void>
 </void>
 <void class="MenuLocation" id="Field0" method="getField">
@@ -53,29 +73,7 @@
  <void id="ArrayList0" method="get">
   <object idref="MenuLocation0"/>
   <void method="add">
-   <object class="Location">
-    <void property="client">
-     <object idref="Client0"/>
-    </void>
-    <void property="dataDebut">
-     <string>06/54/1999</string>
-    </void>
-    <void property="dateFin">
-     <string>10</string>
-    </void>
-    <void property="kmPrevu">
-     <string>200</string>
-    </void>
-    <void property="numLocation">
-     <int>21</int>
-    </void>
-    <void property="prixPrevu">
-     <int>450</int>
-    </void>
-    <void property="vehicule">
-     <object idref="Voiture0"/>
-    </void>
-   </object>
+   <object idref="Location0"/>
   </void>
  </void>
 </void>
