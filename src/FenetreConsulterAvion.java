@@ -142,7 +142,14 @@ public class FenetreConsulterAvion implements ActionListener, ListSelectionListe
         {
             int index = jList.getSelectedIndex();
             if(index!=-1) {
-                new FenetreNouvLocation(main, (Avion) main.menuVehicule.getListeAvion().get(jList.getSelectedIndex()));
+                Avion avion=(Avion) main.menuVehicule.getListeAvion().get(jList.getSelectedIndex());
+                boolean dispo=(avion.isDisponible());
+                if (dispo) {
+                new FenetreNouvLocation(main,avion);
+                }
+                else {
+                    new FenetreErreur("Ce véhicule est déja loué");
+                }
             }
         }
         else if (recup==boutonModifier) {

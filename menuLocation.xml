@@ -5,7 +5,69 @@
    <int>30</int>
   </void>
  </object>
+<void class="Voiture" id="Voiture0">
+ <void property="km">
+  <string>5000</string>
+ </void>
+ <void property="marque">
+  <string>Audi</string>
+ </void>
+ <void property="modele">
+  <string>A3 - 2019</string>
+ </void>
+ <void property="nbPlace">
+  <string>5</string>
+ </void>
+ <void property="prixLocationJour">
+  <string>25</string>
+ </void>
+ <void property="puissance">
+  <string>6 CV</string>
+ </void>
+ <void property="vitesseMax">
+  <string>211 Km/h</string>
+ </void>
+ <void property="etat">
+  <string>Bon</string>
+ </void>
+</void>
 <void class="Location" id="Location0">
+ <void property="dataDebut">
+  <string>658</string>
+ </void>
+ <void property="dateFin">
+  <string>562</string>
+ </void>
+ <void property="kmPrevu">
+  <string>789</string>
+ </void>
+ <void property="numLocation">
+  <int>29</int>
+ </void>
+ <void property="vehicule">
+  <object idref="Voiture0"/>
+ </void>
+ <void property="client">
+  <object class="Client" id="Client0">
+   <void property="adresseMail">
+    <string>virgile.petermann@gmail.com</string>
+   </void>
+   <void property="dateDeNaissance">
+    <string>09/06/1999</string>
+   </void>
+   <void property="nom">
+    <string>Petermann</string>
+   </void>
+   <void property="numTelephone">
+    <string>06.11.33.17.14</string>
+   </void>
+   <void property="prenom">
+    <string>Virgile</string>
+   </void>
+  </object>
+ </void>
+</void>
+<void class="Location" id="Location1">
  <void property="dataDebut">
   <string>jamais</string>
  </void>
@@ -50,7 +112,7 @@
   </object>
  </void>
  <void property="client">
-  <object class="Client" id="Client0">
+  <object class="Client" id="Client1">
    <void property="adresseMail">
     <string>virgile.petermann@gmail.com</string>
    </void>
@@ -69,24 +131,7 @@
   </object>
  </void>
 </void>
-<void class="Client" id="Client1">
- <void property="dateDeNaissance">
-  <string>09/06/1999</string>
- </void>
- <void property="nom">
-  <string>Petermann</string>
- </void>
- <void property="numTelephone">
-  <string>06.11.33.17.14</string>
- </void>
- <void property="prenom">
-  <string>Virgile</string>
- </void>
- <void property="adresseMail">
-  <string>virgile.petermann@gmail.com</string>
- </void>
-</void>
-<void class="Location" id="Location1">
+<void class="Location" id="Location2">
  <void property="dataDebut">
   <string>456</string>
  </void>
@@ -100,74 +145,7 @@
   <int>28</int>
  </void>
  <void property="vehicule">
-  <object class="Voiture" id="Voiture0">
-   <void property="etat">
-    <string>Bon</string>
-   </void>
-   <void property="km">
-    <string>5000</string>
-   </void>
-   <void property="marque">
-    <string>Audi</string>
-   </void>
-   <void property="modele">
-    <string>A3 - 2019</string>
-   </void>
-   <void property="nbPlace">
-    <string>5</string>
-   </void>
-   <void property="prixLocationJour">
-    <string>25</string>
-   </void>
-   <void property="puissance">
-    <string>6 CV</string>
-   </void>
-   <void property="vitesseMax">
-    <string>211 Km/h</string>
-   </void>
-  </object>
- </void>
- <void property="client">
-  <object idref="Client1"/>
- </void>
-</void>
-<void class="Location" id="Location2">
- <void property="dataDebut">
-  <string>toujours</string>
- </void>
- <void property="dateFin">
-  <string>20</string>
- </void>
- <void property="kmPrevu">
-  <string>20</string>
- </void>
- <void property="numLocation">
-  <int>27</int>
- </void>
- <void property="vehicule">
-  <object class="Moto">
-   <void property="etat">
-    <string>Moyen</string>
-   </void>
-   <void property="km">
-    <string>2500</string>
-   </void>
-   <void property="marque">
-    <string>Suzuki</string>
-   </void>
-   <void property="modele">
-    <string>GS 500 2006</string>
-   </void>
-   <void property="prixLocationJour">
-    <string>35</string>
-   </void>
-   <void property="puissance">
-    <string>48 ch</string>
-   </void>
-   <void property="vitesseMax">
-    <string>175 Km/h</string>
-   </void>
-  </object>
+  <object idref="Voiture0"/>
  </void>
  <void property="client">
   <object idref="Client0"/>
@@ -183,27 +161,49 @@
      <object idref="Client1"/>
     </void>
     <void property="dataDebut">
-     <string>658</string>
+     <string>toujours</string>
     </void>
     <void property="dateFin">
-     <string>562</string>
+     <string>20</string>
     </void>
     <void property="kmPrevu">
-     <string>789</string>
+     <string>20</string>
     </void>
     <void property="numLocation">
-     <int>29</int>
+     <int>27</int>
     </void>
     <void property="vehicule">
-     <object idref="Voiture0"/>
+     <object class="Moto">
+      <void property="etat">
+       <string>Moyen</string>
+      </void>
+      <void property="km">
+       <string>2500</string>
+      </void>
+      <void property="marque">
+       <string>Suzuki</string>
+      </void>
+      <void property="modele">
+       <string>GS 500 2006</string>
+      </void>
+      <void property="prixLocationJour">
+       <string>35</string>
+      </void>
+      <void property="puissance">
+       <string>48 ch</string>
+      </void>
+      <void property="vitesseMax">
+       <string>175 Km/h</string>
+      </void>
+     </object>
     </void>
    </object>
   </void>
   <void method="add">
-   <object idref="Location0"/>
+   <object idref="Location2"/>
   </void>
   <void method="add">
-   <object idref="Location2"/>
+   <object idref="Location0"/>
   </void>
   <void method="add">
    <object idref="Location1"/>

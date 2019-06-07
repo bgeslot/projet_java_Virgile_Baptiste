@@ -149,7 +149,14 @@ public class FenetreConsulterVoiture implements ActionListener, ListSelectionLis
         {
             int index = jList.getSelectedIndex();
             if(index!=-1) {
-                new FenetreNouvLocation(main, (Voiture) main.menuVehicule.getListeVoiture().get(jList.getSelectedIndex()));
+                Voiture voiture = (Voiture) main.menuVehicule.getListeVoiture().get(jList.getSelectedIndex());
+                boolean dispo = (voiture.isDisponible());
+                if (dispo) {
+                    new FenetreNouvLocation(main, (Voiture) main.menuVehicule.getListeVoiture().get(jList.getSelectedIndex()));
+                }
+                else{
+                    new FenetreErreur("Ce véhicule est déja loué");
+                }
             }
         }
         else if (recup==boutonModifier)
