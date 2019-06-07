@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<java version="1.8.0_211" class="java.beans.XMLDecoder">
+<java version="1.8.0_191" class="java.beans.XMLDecoder">
  <object class="MenuLocation" id="MenuLocation0">
   <void property="numLocaMin">
    <int>22</int>
@@ -31,45 +31,39 @@
      </object>
     </void>
     <void property="dataDebut">
-     <string>06/54/1999</string>
+     <string>10/06/2019</string>
     </void>
     <void property="dateFin">
-     <string>10</string>
+     <string>50</string>
     </void>
     <void property="kmPrevu">
-     <string>200</string>
+     <string>1000</string>
     </void>
     <void property="numLocation">
      <int>21</int>
     </void>
-    <void property="prixPrevu">
-     <int>450</int>
-    </void>
     <void property="vehicule">
-     <object class="Voiture">
+     <object class="Avion">
       <void property="etat">
-       <string>Bon</string>
+       <string>Excellent</string>
       </void>
-      <void property="km">
-       <string>5000</string>
+      <void property="heureDeVol">
+       <string>1000</string>
       </void>
       <void property="marque">
-       <string>Audi</string>
+       <string>Boeing</string>
       </void>
       <void property="modele">
-       <string>A3 - 2019</string>
+       <string>737</string>
       </void>
-      <void property="nbPlace">
-       <string>5</string>
+      <void property="nbMoteur">
+       <string>2</string>
       </void>
       <void property="prixLocationJour">
-       <string>25</string>
-      </void>
-      <void property="puissance">
-       <string>6 CV</string>
+       <string>10000</string>
       </void>
       <void property="vitesseMax">
-       <string>211 Km/h</string>
+       <string>825 Km/h</string>
       </void>
      </object>
     </void>
