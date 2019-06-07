@@ -124,9 +124,15 @@ public class Location {
      * @return
      */
     public static int prixLocation(Vehicule vehicule, int duree,int kilometrage, boolean reduction){
-        //int temps=Integer.parseInt(uneDuree);
-        //int km=Integer.parseInt(unKilometrage);
-        int res=duree*Integer.parseInt(vehicule.getPrixLocationJour())+kilometrage;
+        int res;
+        try {
+            res = duree * Integer.parseInt(vehicule.getPrixLocationJour()) + kilometrage;
+        }
+        catch (Exception ex)
+        {
+            res=0;
+            System.out.println(ex);
+        }
         if (reduction)
         {
             res=(int) (0.9*res);

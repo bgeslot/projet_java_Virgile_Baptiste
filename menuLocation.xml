@@ -1,8 +1,81 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <java version="1.8.0_211" class="java.beans.XMLDecoder">
- <object class="MenuLocation">
+ <object class="MenuLocation" id="MenuLocation0">
   <void property="numLocaMin">
-   <int>32</int>
+   <int>35</int>
   </void>
  </object>
+<void class="Voiture" id="Voiture0">
+ <void property="km">
+  <string>123</string>
+ </void>
+ <void property="marque">
+  <string>aze</string>
+ </void>
+ <void property="modele">
+  <string>aze</string>
+ </void>
+ <void property="nbPlace">
+  <string>123</string>
+ </void>
+ <void property="prixLocationJour">
+  <string>123</string>
+ </void>
+ <void property="puissance">
+  <string>123</string>
+ </void>
+ <void property="vitesseMax">
+  <string>123</string>
+ </void>
+ <void property="etat">
+  <string>123</string>
+ </void>
+</void>
+<void class="Client" id="Client0">
+ <void property="dateDeNaissance">
+  <string>09/06/1999</string>
+ </void>
+ <void property="nom">
+  <string>Petermann</string>
+ </void>
+ <void property="numTelephone">
+  <string>06.11.33.17.14</string>
+ </void>
+ <void property="prenom">
+  <string>Virgile</string>
+ </void>
+ <void property="adresseMail">
+  <string>virgile.petermann@gmail.com</string>
+ </void>
+</void>
+<void class="Location" id="Location0">
+ <void property="dataDebut">
+  <string>123</string>
+ </void>
+ <void property="dateFin">
+  <string>123</string>
+ </void>
+ <void property="kmPrevu">
+  <string>123</string>
+ </void>
+ <void property="numLocation">
+  <int>34</int>
+ </void>
+ <void property="vehicule">
+  <object idref="Voiture0"/>
+ </void>
+ <void property="client">
+  <object idref="Client0"/>
+ </void>
+</void>
+<void class="MenuLocation" id="Field0" method="getField">
+ <string>listeLocation</string>
+ <void id="ArrayList0" method="get">
+  <object idref="MenuLocation0"/>
+  <void method="add">
+   <object idref="Location0"/>
+  </void>
+ </void>
+</void>
+<void idref="ArrayList0"/>
 </java>
