@@ -10,9 +10,20 @@ public abstract class Vehicule {
     private String etat;
     private boolean disponible;
 
+    /**
+     * permet la serialisation
+     */
     public Vehicule() {
     }
 
+    /**
+     * nessecaire pour implementer les vehicule dans le programe
+     * @param marque
+     * @param modele
+     * @param vitesseMax
+     * @param prixLocationJour
+     * @param etat
+     */
     public Vehicule(String marque, String modele, String vitesseMax, String prixLocationJour, String etat) {
         this.marque = marque;
         this.modele = modele;

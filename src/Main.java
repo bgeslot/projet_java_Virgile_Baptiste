@@ -5,7 +5,9 @@ import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
 
-
+/**
+ *Classe principale
+ */
 public class Main {
     public MenuVehicule menuVehicule=new MenuVehicule();
     public MenuClient menuClient=new MenuClient();
@@ -21,10 +23,15 @@ public class Main {
         new FenetreMain(main);
     }
 
+
     public MenuClient getMenuClient() {
         return menuClient;
     }
 
+    /**
+     * permet la serialisation dans les fichier menuXXXX.xml
+     * @throws IOException
+     */
     public void serializeToXML () throws IOException
     {
         FileOutputStream fosVehicule = new FileOutputStream("menuVehicule.xml");
@@ -62,6 +69,10 @@ public class Main {
 
     }
 
+    /**
+     * permet la deserialisation depuis les fichier menuXXXX.xml
+     * @throws IOException
+     */
     public void deserializeFromXML() throws IOException {
         FileInputStream fisClient = new FileInputStream("menuClient.xml");
         XMLDecoder decoderClient = new XMLDecoder(fisClient);

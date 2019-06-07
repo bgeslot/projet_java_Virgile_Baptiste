@@ -13,11 +13,22 @@ public class Client {
     private String adresseMail;
     private String numTelephone;
 
+    /**
+     * permet la serialisation
+     */
     public Client()
     {
 
     }
 
+    /**
+     * nessecaire pour implementer les clients dans le programe
+     * @param nom
+     * @param prenom
+     * @param dateDeNaissance
+     * @param adresseMail
+     * @param numTelephone
+     */
     public Client(String nom, String prenom, String dateDeNaissance, String adresseMail, String numTelephone) {
         this.nom = nom;
         this.prenom = prenom;
