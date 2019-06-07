@@ -19,7 +19,7 @@ public class Location {
 
     /**
      * Crer une nouvelle location et utilise la duree de la location et le nombre de km prevu pour determine le prix.
-     * De plus on met a jour la liste de vehicule louer par le client
+     * De plus on met a jour la liste de vehicule louer par le client et la disponibilite du vehicule
      * @param client
      * @param numLocation
      * @param dataDebut
@@ -37,6 +37,7 @@ public class Location {
         this.duree = duree;
         this.kmPrevu = kmPrevu;
         this.reduction = reduction;
+        this.vehicule.setDisponible(false);
     }
 
     //set

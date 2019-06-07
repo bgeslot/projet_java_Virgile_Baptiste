@@ -8,6 +8,7 @@ public abstract class Vehicule {
     private String vitesseMax;
     private String prixLocationJour;
     private String etat;
+    private boolean disponible;
 
     public Vehicule() {
     }
@@ -18,6 +19,7 @@ public abstract class Vehicule {
         this.vitesseMax = vitesseMax;
         this.prixLocationJour = prixLocationJour;
         this.etat = etat;
+        this.disponible=true;
     }
 
     //set
@@ -38,7 +40,10 @@ public abstract class Vehicule {
         etat=aEtat;
     }
 
-    // get
+    public void setDisponible(boolean disponible) {
+        this.disponible = disponible;
+    }
+// get
 
     public String getMarque(){
         return marque;
@@ -56,7 +61,10 @@ public abstract class Vehicule {
         return etat;
     }
 
-    //other methode
+    public boolean isDisponible() {
+        return disponible;
+    }
+//other methode
 
     public String getNameVehicule(){
         return (this.marque+" "+this.modele);
