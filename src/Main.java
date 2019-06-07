@@ -16,6 +16,7 @@ public class Main {
     public FenetreConsulterClient fenetreConsulterClient=null;
     public FenetreConsulterLocation fenetreConsulterLocation=null;
     public static void main(String[] args) throws IOException {
+        new FenetreErreur("messa oui");
         Main main=new Main();
         main.deserializeFromXML();
         new FenetreMain(main);
