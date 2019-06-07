@@ -3,6 +3,9 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+/**
+ * Cette classe permet de crer une fenetre pour modifier les information sur une voiture
+ */
 public class FenetreModifierVoiture implements ActionListener {
     private Main main;
     private Voiture voiture;
@@ -106,6 +109,10 @@ public class FenetreModifierVoiture implements ActionListener {
         fenetre.setLocation(screenSize.width/2-windowSize.width/2,screenSize.height/2-windowSize.height/2);
     }
 
+    /**
+     * Permet d'utiliser les different boutons
+     * @param e
+     */
     @Override
     public void actionPerformed(ActionEvent e) {
         JButton recup = (JButton) e.getSource();

@@ -3,6 +3,9 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+/**
+ * Cette classe permet de crer les fenetre d'erreur
+ */
 public class FenetreErreur implements ActionListener {
 
     public JFrame fenetre = new JFrame();
@@ -32,6 +35,10 @@ public class FenetreErreur implements ActionListener {
         fenetre.setLocation(screenSize.width/2-windowSize.width/2,screenSize.height/2-windowSize.height/2);
     }
 
+    /**
+     * permet grace a un bouton de fermer une fenetre d'erreur
+     * @param e
+     */
     @Override
     public void actionPerformed(ActionEvent e) {
         fenetre.dispose();

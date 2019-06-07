@@ -6,6 +6,9 @@ import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 import java.io.IOException;
 
+/**
+ * Cette classe permet de crer la fenetre de base de l'aplication
+ */
 public class FenetreMain implements ActionListener {
     private Main main;
     private JFrame fenetre = new JFrame();
@@ -61,6 +64,10 @@ public class FenetreMain implements ActionListener {
 
     }
 
+    /**
+     * Permet d'utiliser les different boutons
+     * @param e
+     */
     @Override
     public void actionPerformed(ActionEvent e) {
         JButton recup = (JButton) e.getSource();
