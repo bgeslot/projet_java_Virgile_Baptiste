@@ -131,15 +131,18 @@ public class FenetreConsulterLocation implements ActionListener, ListSelectionLi
     @Override
     public void actionPerformed(ActionEvent e) {
         JButton recup = (JButton) e.getSource();
-        if (recup == boutonRendre)
+        if (jList.getSelectedIndex()==-1)
         {
-            new FenetreRenduVehicule(main,(Location) main.menuLocation.getListeLocation().get(jList.getSelectedIndex()),jList.getSelectedIndex());
+            new FenetreErreur("Sélectionner une location");
         }
-        else if (recup==boutonSupprimer)
-        {
-            main.menuLocation.delLocation(jList.getSelectedIndex());
-            main.fenetreConsulterLocation = new FenetreConsulterLocation(main);
-            fenetre.dispose();
+        else {
+            if (recup == boutonRendre) {
+                new FenetreRenduVehicule(main, (Location) main.menuLocation.getListeLocation().get(jList.getSelectedIndex()), jList.getSelectedIndex());
+            } else if (recup == boutonSupprimer) {
+                main.menuLocation.delLocation(jList.getSelectedIndex());
+                main.fenetreConsulterLocation = new FenetreConsulterLocation(main);
+                fenetre.dispose();
+            }
         }
     }
 

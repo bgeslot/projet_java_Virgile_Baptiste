@@ -8,19 +8,459 @@
       <string></string>
      </void>
      <void property="dateDeNaissance">
-      <string></string>
-     </void>
-     <void property="listeLocationEnCours">
-      <object class="java.util.ArrayList"/>
+      <string>09/06/1999</string>
      </void>
      <void property="nom">
-      <string></string>
+      <string>Petermann</string>
      </void>
      <void property="numTelephone">
       <string></string>
      </void>
      <void property="prenom">
-      <string></string>
+      <string>Virgile</string>
+     </void>
+    </object>
+   </void>
+   <void method="add">
+    <object class="Client">
+     <void property="adresseMail">
+      <string>hala.hamoummi@gmail.com</string>
+     </void>
+     <void property="dateDeNaissance">
+      <string>10/07/1998</string>
+     </void>
+     <void property="nom">
+      <string>Elhamoummi</string>
+     </void>
+     <void property="numTelephone">
+      <string>06.50.89.45.61</string>
+     </void>
+     <void property="prenom">
+      <string>Hala</string>
+     </void>
+    </object>
+   </void>
+   <void method="add">
+    <object class="Client">
+     <void property="adresseMail">
+      <string>dzhu@enssat.fr</string>
+     </void>
+     <void property="dateDeNaissance">
+      <string>23/09/1996</string>
+     </void>
+     <void property="nom">
+      <string>Zhu</string>
+     </void>
+     <void property="numTelephone">
+      <string>07.78.69.23.48</string>
+     </void>
+     <void property="prenom">
+      <string>Daniel</string>
+     </void>
+    </object>
+   </void>
+   <void method="add">
+    <object class="Client">
+     <void property="adresseMail">
+      <string>nat.fleche@hotmail.fr</string>
+     </void>
+     <void property="dateDeNaissance">
+      <string>18/12/1998</string>
+     </void>
+     <void property="nom">
+      <string>Collobert</string>
+     </void>
+     <void property="numTelephone">
+      <string>06.06.06.00.40</string>
+     </void>
+     <void property="prenom">
+      <string>Nathan</string>
+     </void>
+    </object>
+   </void>
+   <void method="add">
+    <object class="Client">
+     <void property="adresseMail">
+      <string>mvaquant@enssat.fr</string>
+     </void>
+     <void property="dateDeNaissance">
+      <string>04/01/1997</string>
+     </void>
+     <void property="nom">
+      <string>Vaquant</string>
+     </void>
+     <void property="numTelephone">
+      <string>06.75.12.95.47</string>
+     </void>
+     <void property="prenom">
+      <string>Marc</string>
+     </void>
+    </object>
+   </void>
+   <void method="add">
+    <object class="Client">
+     <void property="adresseMail">
+      <string>baptiste.geslot@gmail.com</string>
+     </void>
+     <void property="dateDeNaissance">
+      <string>04/01/1996</string>
+     </void>
+     <void property="nom">
+      <string>Geslot</string>
+     </void>
+     <void property="numTelephone">
+      <string>06.49.77.92.10</string>
+     </void>
+     <void property="prenom">
+      <string>Baptiste</string>
+     </void>
+    </object>
+   </void>
+   <void method="add">
+    <object class="Client">
+     <void property="adresseMail">
+      <string>bastien.maubon@gmail.com</string>
+     </void>
+     <void property="dateDeNaissance">
+      <string>02/10/1998</string>
+     </void>
+     <void property="nom">
+      <string>Maubon</string>
+     </void>
+     <void property="numTelephone">
+      <string>06.25.34.16.33</string>
+     </void>
+     <void property="prenom">
+      <string>Bastien</string>
+     </void>
+    </object>
+   </void>
+   <void method="add">
+    <object class="Client">
+     <void property="adresseMail">
+      <string>jojo.holyday@gmail.com</string>
+     </void>
+     <void property="dateDeNaissance">
+      <string>15/06/1943</string>
+     </void>
+     <void property="nom">
+      <string>Hallyday</string>
+     </void>
+     <void property="numTelephone">
+      <string>06.84.56.13.15</string>
+     </void>
+     <void property="prenom">
+      <string>Johnny</string>
+     </void>
+    </object>
+   </void>
+   <void method="add">
+    <object class="Client">
+     <void property="adresseMail">
+      <string>wiwi.lapoire@gmail.com</string>
+     </void>
+     <void property="dateDeNaissance">
+      <string>26/04/1564</string>
+     </void>
+     <void property="nom">
+      <string>Shakespear</string>
+     </void>
+     <void property="numTelephone">
+      <string>06.48.56.24.33</string>
+     </void>
+     <void property="prenom">
+      <string>William</string>
+     </void>
+    </object>
+   </void>
+   <void method="add">
+    <object class="Client">
+     <void property="adresseMail">
+      <string>palaisImperial.terra@troneD&apos;or.imp</string>
+     </void>
+     <void property="dateDeNaissance">
+      <string>4000 avant JC</string>
+     </void>
+     <void property="nom">
+      <string>de l&apos;humanité</string>
+     </void>
+     <void property="numTelephone">
+      <string>télépathie</string>
+     </void>
+     <void property="prenom">
+      <string>L&apos;empereur</string>
+     </void>
+    </object>
+   </void>
+   <void method="add">
+    <object class="Client">
+     <void property="adresseMail">
+      <string>rendez@passe.temps</string>
+     </void>
+     <void property="dateDeNaissance">
+      <string>29/03/1968</string>
+     </void>
+     <void property="nom">
+      <string>de Fort Boyard</string>
+     </void>
+     <void property="numTelephone">
+      <string>06.54.48.96.55</string>
+     </void>
+     <void property="prenom">
+      <string>Passe - Partout</string>
+     </void>
+    </object>
+   </void>
+   <void method="add">
+    <object class="Client">
+     <void property="adresseMail">
+      <string>(pareil que le numéro)</string>
+     </void>
+     <void property="dateDeNaissance">
+      <string>on saît pas</string>
+     </void>
+     <void property="nom">
+      <string>Picognat</string>
+     </void>
+     <void property="numTelephone">
+      <string>(on l&apos;a pas mis pcq le git est public, mais en vrai on l&apos;a)</string>
+     </void>
+     <void property="prenom">
+      <string>Alexandre</string>
+     </void>
+    </object>
+   </void>
+   <void method="add">
+    <object class="Client">
+     <void property="adresseMail">
+      <string>dider.drogba@gmail.com</string>
+     </void>
+     <void property="dateDeNaissance">
+      <string>15/54/2000</string>
+     </void>
+     <void property="nom">
+      <string>Drogba</string>
+     </void>
+     <void property="numTelephone">
+      <string>06.06.06.06.06</string>
+     </void>
+     <void property="prenom">
+      <string>Didier</string>
+     </void>
+    </object>
+   </void>
+   <void method="add">
+    <object class="Client">
+     <void property="adresseMail">
+      <string>adresse@boitemail.fr</string>
+     </void>
+     <void property="dateDeNaissance">
+      <string>07/06/2019</string>
+     </void>
+     <void property="nom">
+      <string>Quelconque</string>
+     </void>
+     <void property="numTelephone">
+      <string>00.00.00.00.00</string>
+     </void>
+     <void property="prenom">
+      <string>Client</string>
+     </void>
+    </object>
+   </void>
+   <void method="add">
+    <object class="Client">
+     <void property="adresseMail">
+      <string>idee@gmail.com</string>
+     </void>
+     <void property="dateDeNaissance">
+      <string>06/01/1999</string>
+     </void>
+     <void property="nom">
+      <string>PLUS D&apos;IDEE</string>
+     </void>
+     <void property="numTelephone">
+      <string>05.08.06.01.02</string>
+     </void>
+     <void property="prenom">
+      <string>OSCOUR J&apos;AI </string>
+     </void>
+    </object>
+   </void>
+   <void method="add">
+    <object class="Client">
+     <void property="adresseMail">
+      <string>sarko@gmail.com</string>
+     </void>
+     <void property="dateDeNaissance">
+      <string>06/02/1964</string>
+     </void>
+     <void property="nom">
+      <string>Sarkozi</string>
+     </void>
+     <void property="numTelephone">
+      <string>05.09.84.65.21</string>
+     </void>
+     <void property="prenom">
+      <string>Nicolas</string>
+     </void>
+    </object>
+   </void>
+   <void method="add">
+    <object class="Client">
+     <void property="adresseMail">
+      <string>madame.KH@gmail.com</string>
+     </void>
+     <void property="dateDeNaissance">
+      <string>03/12/2016</string>
+     </void>
+     <void property="nom">
+      <string>Henry</string>
+     </void>
+     <void property="numTelephone">
+      <string>00.04.51.21.13</string>
+     </void>
+     <void property="prenom">
+      <string>Karine</string>
+     </void>
+    </object>
+   </void>
+   <void method="add">
+    <object class="Client">
+     <void property="adresseMail">
+      <string>yeux.revolver@hotmail.com</string>
+     </void>
+     <void property="dateDeNaissance">
+      <string>01/10/1950</string>
+     </void>
+     <void property="nom">
+      <string>Beauregard</string>
+     </void>
+     <void property="numTelephone">
+      <string>05.01.03.52.12</string>
+     </void>
+     <void property="prenom">
+      <string>Gérard</string>
+     </void>
+    </object>
+   </void>
+   <void method="add">
+    <object class="Client">
+     <void property="adresseMail">
+      <string>cookie.clicker@gmail.com</string>
+     </void>
+     <void property="dateDeNaissance">
+      <string>03.04.05.84.65</string>
+     </void>
+     <void property="nom">
+      <string>Clicker</string>
+     </void>
+     <void property="numTelephone">
+      <string>03.08.54.26.89</string>
+     </void>
+     <void property="prenom">
+      <string>Cookie</string>
+     </void>
+    </object>
+   </void>
+   <void method="add">
+    <object class="Client">
+     <void property="adresseMail">
+      <string>pedri.drog@gmial.com</string>
+     </void>
+     <void property="dateDeNaissance">
+      <string>03/11/2000</string>
+     </void>
+     <void property="nom">
+      <string>Sanchez</string>
+     </void>
+     <void property="numTelephone">
+      <string>01.03.65.48.88</string>
+     </void>
+     <void property="prenom">
+      <string>Pedro</string>
+     </void>
+    </object>
+   </void>
+   <void method="add">
+    <object class="Client">
+     <void property="adresseMail">
+      <string>pasdidee@gmail.com</string>
+     </void>
+     <void property="dateDeNaissance">
+      <string>04/10/1989</string>
+     </void>
+     <void property="nom">
+      <string>les idées</string>
+     </void>
+     <void property="numTelephone">
+      <string>04.90.70.03.78</string>
+     </void>
+     <void property="prenom">
+      <string>RIP</string>
+     </void>
+    </object>
+   </void>
+   <void method="add">
+    <object class="Client">
+     <void property="adresseMail">
+      <string>scrollplease@gmail.com</string>
+     </void>
+     <void property="dateDeNaissance">
+      <string>06/08/1984</string>
+     </void>
+     <void property="nom">
+      <string>de quoi faire scroll</string>
+     </void>
+     <void property="numTelephone">
+      <string>05.04.98.65.21</string>
+     </void>
+     <void property="prenom">
+      <string>J&apos;ai presque</string>
+     </void>
+    </object>
+   </void>
+   <void method="add">
+    <object class="Client">
+     <void property="adresseMail">
+      <string>sanchez@gmail.com</string>
+     </void>
+     <void property="dateDeNaissance">
+      <string>21/03/1965</string>
+     </void>
+     <void property="listeLocationEnCours">
+      <object class="java.util.ArrayList"/>
+     </void>
+     <void property="nom">
+      <string>Sanchez</string>
+     </void>
+     <void property="numTelephone">
+      <string>06.84.32.56.45</string>
+     </void>
+     <void property="prenom">
+      <string>Jérémy</string>
+     </void>
+    </object>
+   </void>
+   <void method="add">
+    <object class="Client">
+     <void property="adresseMail">
+      <string>CASCROLL@gmail.com</string>
+     </void>
+     <void property="dateDeNaissance">
+      <string>23/12/1985</string>
+     </void>
+     <void property="listeLocationEnCours">
+      <object class="java.util.ArrayList"/>
+     </void>
+     <void property="nom">
+      <string>SCROLL</string>
+     </void>
+     <void property="numTelephone">
+      <string>02.65.14.45.14</string>
+     </void>
+     <void property="prenom">
+      <string>JE</string>
      </void>
     </object>
    </void>
