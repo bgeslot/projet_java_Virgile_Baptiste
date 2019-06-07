@@ -56,7 +56,7 @@ public abstract class Vehicule {
     //other methode
 
     public String getNameVehicule(){
-        return (this.marque+""+this.modele);
+        return (this.marque+" "+this.modele);
     }
 
     @Override
