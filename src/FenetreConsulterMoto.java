@@ -134,7 +134,7 @@ public class FenetreConsulterMoto implements ActionListener, ListSelectionListen
                     new FenetreNouvLocation(main, moto);
                 }
                 else{
-                    new FenetreErreur("Ce Véhicule est déja louer");
+                    new FenetreErreur("Ce véhicule est déja loué");
                 }
             }
         }
