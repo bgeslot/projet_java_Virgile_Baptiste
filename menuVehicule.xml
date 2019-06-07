@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<java version="1.8.0_211" class="java.beans.XMLDecoder">
+<java version="1.8.0_191" class="java.beans.XMLDecoder">
  <object class="MenuVehicule" id="MenuVehicule0">
   <void property="listeAvion">
    <void method="add">
@@ -28,32 +28,59 @@
     </object>
    </void>
   </void>
+  <void property="listeMoto">
+   <void method="add">
+    <object class="Moto">
+     <void property="etat">
+      <string>Moyen</string>
+     </void>
+     <void property="km">
+      <string>2500</string>
+     </void>
+     <void property="marque">
+      <string>Suzuki</string>
+     </void>
+     <void property="modele">
+      <string>GS 500 2006</string>
+     </void>
+     <void property="prixLocationJour">
+      <string>35</string>
+     </void>
+     <void property="puissance">
+      <string>48 ch</string>
+     </void>
+     <void property="vitesseMax">
+      <string>175 Km/h</string>
+     </void>
+    </object>
+   </void>
+  </void>
   <void property="listeVoiture">
    <void method="add">
     <object class="Voiture">
      <void property="etat">
-      <string>123</string>
+      <string>Bon</string>
      </void>
      <void property="km">
-      <string>123</string>
+      <string>5000</string>
      </void>
      <void property="marque">
-      <string>aze</string>
+      <string>Audi</string>
      </void>
      <void property="modele">
-      <string>aze</string>
+      <string>A3 - 2019</string>
      </void>
      <void property="nbPlace">
-      <string>123</string>
+      <string>5</string>
      </void>
      <void property="prixLocationJour">
-      <string>123</string>
+      <string>25</string>
      </void>
      <void property="puissance">
-      <string>123</string>
+      <string>6 CV</string>
      </void>
      <void property="vitesseMax">
-      <string>123</string>
+      <string>211 Km/h</string>
      </void>
     </object>
    </void>

@@ -46,14 +46,25 @@ public class MenuLocation {
         return  numLocaMin;
     }
 
+    /**
+     * permet d'ajouter une location
+     * @param aLocation
+     */
     public void addLocation(Location aLocation){
         (this.listeLocation).add(aLocation);
 
     }
 
+    /**
+     * suprime la i-eme location de la liste
+     * @param i
+     */
     public void delLocation(int i){
         if(i!=-1) {
+            Location location=(Location)(this.listeLocation.get(i));
+            location.getVehicule().setDisponible(true);
             listeLocation.remove(i);
+
         }
     }
 

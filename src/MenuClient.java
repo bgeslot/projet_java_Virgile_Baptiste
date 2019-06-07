@@ -27,11 +27,19 @@ public class MenuClient {
 
     //usefull methode
 
+    /**
+     * Permet d'ajouter un client
+     * @param aClient
+     */
     public void addClient(Client aClient)
     {
         (this.listeClient).add(aClient);
     }
 
+    /**
+     * Permet de supprimer le i-eme client
+     * @param i
+     */
     public void delClient(int i){
         if(i!=-1) {
             listeClient.remove(i);

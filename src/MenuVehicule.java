@@ -43,33 +43,56 @@ public class MenuVehicule {
     }
     //usefull methode
 
+    /**
+     * ajoute une nouvelle voiture
+     * @param aVoiture
+     */
    public void addVoiture(Voiture aVoiture){
        (this.listeVoiture).add(aVoiture);
 
     }
 
+    /**
+     * ajoute une nouvelle moto
+     * @param aMoto
+     */
     public void addMoto(Moto aMoto){
         (this.listeMoto).add(aMoto);
 
     }
 
+    /**
+     * ajoute un nouvel avion
+     * @param aAvion
+     */
     public void addAvion(Avion aAvion){
         (this.listeAvion).add(aAvion);
     }
 
-
+    /**
+     * suprime la i-eme voiture de la liste
+     * @param i
+     */
     public void delVoiture(int i){
         if(i!=-1) {
             listeVoiture.remove(i);
         }
     }
 
+    /**
+     * suprime la i-eme moto de la liste
+     * @param i
+     */
     public void delMoto(int i){
         if(i!=-1) {
             listeMoto.remove(i);
         }
     }
 
+    /**
+     * suprime le i-eme Avion de la liste
+     * @param i
+     */
     public void delAvion(int i){
         if(i!=-1) {
             listeAvion.remove(i);
