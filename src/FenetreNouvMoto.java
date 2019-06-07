@@ -34,7 +34,7 @@ public class FenetreNouvMoto implements ActionListener {
     private JTextField fieldKm = new JTextField();
     private JTextField fieldPuissance = new JTextField();
     private JButton boutonAjouter = new JButton("Ajouter");
-    private JButton boutonReset = new JButton("Reset");
+    private JButton boutonAnnuler = new JButton("Annuler");
 
     public FenetreNouvMoto(Main m) {
         main=m;
@@ -74,7 +74,7 @@ public class FenetreNouvMoto implements ActionListener {
         panel71.add(new Label("Puissance :"));
         panel72.add(fieldPuissance);
         panel81.add(boutonAjouter);
-        panel82.add(boutonReset);
+        panel82.add(boutonAnnuler);
         fieldEtat.setColumns(15);
         fieldMarque.setColumns(15);
         fieldModele.setColumns(15);
@@ -83,7 +83,7 @@ public class FenetreNouvMoto implements ActionListener {
         fieldKm.setColumns(15);
         fieldPrixLocationJour.setColumns(15);
         boutonAjouter.addActionListener(this);
-        boutonReset.addActionListener(this);
+        boutonAnnuler.addActionListener(this);
 
         fenetre.pack();
         Dimension windowSize = fenetre.getSize();
@@ -98,15 +98,9 @@ public class FenetreNouvMoto implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
         JButton recup = (JButton) e.getSource();
-        if (recup==boutonReset)
+        if (recup==boutonAnnuler)
         {
-            fieldPrixLocationJour.setText("");
-            fieldvitesseMax.setText("");
-            fieldModele.setText("");
-            fieldMarque.setText("");
-            fieldEtat.setText("");
-            fieldKm.setText("");
-            fieldPuissance.setText("");
+            fenetre.dispose();
         }
         else if (recup==boutonAjouter)
         {

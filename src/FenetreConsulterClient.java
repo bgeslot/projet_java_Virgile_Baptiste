@@ -115,7 +115,7 @@ public class FenetreConsulterClient<a> implements ActionListener, ListSelectionL
         else if (recup==boutonSupprimer)
         {
             (main.menuClient).delClient(jList.getSelectedIndex());
-            new FenetreConsulterClient(main);
+            main.fenetreConsulterClient=new FenetreConsulterClient(main);
             fenetre.dispose();
         }
         else if (recup==boutonAnnuler)

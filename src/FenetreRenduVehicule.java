@@ -132,11 +132,9 @@ public class FenetreRenduVehicule implements ActionListener {
         else if (recup==boutonRendre)
         {
             main.menuLocation.delLocation(index);
-            try {
-                main.fenetreConsulterLocation.fenetre.dispose();
-            }
-            catch (Exception ex)
+            if (main.fenetreConsulterLocation!=null)
             {
+                main.fenetreConsulterLocation.fenetre.dispose();
             }
             main.fenetreConsulterLocation=new FenetreConsulterLocation(main);
             fenetre.dispose();
