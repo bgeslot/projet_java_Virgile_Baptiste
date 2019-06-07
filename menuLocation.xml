@@ -5,23 +5,6 @@
    <int>22</int>
   </void>
  </object>
-<void class="Client" id="Client0">
- <void property="dateDeNaissance">
-  <string>14/12/1998</string>
- </void>
- <void property="nom">
-  <string>Plantet</string>
- </void>
- <void property="numTelephone">
-  <string>06.38.62..44.15</string>
- </void>
- <void property="prenom">
-  <string>Cédric</string>
- </void>
- <void property="adresseMail">
-  <string>cedric.plantet@gmail.com</string>
- </void>
-</void>
 <void class="MenuLocation" id="Field0" method="getField">
  <string>listeLocation</string>
  <void id="ArrayList0" method="get">
@@ -29,7 +12,23 @@
   <void method="add">
    <object class="Location">
     <void property="client">
-     <object idref="Client0"/>
+     <object class="Client">
+      <void property="adresseMail">
+       <string>cedric.plantet@gmail.com</string>
+      </void>
+      <void property="dateDeNaissance">
+       <string>14/12/1998</string>
+      </void>
+      <void property="nom">
+       <string>Plantet</string>
+      </void>
+      <void property="numTelephone">
+       <string>06.38.62..44.15</string>
+      </void>
+      <void property="prenom">
+       <string>Cédric</string>
+      </void>
+     </object>
     </void>
     <void property="dataDebut">
      <string>10/06/2019</string>
