@@ -1,9 +1,8 @@
-import java.beans.XMLEncoder;
-import java.io.BufferedOutputStream;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
 import java.util.ArrayList;
 
+/**
+ * La classe MenuClient permet de creer des objet contenant une liste de client
+ */
 public class MenuClient {
 
     private ArrayList listeClient;
@@ -39,6 +38,11 @@ public class MenuClient {
         }
     }
 
+    /**
+     * Cette methode permet d'obtenir une liste des nom et prenom des client pour l'utilise dans l'interface
+     * @param data
+     * @return
+     */
     public String[] getClient(String[] data){
         ArrayList listeClient;
         listeClient = this.getListeClient();
