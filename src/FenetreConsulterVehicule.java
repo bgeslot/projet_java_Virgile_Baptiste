@@ -3,6 +3,9 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+/**
+ * Cette classe permet de crer une fenetre qui mene vers les fenetre de consultation d'un vehicule
+ */
 public class FenetreConsulterVehicule implements ActionListener {
     private Main main;
     private JFrame fenetre=new JFrame();
@@ -39,6 +42,10 @@ public class FenetreConsulterVehicule implements ActionListener {
         fenetre.setLocation(screenSize.width/2-windowSize.width/2,screenSize.height/2-windowSize.height/2);
     }
 
+    /**
+     * Permet d'utiliser les different boutons
+     * @param e
+     */
     @Override
     public void actionPerformed(ActionEvent e) {
         JButton recup = (JButton) e.getSource();

@@ -6,6 +6,10 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
 
+/**
+ * Cet classe permet d'afficher une fenetre qui permet de consulter les client
+ * @param <a>
+ */
 public class FenetreConsulterClient<a> implements ActionListener, ListSelectionListener {
     private Main main;
     public JFrame fenetre = new JFrame();
@@ -97,7 +101,10 @@ public class FenetreConsulterClient<a> implements ActionListener, ListSelectionL
     }
 
 
-
+    /**
+     * Permet d'utiliser les different boutons
+     * @param e
+     */
     @Override
     public void actionPerformed(ActionEvent e) {
         JButton recup = (JButton) e.getSource();
@@ -123,6 +130,10 @@ public class FenetreConsulterClient<a> implements ActionListener, ListSelectionL
         }
     }
 
+    /**
+     * permet d'afficher les differente information sur un client
+     * @param e
+     */
     @Override
     public void valueChanged(ListSelectionEvent e) {
 

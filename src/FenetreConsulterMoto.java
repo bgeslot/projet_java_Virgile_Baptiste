@@ -6,6 +6,9 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
 
+/**
+ * Cet classe permet d'afficher une fenetre qui permet de consulter les motos
+ */
 public class FenetreConsulterMoto implements ActionListener, ListSelectionListener {
     private Main main;
     public JFrame fenetre = new JFrame();
@@ -110,6 +113,11 @@ public class FenetreConsulterMoto implements ActionListener, ListSelectionListen
         fenetre.setLocation(screenSize.width/2-windowSize.width/2,screenSize.height/2-windowSize.height/2);
     }
 
+    /**
+     * Permet d'avoire une liste de String utiliser pour l'affichage des motos
+     * @param data
+     * @return
+     */
     public String[] getMoto(String[] data){
         ArrayList listeMoto;
         listeMoto = main.menuVehicule.getListeMoto();
@@ -121,6 +129,10 @@ public class FenetreConsulterMoto implements ActionListener, ListSelectionListen
         return data;
     }
 
+    /**
+     * Permet d'utiliser les different boutons
+     * @param e
+     */
     @Override
     public void actionPerformed(ActionEvent e) {
         JButton recup = (JButton) e.getSource();
@@ -156,6 +168,10 @@ public class FenetreConsulterMoto implements ActionListener, ListSelectionListen
         }
     }
 
+    /**
+     * permet d'afficher les differente information sur une moto
+     * @param e
+     */
     @Override
     public void valueChanged(ListSelectionEvent e) {
         int index = jList.getSelectedIndex();

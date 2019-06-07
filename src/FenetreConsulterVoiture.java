@@ -6,6 +6,9 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
 
+/**
+ * Cet classe permet d'afficher une fenetre qui permet de consulter les voiture
+ */
 public class FenetreConsulterVoiture implements ActionListener, ListSelectionListener {
     private Main main;
     public JFrame fenetre = new JFrame();
@@ -116,6 +119,12 @@ public class FenetreConsulterVoiture implements ActionListener, ListSelectionLis
         fenetre.setLocation(screenSize.width/2-windowSize.width/2,screenSize.height/2-windowSize.height/2);
     }
 
+    /**
+     *  Permet d'avoire une liste de String utiliser pour l'affichage des voiture
+     * @param m
+     * @param data
+     * @return
+     */
     public String[] getVoiture(Main m,String[] data){
         m=main;
         ArrayList listeVoiture;
@@ -128,6 +137,10 @@ public class FenetreConsulterVoiture implements ActionListener, ListSelectionLis
         return data;
     }
 
+    /**
+     * Permet d'utiliser les different boutons
+     * @param e
+     */
     @Override
     public void actionPerformed(ActionEvent e) {
         JButton recup = (JButton) e.getSource();
@@ -168,6 +181,10 @@ public class FenetreConsulterVoiture implements ActionListener, ListSelectionLis
         }
     }
 
+    /**
+     * permet d'afficher les differente information sur une voiture
+     * @param e
+     */
     @Override
     public void valueChanged(ListSelectionEvent e) {
         int index = jList.getSelectedIndex();
