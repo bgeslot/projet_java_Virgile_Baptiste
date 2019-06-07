@@ -37,7 +37,7 @@ public class Location {
         this.duree = duree;
         this.kmPrevu = kmPrevu;
         this.reduction = reduction;
-        (this.client.getListeLocationEnCours()).add(vehicule);
+        System.out.println(this.client.getListeLocationEnCours()/*.add(vehicule)*/);
     }
 
     //set
@@ -106,7 +106,13 @@ public class Location {
         return vehicule;
     }
 
+    public boolean getReduction() {
+        return reduction;
+    }
 
+    public String getDuree() {
+        return duree;
+    }
     //other metode
 
     /**

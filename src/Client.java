@@ -3,7 +3,6 @@
  */
 
 import java.util.ArrayList;
-import java.util.Calendar;
 
 public class Client {
 
@@ -25,7 +24,7 @@ public class Client {
         this.dateDeNaissance = dateDeNaissance;
         this.adresseMail = adresseMail;
         this.numTelephone = numTelephone;
-        listeLocationEnCours = new ArrayList();
+        this.listeLocationEnCours = new ArrayList();
     }
 
     //set

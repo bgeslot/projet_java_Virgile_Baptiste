@@ -89,11 +89,7 @@ public class FenetreNouvClient implements ActionListener {
         }
         else if (recup==boutonAnnuler)
         {
-            fieldPrenom.setText("");
-            fieldNumeroTelephone.setText("");
-            fieldDateDeNaissance.setText("");
-            fieldAdresseMail.setText("");
-            fieldNom.setText("");
+            fenetre.dispose();
         }
     }
 }

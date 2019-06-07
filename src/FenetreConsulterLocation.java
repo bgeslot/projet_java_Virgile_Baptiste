@@ -38,6 +38,7 @@ public class FenetreConsulterLocation implements ActionListener, ListSelectionLi
     private JLabel labelDateDebut = new JLabel("");
     private JLabel labelDateFin = new JLabel("");
     private JLabel labelKmPrevi = new JLabel("");
+    private JLabel labelReduction = new JLabel("");
     private JLabel labelPrixPrevi = new JLabel("");
     private JButton boutonRendre = new JButton("Rendre");
     private JButton boutonSupprimer = new JButton("Supprimer");
@@ -92,7 +93,7 @@ public class FenetreConsulterLocation implements ActionListener, ListSelectionLi
         panel71.add(new JLabel("Prix prévisionnel :"));
         panel72.add(labelPrixPrevi);
         panel81.add(new JLabel("Réduction :"));
-        panel82.add(labelPrixPrevi);
+        panel82.add(labelReduction);
         panel91.add(boutonRendre);
         panel92.add(boutonSupprimer);
         jList.addListSelectionListener(this);
@@ -132,13 +133,24 @@ public class FenetreConsulterLocation implements ActionListener, ListSelectionLi
 
     @Override
     public void valueChanged(ListSelectionEvent e) {
-        int index = e.getLastIndex();
+        int index = jList.getSelectedIndex();
+        System.out.println(index);
         Location location=(Location) main.menuLocation.getListeLocation().get(index);
         labelNumLoc.setText(String.valueOf(((Location) main.menuLocation.getListeLocation().get(jList.getSelectedIndex())).getNumLocation()));
         labelClient.setText(location.getClient().toString());
+        System.out.println(location.getClient().toString());
+        labelVehicule.setText(location.getVehicule().getNameVehicule());
         labelDateDebut.setText(location.getDataDebut());
         labelDateFin.setText(location.getDateFin());
         labelKmPrevi.setText(location.getKmPrevu());
-        labelPrixPrevi.setText(Integer.toString(location.getPrixPrevu()));
+        if (location.getReduction())
+        {
+            labelReduction.setText("oui");
+        }
+        else
+        {
+            labelReduction.setText("non");
+        }
+        labelPrixPrevi.setText(String.valueOf(location.getPrixPrevu()));
     }
 }
