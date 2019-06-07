@@ -34,7 +34,7 @@ public class FenetreNouvAvion implements ActionListener {
     private JTextField fieldNbHeureVol = new JTextField();
     private JTextField fieldNbMoteur = new JTextField();
     private JButton boutonAjouter = new JButton("Ajouter");
-    private JButton boutonReset = new JButton("Reset");
+    private JButton boutonAnnuler = new JButton("Annuler");
 
     public FenetreNouvAvion(Main m) {
         main=m;
@@ -74,7 +74,7 @@ public class FenetreNouvAvion implements ActionListener {
         panel71.add(new Label("Nombre de moteurs :"));
         panel72.add(fieldNbMoteur);
         panel81.add(boutonAjouter);
-        panel82.add(boutonReset);
+        panel82.add(boutonAnnuler);
         fieldEtat.setColumns(15);
         fieldMarque.setColumns(15);
         fieldModele.setColumns(15);
@@ -83,7 +83,7 @@ public class FenetreNouvAvion implements ActionListener {
         fieldNbHeureVol.setColumns(15);
         fieldNbMoteur.setColumns(15);
         boutonAjouter.addActionListener(this);
-        boutonReset.addActionListener(this);
+        boutonAnnuler.addActionListener(this);
 
         fenetre.pack();
         Dimension windowSize = fenetre.getSize();
@@ -98,7 +98,7 @@ public class FenetreNouvAvion implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
         JButton recup = (JButton) e.getSource();
-        if (recup==boutonReset)
+        if (recup==boutonAnnuler)
         {
             fieldPrixLocationJour.setText("");
             fieldvitesseMax.setText("");

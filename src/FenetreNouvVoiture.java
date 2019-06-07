@@ -37,7 +37,7 @@ public class FenetreNouvVoiture implements ActionListener {
     private JTextField fieldNbPlace = new JTextField();
     private JTextField fieldPuissance = new JTextField();
     private JButton boutonAjouter = new JButton("Ajouter");
-    private JButton boutonReset = new JButton("Reset");
+    private JButton boutonAnnuler = new JButton("Annuler");
 
     public FenetreNouvVoiture(Main m) {
         main=m;
@@ -81,7 +81,7 @@ public class FenetreNouvVoiture implements ActionListener {
         panel81.add(new Label("Puissance :"));
         panel82.add(fieldPuissance);
         panel91.add(boutonAjouter);
-        panel92.add(boutonReset);
+        panel92.add(boutonAnnuler);
         fieldEtat.setColumns(15);
         fieldMarque.setColumns(15);
         fieldModele.setColumns(15);
@@ -91,7 +91,7 @@ public class FenetreNouvVoiture implements ActionListener {
         fieldNbPlace.setColumns(15);
         fieldPuissance.setColumns(15);
         boutonAjouter.addActionListener(this);
-        boutonReset.addActionListener(this);
+        boutonAnnuler.addActionListener(this);
 
         fenetre.pack();
         Dimension windowSize = fenetre.getSize();
@@ -106,7 +106,7 @@ public class FenetreNouvVoiture implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
         JButton recup = (JButton) e.getSource();
-        if (recup==boutonReset)
+        if (recup==boutonAnnuler)
         {
             fieldPrixLocationJour.setText("");
             fieldVitesseMax.setText("");
