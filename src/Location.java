@@ -92,7 +92,13 @@ public class Location {
         return vehicule;
     }
 
+    public boolean getReduction() {
+        return reduction;
+    }
 
+    public String getDuree() {
+        return duree;
+    }
     //other metode
 
     public static int prixLocation(Vehicule vehicule, int duree,int kilometrage, boolean reduction){
