@@ -57,7 +57,7 @@ public class MenuClient {
         int length=listeClient.size();
         data=new String[length];
         for(int i=0;i<length; i++){
-            data[i]=(((Client)(listeClient.get(i))).getNom()+" "+((Client)(listeClient.get(i))).getPrenom());
+            data[i]=(((Client)(listeClient.get(i))).getPrenom()+" "+((Client)(listeClient.get(i))).getNom());
         }
         return data;
     }
