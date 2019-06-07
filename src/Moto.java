@@ -1,3 +1,6 @@
+/**
+ * Permet de definire un vehicule terestre de type Moto
+ */
 public class Moto extends Terrestre {
 
     //new bike

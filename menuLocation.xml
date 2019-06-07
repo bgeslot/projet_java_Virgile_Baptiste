@@ -5,69 +5,72 @@
    <int>22</int>
   </void>
  </object>
+<void class="Avion" id="Avion0">
+ <void property="heureDeVol">
+  <string>1000</string>
+ </void>
+ <void property="marque">
+  <string>Boeing</string>
+ </void>
+ <void property="modele">
+  <string>737</string>
+ </void>
+ <void property="nbMoteur">
+  <string>2</string>
+ </void>
+ <void property="prixLocationJour">
+  <string>10000</string>
+ </void>
+ <void property="vitesseMax">
+  <string>825 Km/h</string>
+ </void>
+ <void property="etat">
+  <string>Excellent</string>
+ </void>
+</void>
+<void class="Client" id="Client0">
+ <void property="dateDeNaissance">
+  <string>14/12/1998</string>
+ </void>
+ <void property="nom">
+  <string>Plantet</string>
+ </void>
+ <void property="numTelephone">
+  <string>06.38.62..44.15</string>
+ </void>
+ <void property="prenom">
+  <string>Cédric</string>
+ </void>
+ <void property="adresseMail">
+  <string>cedric.plantet@gmail.com</string>
+ </void>
+</void>
+<void class="Location" id="Location0">
+ <void property="dataDebut">
+  <string>10/06/2019</string>
+ </void>
+ <void property="dateFin">
+  <string>50</string>
+ </void>
+ <void property="kmPrevu">
+  <string>1000</string>
+ </void>
+ <void property="numLocation">
+  <int>21</int>
+ </void>
+ <void property="vehicule">
+  <object idref="Avion0"/>
+ </void>
+ <void property="client">
+  <object idref="Client0"/>
+ </void>
+</void>
 <void class="MenuLocation" id="Field0" method="getField">
  <string>listeLocation</string>
  <void id="ArrayList0" method="get">
   <object idref="MenuLocation0"/>
   <void method="add">
-   <object class="Location">
-    <void property="client">
-     <object class="Client">
-      <void property="adresseMail">
-       <string>cedric.plantet@gmail.com</string>
-      </void>
-      <void property="dateDeNaissance">
-       <string>14/12/1998</string>
-      </void>
-      <void property="nom">
-       <string>Plantet</string>
-      </void>
-      <void property="numTelephone">
-       <string>06.38.62..44.15</string>
-      </void>
-      <void property="prenom">
-       <string>Cédric</string>
-      </void>
-     </object>
-    </void>
-    <void property="dataDebut">
-     <string>10/06/2019</string>
-    </void>
-    <void property="dateFin">
-     <string>50</string>
-    </void>
-    <void property="kmPrevu">
-     <string>1000</string>
-    </void>
-    <void property="numLocation">
-     <int>21</int>
-    </void>
-    <void property="vehicule">
-     <object class="Avion">
-      <void property="etat">
-       <string>Excellent</string>
-      </void>
-      <void property="heureDeVol">
-       <string>1000</string>
-      </void>
-      <void property="marque">
-       <string>Boeing</string>
-      </void>
-      <void property="modele">
-       <string>737</string>
-      </void>
-      <void property="nbMoteur">
-       <string>2</string>
-      </void>
-      <void property="prixLocationJour">
-       <string>10000</string>
-      </void>
-      <void property="vitesseMax">
-       <string>825 Km/h</string>
-      </void>
-     </object>
-    </void>
-   </object>
+   <object idref="Location0"/>
   </void>
  </void>
 </void>

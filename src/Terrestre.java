@@ -1,3 +1,6 @@
+/**
+ * Permet de definire un vehicule terrestre
+ */
 public abstract class Terrestre extends Vehicule {
 
     private String km;

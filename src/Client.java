@@ -1,3 +1,7 @@
+/**
+ * la class Client permet de definire les clients
+ */
+
 import java.util.ArrayList;
 import java.util.Calendar;
 
