@@ -7,7 +7,7 @@ import java.awt.event.ActionListener;
 import java.util.ArrayList;
 
 /**
- * Cet classe permet d'afficher une fenetre qui permet de consulter les client
+ * Cet classe permet d'afficher une fenetre qui permet de consulter, modifier ou d'ajouter des clients grace a une liste deroulente et des boutons.
  * @param <a>
  */
 public class FenetreConsulterClient<a> implements ActionListener, ListSelectionListener {

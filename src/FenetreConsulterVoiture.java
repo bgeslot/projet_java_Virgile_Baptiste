@@ -7,7 +7,7 @@ import java.awt.event.ActionListener;
 import java.util.ArrayList;
 
 /**
- * Cet classe permet d'afficher une fenetre qui permet de consulter les voiture
+ * Cet classe permet d'afficher une fenetre qui permet de consulter les voiture grace a une liste deroulente. De plus on peut ajouter, supprimer, modifier et louer des voitures grace a des bouton
  */
 public class FenetreConsulterVoiture implements ActionListener, ListSelectionListener {
     private Main main;

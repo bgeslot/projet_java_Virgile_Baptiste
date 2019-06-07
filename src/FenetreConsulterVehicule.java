@@ -4,7 +4,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 /**
- * Cette classe permet de crer une fenetre qui mene vers les fenetre de consultation d'un vehicule
+ * Cette classe permet de crer une fenetre qui mene vers les fenetre de consultation d'un vehicule avec 3 boutons 1 pour chaque vehicule
  */
 public class FenetreConsulterVehicule implements ActionListener {
     private Main main;

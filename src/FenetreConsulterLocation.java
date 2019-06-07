@@ -7,7 +7,7 @@ import java.awt.event.ActionListener;
 import java.util.ArrayList;
 
 /**
- * Cet classe permet d'afficher une fenetre qui permet de consulter les location
+ * Cet classe permet d'afficher une fenetre qui permet de consulter, rendre ou supprimer les location
  */
 public class FenetreConsulterLocation implements ActionListener, ListSelectionListener
 {

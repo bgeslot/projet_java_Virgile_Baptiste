@@ -7,7 +7,7 @@ import java.awt.event.ActionListener;
 import java.util.ArrayList;
 
 /**
- * Cet classe permet d'afficher une fenetre qui permet de consulter les motos
+ * Cet classe permet d'afficher une fenetre qui permet de consulter les motos grace a une liste deroulente. De plus on peut ajouter, supprimer, modifier et louer des motos grace a des bouton
  */
 public class FenetreConsulterMoto implements ActionListener, ListSelectionListener {
     private Main main;
