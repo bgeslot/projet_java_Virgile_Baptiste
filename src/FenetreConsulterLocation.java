@@ -136,6 +136,7 @@ public class FenetreConsulterLocation implements ActionListener, ListSelectionLi
         Location location=(Location) main.menuLocation.getListeLocation().get(index);
         labelNumLoc.setText(String.valueOf(((Location) main.menuLocation.getListeLocation().get(jList.getSelectedIndex())).getNumLocation()));
         labelClient.setText(location.getClient().toString());
+        labelVehicule.setText(location.getVehicule().getNameVehicule());
         labelDateDebut.setText(location.getDataDebut());
         labelDateFin.setText(location.getDateFin());
         labelKmPrevi.setText(location.getKmPrevu());

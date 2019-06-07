@@ -1,16 +1,13 @@
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.awt.event.KeyAdapter;
-import java.awt.event.KeyEvent;
+import java.awt.event.*;
 
 public class FenetreNouvLocation implements ActionListener {
     private Main main;
     private Vehicule vehicule;
     private JFrame fenetre = new JFrame();
     private JPanel panel = new JPanel();
-    private JLabel labelPrix = new JLabel();
+    private JLabel labelPrix = new JLabel("0");
     private JComboBox jComboBox;
     private JTextField fieldDateDebut = new JTextField();
     private JTextField fieldDuree = new JTextField();
@@ -55,6 +52,56 @@ public class FenetreNouvLocation implements ActionListener {
         fieldKmPrevi.setColumns(15);
         boutonAjouter.addActionListener(this);
         boutonAnnuler.addActionListener(this);
+        boxReduction.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent actionEvent) {
+                int nbKm;
+                int nbJour;
+                String stringNbJour=fieldDuree.getText();
+                String stringNbKm=fieldKmPrevi.getText();
+                try
+                {
+                    nbJour = Integer.parseInt(stringNbJour);
+                }
+                catch (NumberFormatException er)
+                {
+                    nbJour=0;
+                }
+                try
+                {
+                    nbKm = Integer.parseInt(stringNbKm);
+                }
+                catch (NumberFormatException er)
+                {
+                    nbKm=0;
+                }
+                labelPrix.setText(String.valueOf(Location.prixLocation(vehicule,nbJour,nbKm,boxReduction.isSelected())));
+            }
+        });
+        fieldKmPrevi.addKeyListener(new KeyAdapter() {
+            public void keyReleased(KeyEvent e) {
+                int nbKm;
+                int nbJour;
+                String stringNbJour=fieldDuree.getText();
+                String stringNbKm=fieldKmPrevi.getText();
+                try
+                {
+                    nbJour = Integer.parseInt(stringNbJour);
+                }
+                catch (NumberFormatException er)
+                {
+                    nbJour=0;
+                }
+                try
+                {
+                    nbKm = Integer.parseInt(stringNbKm);
+                }
+                catch (NumberFormatException er)
+                {
+                    nbKm=0;
+                }
+                labelPrix.setText(String.valueOf(Location.prixLocation(vehicule,nbJour,nbKm,boxReduction.isSelected())));
+            }
+        });
         fieldDuree.addKeyListener(new KeyAdapter() {
             public void keyReleased(KeyEvent e) {
                 int nbKm;
