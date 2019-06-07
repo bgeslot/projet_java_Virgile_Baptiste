@@ -33,7 +33,7 @@ public class FenetreNouvLocation implements ActionListener {
     private JPanel panel82 = new JPanel();
     private JPanel panel91 = new JPanel();
     private JPanel panel92 = new JPanel();
-
+    private int prixPrevu;
 
 
     public FenetreNouvLocation(Main main, Vehicule vehicule) {
@@ -74,7 +74,8 @@ public class FenetreNouvLocation implements ActionListener {
                 {
                     nbKm=0;
                 }
-                labelPrix.setText(String.valueOf(Location.prixLocation(vehicule,nbJour,nbKm,boxReduction.isSelected())));
+                prixPrevu=Location.prixLocation(vehicule,nbJour,nbKm,boxReduction.isSelected());
+                labelPrix.setText(String.valueOf(prixPrevu));
             }
         });
         fieldKmPrevi.addKeyListener(new KeyAdapter() {
@@ -99,7 +100,8 @@ public class FenetreNouvLocation implements ActionListener {
                 {
                     nbKm=0;
                 }
-                labelPrix.setText(String.valueOf(Location.prixLocation(vehicule,nbJour,nbKm,boxReduction.isSelected())));
+                prixPrevu=Location.prixLocation(vehicule,nbJour,nbKm,boxReduction.isSelected());
+                labelPrix.setText(String.valueOf(prixPrevu));
             }
         });
         fieldDuree.addKeyListener(new KeyAdapter() {
@@ -133,7 +135,8 @@ public class FenetreNouvLocation implements ActionListener {
                     boxReduction.setSelected(false);
                     boxReduction.setEnabled(false);
                 }
-                labelPrix.setText(String.valueOf(Location.prixLocation(vehicule,nbJour,nbKm,boxReduction.isSelected())));
+                prixPrevu=Location.prixLocation(vehicule,nbJour,nbKm,boxReduction.isSelected());
+                labelPrix.setText(String.valueOf(prixPrevu));
             }
         });
         panel.setLayout(new GridLayout(9, 2));
@@ -185,7 +188,7 @@ public class FenetreNouvLocation implements ActionListener {
         JButton recup = (JButton) e.getSource();
         if (recup == boutonAjouter) {
             int i=main.menuLocation.getNumLocaMin();
-            Location location=new Location((Client) main.menuClient.getListeClient().get(jComboBox.getSelectedIndex()),i,fieldDateDebut.getText(),fieldDuree.getText(),fieldKmPrevi.getText(),boxReduction.isSelected(),vehicule);
+            Location location=new Location((Client) main.menuClient.getListeClient().get(jComboBox.getSelectedIndex()),i,fieldDateDebut.getText(),fieldDuree.getText(),fieldKmPrevi.getText(),boxReduction.isSelected(),vehicule,prixPrevu);
             main.menuLocation.setNumLocaMin(main.menuLocation.getNewID());
             main.menuLocation.addLocation(location);
             if (main.fenetreConsulterLocation!=null)

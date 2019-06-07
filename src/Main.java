@@ -2,7 +2,6 @@ import java.beans.ExceptionListener;
 import java.beans.XMLDecoder;
 import java.beans.XMLEncoder;
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 
@@ -16,11 +15,9 @@ public class Main {
     public FenetreConsulterClient fenetreConsulterClient=null;
     public FenetreConsulterLocation fenetreConsulterLocation=null;
     public static void main(String[] args) throws IOException {
-        new FenetreErreur("messa oui");
         Main main=new Main();
         main.deserializeFromXML();
         new FenetreMain(main);
-        //serializationClient((main.getMenuClient()).getListeClient());
     }
 
     public MenuClient getMenuClient() {
