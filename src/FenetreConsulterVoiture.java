@@ -150,13 +150,18 @@ public class FenetreConsulterVoiture implements ActionListener, ListSelectionLis
         }
         else if (recup==boutonSupprimer)
         {
-            main.menuVehicule.delVoiture(jList.getSelectedIndex());
-            if (main.fenetreConsulterVoiture!=null)
-            {
-                main.fenetreConsulterVoiture.fenetre.dispose();
+            if (jList.getSelectedIndex()!=-1) {
+                main.menuVehicule.delVoiture(jList.getSelectedIndex());
+                if (main.fenetreConsulterVoiture != null) {
+                    main.fenetreConsulterVoiture.fenetre.dispose();
+                }
+                main.fenetreConsulterVoiture = new FenetreConsulterVoiture(main);
+                fenetre.dispose();
             }
-            main.fenetreConsulterVoiture = new FenetreConsulterVoiture(main);
-            fenetre.dispose();
+            else
+            {
+                new FenetreErreur("Sélectionner une voiture");
+            }
         }
         else if (recup==boutonLouer)
         {
@@ -171,12 +176,20 @@ public class FenetreConsulterVoiture implements ActionListener, ListSelectionLis
                     new FenetreErreur("Ce véhicule est déja loué");
                 }
             }
+            else
+            {
+                new FenetreErreur("Sélectionner un Voiture");
+            }
         }
         else if (recup==boutonModifier)
         {
             int index = jList.getSelectedIndex();
             if(index!=-1) {
-            new FenetreModifierVoiture(main, (Voiture) main.menuVehicule.getListeVoiture().get(jList.getSelectedIndex()));
+                new FenetreModifierVoiture(main, (Voiture) main.menuVehicule.getListeVoiture().get(jList.getSelectedIndex()));
+            }
+            else
+            {
+                new FenetreErreur("Sélectionner une voiture");
             }
         }
     }

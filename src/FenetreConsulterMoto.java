@@ -149,12 +149,22 @@ public class FenetreConsulterMoto implements ActionListener, ListSelectionListen
                     new FenetreErreur("Ce véhicule est déja loué");
                 }
             }
+            else
+            {
+                new FenetreErreur("Sélectionner un moto");
+            }
         }
         else if (recup==boutonSupprimer)
         {
-            main.menuVehicule.delMoto(jList.getSelectedIndex());
-            main.fenetreConsulterMoto = new FenetreConsulterMoto(main);
-            fenetre.dispose();
+            if (jList.getSelectedIndex()==-1)
+            {
+                new FenetreErreur("Sélectionner une moto");
+            }
+            else {
+                main.menuVehicule.delMoto(jList.getSelectedIndex());
+                main.fenetreConsulterMoto = new FenetreConsulterMoto(main);
+                fenetre.dispose();
+            }
         }
         else if (recup==boutonAjouter)
         {
@@ -164,6 +174,10 @@ public class FenetreConsulterMoto implements ActionListener, ListSelectionListen
             int index = jList.getSelectedIndex();
             if (index != -1) {
                 new FenetreModifierMoto(main, (Moto) main.menuVehicule.getListeMoto().get(index));
+            }
+            else
+            {
+                new FenetreErreur("Sélectionner une moto");
             }
         }
     }

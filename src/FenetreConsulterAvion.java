@@ -141,14 +141,19 @@ public class FenetreConsulterAvion implements ActionListener, ListSelectionListe
         }
         else if (recup==boutonSupprimer)
         {
-            main.menuVehicule.delAvion(jList.getSelectedIndex());
-            main.fenetreConsulterAvion=new FenetreConsulterAvion(main);
-            if (main.fenetreConsulterAvion!=null)
+            if (jList.getSelectedIndex()==-1)
             {
-                main.fenetreConsulterAvion.fenetre.dispose();
+                new FenetreErreur("Sélectionner un avion");
             }
-            main.fenetreConsulterAvion = new FenetreConsulterAvion(main);
-            fenetre.dispose();
+            else {
+                main.menuVehicule.delAvion(jList.getSelectedIndex());
+                main.fenetreConsulterAvion = new FenetreConsulterAvion(main);
+                if (main.fenetreConsulterAvion != null) {
+                    main.fenetreConsulterAvion.fenetre.dispose();
+                }
+                main.fenetreConsulterAvion = new FenetreConsulterAvion(main);
+                fenetre.dispose();
+            }
         }
         else if (recup==boutonLouer)
         {
@@ -163,11 +168,19 @@ public class FenetreConsulterAvion implements ActionListener, ListSelectionListe
                     new FenetreErreur("Ce véhicule est déja loué");
                 }
             }
+            else
+            {
+                new FenetreErreur("Sélectionner un avion");
+            }
         }
         else if (recup==boutonModifier) {
             int index = jList.getSelectedIndex();
             if (index != -1) {
                 new FenetreModifierAvion(main, (Avion) main.menuVehicule.getListeAvion().get(jList.getSelectedIndex()));
+            }
+            else
+            {
+                new FenetreErreur("Sélectionner un avion");
             }
         }
     }

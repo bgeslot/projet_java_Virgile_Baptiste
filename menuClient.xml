@@ -428,9 +428,6 @@
      <void property="dateDeNaissance">
       <string>21/03/1965</string>
      </void>
-     <void property="listeLocationEnCours">
-      <object class="java.util.ArrayList"/>
-     </void>
      <void property="nom">
       <string>Sanchez</string>
      </void>
@@ -449,9 +446,6 @@
      </void>
      <void property="dateDeNaissance">
       <string>23/12/1985</string>
-     </void>
-     <void property="listeLocationEnCours">
-      <object class="java.util.ArrayList"/>
      </void>
      <void property="nom">
       <string>SCROLL</string>

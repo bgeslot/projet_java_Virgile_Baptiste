@@ -114,9 +114,15 @@ public class FenetreConsulterClient<a> implements ActionListener, ListSelectionL
         }
         else if (recup==boutonSupprimer)
         {
-            (main.menuClient).delClient(jList.getSelectedIndex());
-            main.fenetreConsulterClient=new FenetreConsulterClient(main);
-            fenetre.dispose();
+            if (jList.getSelectedIndex()==-1)
+            {
+                new FenetreErreur("Sélectionner un client");
+            }
+            else {
+                (main.menuClient).delClient(jList.getSelectedIndex());
+                main.fenetreConsulterClient = new FenetreConsulterClient(main);
+                fenetre.dispose();
+            }
         }
         else if (recup==boutonAnnuler)
         {
@@ -126,6 +132,10 @@ public class FenetreConsulterClient<a> implements ActionListener, ListSelectionL
             int index = jList.getSelectedIndex();
             if (index != -1) {
                 new FenetreModifierClient(main, (Client) main.menuClient.getListeClient().get(jList.getSelectedIndex()));
+            }
+            else
+            {
+                new FenetreErreur("Sélectionner un client");
             }
         }
     }
