@@ -129,7 +129,13 @@ public class FenetreConsulterMoto implements ActionListener, ListSelectionListen
             int index = jList.getSelectedIndex();
             if(index!=-1) {
                 Moto moto = (Moto) main.menuVehicule.getListeMoto().get(jList.getSelectedIndex());
-                new FenetreNouvLocation(main, moto);
+                boolean dispo=(moto.isDisponible());
+                if (dispo) {
+                    new FenetreNouvLocation(main, moto);
+                }
+                else{
+                    new FenetreErreur("Ce Véhicule est déja louer");
+                }
             }
         }
         else if (recup==boutonSupprimer)
@@ -145,7 +151,7 @@ public class FenetreConsulterMoto implements ActionListener, ListSelectionListen
         else if (recup==boutonModifier) {
             int index = jList.getSelectedIndex();
             if (index != -1) {
-                new FenetreModifierMoto(main, (Moto) main.menuVehicule.getListeMoto().get(jList.getSelectedIndex()));
+                new FenetreModifierMoto(main, (Moto) main.menuVehicule.getListeMoto().get(index));
             }
         }
     }
