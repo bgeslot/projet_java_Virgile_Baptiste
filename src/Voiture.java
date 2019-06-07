@@ -7,10 +7,24 @@ public class Voiture extends Terrestre {
 
     //new car
 
+    /**
+     * permet la serialisation
+     */
     public Voiture()
     {
     }
 
+    /**
+     * nessecaire pour implementer les vehicule dans le programe
+     * @param marque
+     * @param modele
+     * @param vitesseMax
+     * @param prixLocationJour
+     * @param etat
+     * @param km
+     * @param puissance
+     * @param nbPlace
+     */
     public Voiture(String marque, String modele, String vitesseMax, String prixLocationJour, String etat, String km, String puissance, String nbPlace) {
         super(marque, modele, vitesseMax, prixLocationJour, etat, km, puissance);
         this.nbPlace = nbPlace;

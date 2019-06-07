@@ -6,13 +6,21 @@ public class Aerien extends Vehicule {
     private String heureDeVol;
 
     /**
-     *
+     *permet la serialisation
      */
  public Aerien()
     {
     }
 
-
+    /**
+     * nessecaire pour implementer les vehicule aerien dans le programe
+     * @param marque
+     * @param modele
+     * @param vitesseMax
+     * @param prixLocationJour
+     * @param etat
+     * @param heureDeVol
+     */
     public Aerien(String marque, String modele, String vitesseMax, String prixLocationJour, String etat, String heureDeVol) {
         super(marque, modele, vitesseMax, prixLocationJour, etat);
         this.heureDeVol = heureDeVol;

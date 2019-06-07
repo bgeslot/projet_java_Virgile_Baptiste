@@ -12,6 +12,9 @@ public class Location {
     private int prixPrevu;
     private boolean reduction;
 
+    /**
+     * permet la serialisation
+     */
     public Location()
     {
 

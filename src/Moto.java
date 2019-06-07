@@ -5,9 +5,22 @@ public class Moto extends Terrestre {
 
     //new bike
 
+    /**
+     * permet la serialisation
+     */
     public Moto() {
     }
 
+    /**
+     * nessecaire pour implementer les motos dans le programe
+     * @param marque
+     * @param modele
+     * @param vitesseMax
+     * @param prixLocationJour
+     * @param etat
+     * @param km
+     * @param puissance
+     */
     public Moto(String marque, String modele, String vitesseMax, String prixLocationJour, String etat, String km, String puissance) {
         super(marque, modele, vitesseMax, prixLocationJour, etat, km, puissance);
     }

@@ -5,10 +5,23 @@ public class Avion extends Aerien {
 
     private String nbMoteur;
 
+    /**
+     * permet la serialisation
+     */
     public Avion()
     {
     }
 
+    /**
+     * nessecaire pour implementer les avion dans le programe
+     * @param marque
+     * @param modele
+     * @param vitesseMax
+     * @param prixLocationJour
+     * @param etat
+     * @param heureDeVol
+     * @param nbMoteur
+     */
     public Avion(String marque, String modele, String vitesseMax, String prixLocationJour, String etat, String heureDeVol, String nbMoteur) {
         super(marque, modele, vitesseMax, prixLocationJour, etat, heureDeVol);
         this.nbMoteur = nbMoteur;

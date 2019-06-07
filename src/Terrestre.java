@@ -6,12 +6,25 @@ public abstract class Terrestre extends Vehicule {
     private String km;
     private String puissance;
 
+    /**
+     * nessecaire pour implementer les vehicule terrestre dans le programe
+     * @param marque
+     * @param modele
+     * @param vitesseMax
+     * @param prixLocationJour
+     * @param etat
+     * @param km
+     * @param puissance
+     */
     public Terrestre(String marque, String modele, String vitesseMax, String prixLocationJour, String etat, String km, String puissance) {
         super(marque, modele, vitesseMax, prixLocationJour, etat);
         this.km = km;
         this.puissance = puissance;
     }
 
+    /**
+     * permet la serialisation
+     */
     public Terrestre() {
     }
 // seter
