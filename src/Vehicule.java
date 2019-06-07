@@ -1,3 +1,6 @@
+/**
+ * Cette classe permet de definir un vehicule que ce soit un vehicule tereste ou aerien
+ */
 public abstract class Vehicule {
 
     private String marque;

@@ -1,3 +1,6 @@
+/**
+ * Permet de definire un vehicule aérient de type Avion
+ */
 public class Avion extends Aerien {
 
     private String nbMoteur;

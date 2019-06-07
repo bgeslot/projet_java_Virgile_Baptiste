@@ -1,3 +1,6 @@
+/**
+ * Permet de definire un vehicule terestre de type Voiture
+ */
 public class Voiture extends Terrestre {
 
     private String nbPlace;
