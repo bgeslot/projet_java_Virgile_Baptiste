@@ -1,5 +1,8 @@
 import java.util.ArrayList;
 
+/**
+ * La classe MenuClient permet de creer des objet contenant une liste de clients
+ */
 public class MenuVehicule {
 
     private ArrayList listeVoiture;

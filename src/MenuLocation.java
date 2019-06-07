@@ -1,5 +1,8 @@
 import java.util.ArrayList;
 
+/**
+ * La classe MenuLocation permet de creer des objet contenant une liste de location
+ */
 public class MenuLocation {
     public ArrayList listeLocation;
     private int numLocaMin;
@@ -34,6 +37,10 @@ public class MenuLocation {
     }
 //usefull methode
 
+    /**
+     * permet de changer la variable d'instance numLocaMin qui sert à donne l'identifiant d'une location
+     * @return
+     */
     public int getNewID(){
         this.numLocaMin=numLocaMin+1;
         return  numLocaMin;
