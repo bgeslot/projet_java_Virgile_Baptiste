@@ -126,8 +126,11 @@ public class FenetreConsulterMoto implements ActionListener, ListSelectionListen
         JButton recup = (JButton) e.getSource();
         if (recup==boutonLouer)
         {
-            Moto moto=(Moto) main.menuVehicule.getListeMoto().get(jList.getSelectedIndex());
-            new FenetreNouvLocation(main,moto);
+            int index = jList.getSelectedIndex();
+            if(index!=-1) {
+                Moto moto = (Moto) main.menuVehicule.getListeMoto().get(jList.getSelectedIndex());
+                new FenetreNouvLocation(main, moto);
+            }
         }
         else if (recup==boutonSupprimer)
         {
