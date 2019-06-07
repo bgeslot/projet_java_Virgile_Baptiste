@@ -133,7 +133,7 @@ public class FenetreConsulterLocation implements ActionListener, ListSelectionLi
 
     @Override
     public void valueChanged(ListSelectionEvent e) {
-        int index = e.getLastIndex();
+        int index = jList.getSelectedIndex();
         System.out.println(index);
         Location location=(Location) main.menuLocation.getListeLocation().get(index);
         labelNumLoc.setText(String.valueOf(((Location) main.menuLocation.getListeLocation().get(jList.getSelectedIndex())).getNumLocation()));
