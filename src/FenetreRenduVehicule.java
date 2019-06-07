@@ -5,6 +5,9 @@ import java.awt.event.ActionListener;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 
+/**
+ * Cette fenetre permet de rendre un vehicule
+ */
 public class FenetreRenduVehicule implements ActionListener {
     private Main main;
     private int index;
@@ -114,6 +117,10 @@ public class FenetreRenduVehicule implements ActionListener {
         fenetre.setLocation(screenSize.width/2-windowSize.width/2,screenSize.height/2-windowSize.height/2);
     }
 
+    /**
+     * Permet d'utiliser les different boutons
+     * @param e
+     */
     @Override
     public void actionPerformed(ActionEvent e)
     {

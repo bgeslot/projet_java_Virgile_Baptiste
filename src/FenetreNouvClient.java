@@ -1,10 +1,11 @@
-import com.sun.org.apache.xml.internal.utils.StringToStringTable;
-
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+/**
+ * Cette fenetre permet de rentrer les information sur un nouveau client
+ */
 public class FenetreNouvClient implements ActionListener {
     private Main main;
     private JFrame fenetre=new JFrame();
@@ -73,6 +74,10 @@ public class FenetreNouvClient implements ActionListener {
         fenetre.setLocation(screenSize.width/2-windowSize.width/2,screenSize.height/2-windowSize.height/2);
     }
 
+    /**
+     * Permet d'utiliser les different boutons
+     * @param e
+     */
     @Override
     public void actionPerformed(ActionEvent e) {
         JButton recup = (JButton) e.getSource();
