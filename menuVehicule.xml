@@ -54,6 +54,34 @@
      </void>
     </object>
    </void>
+   <void method="add">
+    <object class="Moto">
+     <void property="disponible">
+      <boolean>true</boolean>
+     </void>
+     <void property="etat">
+      <string></string>
+     </void>
+     <void property="km">
+      <string></string>
+     </void>
+     <void property="marque">
+      <string>1</string>
+     </void>
+     <void property="modele">
+      <string>1</string>
+     </void>
+     <void property="prixLocationJour">
+      <string></string>
+     </void>
+     <void property="puissance">
+      <string></string>
+     </void>
+     <void property="vitesseMax">
+      <string></string>
+     </void>
+    </object>
+   </void>
   </void>
   <void property="listeVoiture">
    <void method="add">

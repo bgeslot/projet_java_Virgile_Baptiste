@@ -53,7 +53,10 @@ public class MenuLocation {
 
     public void delLocation(int i){
         if(i!=-1) {
+            Location location=(Location)(this.listeLocation.get(i));
+            location.getVehicule().setDisponible(true);
             listeLocation.remove(i);
+
         }
     }
 
