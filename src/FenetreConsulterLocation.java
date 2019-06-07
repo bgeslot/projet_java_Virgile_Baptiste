@@ -121,7 +121,7 @@ public class FenetreConsulterLocation implements ActionListener, ListSelectionLi
         JButton recup = (JButton) e.getSource();
         if (recup == boutonRendre)
         {
-            new FenetreRenduVehicule();
+            new FenetreRenduVehicule(main,(Location) main.menuLocation.getListeLocation().get(jList.getSelectedIndex()),jList.getSelectedIndex());
         }
         else if (recup==boutonSupprimer)
         {
