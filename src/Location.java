@@ -1,3 +1,6 @@
+/**
+ *Cette classe permet de definire une location
+ */
 public class Location {
 
     private int numLocation;
@@ -14,6 +17,17 @@ public class Location {
 
     }
 
+    /**
+     * Crer une nouvelle location et utilise la duree de la location et le nombre de km prevu pour determine le prix.
+     * De plus on met a jour la liste de vehicule louer par le client
+     * @param client
+     * @param numLocation
+     * @param dataDebut
+     * @param duree
+     * @param kmPrevu
+     * @param reduction
+     * @param vehicule
+     */
     public Location(Client client,int numLocation, String dataDebut, String duree, String kmPrevu, boolean reduction, Vehicule vehicule)
     {
         this.vehicule=vehicule;
@@ -23,7 +37,6 @@ public class Location {
         this.duree = duree;
         this.kmPrevu = kmPrevu;
         this.reduction = reduction;
-        System.out.println(this.client.getListeLocationEnCours()/*.add(vehicule)*/);
     }
 
     //set
@@ -101,6 +114,14 @@ public class Location {
     }
     //other metode
 
+    /**
+     * genere automatiquement le prix
+     * @param vehicule
+     * @param duree
+     * @param kilometrage
+     * @param reduction
+     * @return
+     */
     public static int prixLocation(Vehicule vehicule, int duree,int kilometrage, boolean reduction){
         //int temps=Integer.parseInt(uneDuree);
         //int km=Integer.parseInt(unKilometrage);
